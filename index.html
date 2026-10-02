@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeepSeek Prompt Generator - Free Online CoT & System Prompt Builder | PaceBowl</title>
+
+  <!-- Theme & Language Initialization: Anti-FOUC & Cross-Subdomain Sync -->
+  <script>
+    (function() {
+      function getSharedCookie(name) {
+        var m = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
+        return m ? decodeURIComponent(m[1]) : null;
+      }
+      var theme = getSharedCookie('pacebowl-theme') || localStorage.getItem('pacebowl-theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (theme === 'light') {
+        document.documentElement.classList.remove('dark');
+        document.documentElement.classList.add('light');
+      } else if (theme === 'dark' || (!theme && prefersDark)) {
+        document.documentElement.classList.add('dark');
+        document.documentElement.classList.remove('light');
+      } else {
+        document.documentElement.classList.remove('dark');
+        document.documentElement.classList.add('light');
+      }
+    })();
+  </script>
+
+  <meta name="description" content="Free online DeepSeek prompt generator optimized for DeepSeek-R1 (Chain-of-Thought reasoning) and DeepSeek-V3. Craft structured system prompts, code refactoring templates, and reasoning directives in 1 click.">
+  <meta name="keywords" content="deepseek prompt generator, deepseek r1 prompts, deepseek system prompt builder, chain of thought prompt generator, deepseek v3 prompts, deepseek prompt engineering, pacebowl">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://deepseek.pacebowl.com/">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <!-- Umami Analytics -->
+  <script defer src="https://umami-ruby-alpha-96.vercel.app/script.js" data-website-id="f19f74d0-d931-45d2-9e84-64626b9e7409"></script>
+
+  <!-- OpenGEO (GeoTrace) Attribution -->
+  <script defer data-domain="deepseek.pacebowl.com" data-api="https://geo.pacebowl.com/api" src="https://geo.pacebowl.com/geo.js"></script>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://deepseek.pacebowl.com/">
+  <meta property="og:title" content="DeepSeek Prompt Generator & CoT Studio - PaceBowl">
+  <meta property="og:description" content="Generate high-precision Chain-of-Thought and System prompts optimized for DeepSeek-R1 and DeepSeek-V3. 100% Free & Client-Side.">
+  <meta property="og:image" content="https://deepseek.pacebowl.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="PaceBowl Suite">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://deepseek.pacebowl.com/">
+  <meta name="twitter:title" content="DeepSeek Prompt Generator & CoT Studio - PaceBowl">
+  <meta name="twitter:description" content="Structure reasoning directives and system prompts tailored for DeepSeek-R1 and V3.">
+  <meta name="twitter:image" content="https://deepseek.pacebowl.com/og-image.png">
+
+  <!-- Structured Data: WebApplication & FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://deepseek.pacebowl.com/#webapp",
+        "name": "PaceBowl DeepSeek Prompt Generator",
+        "url": "https://deepseek.pacebowl.com/",
+        "description": "Free web-based prompt builder and Chain-of-Thought directive synthesizer optimized for DeepSeek-R1 and DeepSeek-V3 models.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "All",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "featureList": [
+          "DeepSeek-R1 Chain-of-Thought (CoT) reasoning prompt synthesizer",
+          "DeepSeek-V3 rapid code and general chat structure generator",
+          "Negative constraint guardrails to eliminate AI hallucinations",
+          "XML tag structuring (<thinking>, <context>, <instructions>, <constraints>)",
+          "1-Click Copy and direct launcher for chat.deepseek.com",
+          "DeepSeek API token cost and arbitrage savings calculator"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://deepseek.pacebowl.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Why does DeepSeek-R1 perform better with Zero-Shot than Few-Shot prompts?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "DeepSeek's official research team discovered that providing few-shot in-context examples can bias and constrain DeepSeek-R1's internal reinforcement learning reasoning traces. Direct, zero-shot instructions with clear objective constraints allow R1's internal Chain-of-Thought (CoT) to explore optimal reasoning paths freely."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What temperature setting is recommended for DeepSeek-R1?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The official DeepSeek team recommends setting temperature between 0.5 and 0.7 (default 0.6) for DeepSeek-R1. A temperature that is too low causes looping and repetitive reasoning, while a temperature above 0.8 degrades logical rigor."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why use XML tags in DeepSeek prompts?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "DeepSeek models are heavily trained on structured codebases and markup. Enclosing role, context, instructions, and constraints in explicit XML tags like <context> and <instructions> creates clear semantic attention boundaries, significantly reducing instruction drift."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            deepseek: {
+              400: '#38bdf8',
+              500: '#0284c7',
+              600: '#0369a1',
+              900: '#082f49'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    html.dark ::-webkit-scrollbar-track { background: #07090e; }
+    html.dark ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 3px; }
+    html.dark ::-webkit-scrollbar-thumb:hover { background: #334155; }
+    html.light ::-webkit-scrollbar-track { background: #f8fafc; }
+    html.light ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+    html.light ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    .glow-deepseek {
+      box-shadow: 0 0 35px -5px rgba(2, 132, 199, 0.2);
+    }
+    input, select, textarea {
+      font-size: 16px; /* Prevents auto-zoom on iOS */
+    }
+    @media (min-width: 640px) {
+      input, select, textarea {
+        font-size: 0.75rem; /* text-xs */
+      }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 dark:bg-[#07090e] text-slate-800 dark:text-slate-100 min-h-screen flex flex-col font-sans antialiased selection:bg-sky-500 selection:text-white transition-colors duration-200">
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none bg-sky-500 text-slate-950 font-bold px-4 py-2.5 rounded-lg shadow-xl shadow-sky-500/20 text-xs flex items-center space-x-2">
+    <span>✓ Copied to clipboard!</span>
+  </div>
+
+  <!-- Header -->
+  <header class="border-b border-slate-200 dark:border-slate-800/80 bg-white/80 dark:bg-[#07090e]/80 backdrop-blur sticky top-0 z-40 transition-colors duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="https://pacebowl.com" class="text-xs font-mono text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition flex items-center gap-1.5 py-1 px-2.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 shadow-sm" title="Back to PaceBowl Mothership">
+          <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
+          <span>PaceBowl</span>
+        </a>
+        <span class="text-slate-400 dark:text-slate-600 font-mono">/</span>
+        <div class="flex items-center space-x-2">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-sky-500 via-blue-600 to-indigo-700 flex items-center justify-center font-bold text-white shadow-md shadow-sky-500/20">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <div>
+            <span class="font-bold text-base text-slate-900 dark:text-white tracking-tight">DeepSeek <span class="text-sky-600 dark:text-sky-400 font-mono text-xs px-1.5 py-0.5 rounded bg-sky-100 dark:bg-sky-950/80 border border-sky-300 dark:border-sky-500/30">Studio</span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center space-x-2 sm:space-x-3">
+        <!-- Language Switcher Button -->
+        <button id="lang-toggle-btn" onclick="toggleLanguage()" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 hover:border-sky-400 text-xs text-slate-700 dark:text-slate-300 transition shadow-sm" title="Toggle English / 简体中文">
+          <svg class="w-3.5 h-3.5 text-slate-500 dark:text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/></svg>
+          <span id="lang-label" class="font-semibold font-mono text-[11px]">中文</span>
+        </button>
+
+        <!-- Theme Switcher Button -->
+        <button id="theme-toggle-btn" onclick="toggleTheme()" class="p-1.5 rounded-lg bg-slate-100 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 hover:border-sky-400 text-slate-700 dark:text-slate-300 transition shadow-sm" title="Toggle Light / Dark mode">
+          <svg id="theme-sun-icon" class="w-4 h-4 hidden text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 9h-1m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          <svg id="theme-moon-icon" class="w-4 h-4 text-slate-600 dark:text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+        </button>
+
+        <!-- PaceBowl Suite Matrix Switcher -->
+        <div class="relative group">
+          <button class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 hover:border-sky-500/40 text-xs text-slate-700 dark:text-slate-300 transition shadow-sm">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+            <span class="font-medium hidden sm:inline" data-i18n="suite_btn">PaceBowl Suite</span>
+            <span class="font-medium sm:hidden">Suite</span>
+            <svg class="w-3.5 h-3.5 text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white transition transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="hidden group-hover:block absolute right-0 mt-1 w-64 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-2xl p-2 z-50">
+            <div class="text-[10px] font-mono uppercase tracking-wider text-slate-500 px-2 py-1" data-i18n="suite_title">PaceBowl Ecosystem</div>
+            <a href="https://pacebowl.com" class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/80 text-xs text-slate-700 dark:text-slate-200 transition">
+              <span class="w-7 h-7 rounded-lg bg-gradient-to-tr from-sky-500 via-indigo-600 to-purple-600 flex items-center justify-center text-[10px] font-bold text-white shadow-sm">PB</span>
+              <div>
+                <div class="font-bold text-slate-900 dark:text-white" data-i18n="suite_hub">PaceBowl Mothership</div>
+                <div class="text-[10px] text-slate-500 dark:text-slate-400" data-i18n="suite_hub_sub">Central Hub & Runbooks</div>
+              </div>
+            </a>
+            <div class="border-t border-slate-200 dark:border-slate-800/80 my-1"></div>
+            <a href="https://deepseek.pacebowl.com" class="flex items-center gap-2.5 p-2 rounded-lg bg-sky-50 dark:bg-sky-950/60 border border-sky-300 dark:border-sky-500/40 text-xs text-sky-800 dark:text-sky-200">
+              <span class="w-7 h-7 rounded-lg bg-sky-600 flex items-center justify-center text-[10px] font-bold text-white">DS</span>
+              <div>
+                <div class="font-bold text-sky-900 dark:text-white" data-i18n="suite_deepseek">DeepSeek Studio</div>
+                <div class="text-[10px] text-sky-600 dark:text-sky-300" data-i18n="suite_deepseek_sub">Active • R1 CoT Builder</div>
+              </div>
+            </a>
+            <a href="https://cursor.pacebowl.com" class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/80 text-xs text-slate-700 dark:text-slate-200 transition mt-1">
+              <span class="w-7 h-7 rounded-lg bg-indigo-600 flex items-center justify-center text-[10px] font-bold text-white">CR</span>
+              <div>
+                <div class="font-bold text-slate-900 dark:text-white" data-i18n="suite_cursor">Cursor Rules Studio</div>
+                <div class="text-[10px] text-slate-500 dark:text-slate-400" data-i18n="suite_cursor_sub">Next.js & FastAPI .mdc</div>
+              </div>
+            </a>
+            <a href="https://comfy.pacebowl.com" class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/80 text-xs text-slate-700 dark:text-slate-200 transition mt-1">
+              <span class="w-7 h-7 rounded-lg bg-sky-600 flex items-center justify-center text-[10px] font-bold text-white">CF</span>
+              <div>
+                <div class="font-bold text-slate-900 dark:text-white" data-i18n="suite_comfy">ComfyUI Prompt Studio</div>
+                <div class="text-[10px] text-slate-500 dark:text-slate-400" data-i18n="suite_comfy_sub">Flux & Latent Calc</div>
+              </div>
+            </a>
+            <a href="https://hot.pacebowl.com" class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/80 text-xs text-slate-700 dark:text-slate-200 transition mt-1">
+              <span class="w-7 h-7 rounded-lg bg-gradient-to-tr from-rose-500 to-amber-500 flex items-center justify-center text-[10px] font-bold text-white shadow-sm">🔥</span>
+              <div>
+                <div class="font-bold text-slate-900 dark:text-white" data-i18n="suite_hot">AI Radar & Hotlist</div>
+                <div class="text-[10px] text-slate-500 dark:text-slate-400" data-i18n="suite_hot_sub">24h Automated Tech Intel</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <a href="https://buymeacoffee.com/pacebowl" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-amber-50 hover:bg-amber-100 dark:bg-amber-950/40 dark:hover:bg-amber-900/50 border border-amber-300/80 dark:border-amber-500/30 text-amber-800 dark:text-amber-300 text-xs font-medium transition shadow-sm" title="Support the project">
+          <span>☕</span>
+          <span class="hidden sm:inline" data-i18n="nav_coffee">Sponsor</span>
+        </a>
+        <a href="#faq" class="text-xs text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 transition hidden md:inline" data-i18n="nav_faq">R1 Best Practices</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="pt-8 pb-4 px-4 text-center max-w-4xl mx-auto">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100 dark:bg-sky-950/40 border border-sky-300 dark:border-sky-500/30 text-sky-700 dark:text-sky-300 text-xs mb-3">
+      <span data-i18n="hero_badge1">⚡ DeepSeek-R1 CoT & V3 Specialized</span>
+      <span class="text-slate-400 dark:text-slate-600">•</span>
+      <span data-i18n="hero_badge2">100% Free & Client-Side</span>
+    </div>
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-3" data-i18n="hero_title">
+      The Modern <span class="bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500 dark:from-sky-400 dark:via-blue-300 dark:to-indigo-400 bg-clip-text text-transparent">DeepSeek Prompt Generator</span>
+    </h1>
+    <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed" data-i18n="hero_desc">
+      Synthesize high-precision prompts tailored for DeepSeek-R1's deep reasoning engine and DeepSeek-V3's rapid code generation. Eliminate hallucinations with structured XML tags and verifiable constraints.
+    </p>
+  </section>
+
+  <!-- Main Workspace -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-6 flex-1">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+
+      <!-- Left Column: Controls (7 cols) -->
+      <div class="lg:col-span-7 space-y-6">
+
+        <!-- Step 1: Model Mode Toggle -->
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 shadow-lg">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="font-bold text-xs uppercase tracking-wider text-slate-700 dark:text-slate-200 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-sky-500"></span>
+              <span data-i18n="sec1_title">1. Target Model Architecture</span>
+            </h3>
+            <span class="text-[10px] font-mono text-slate-500" data-i18n="sec1_sub">Select engine capability</span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <label class="relative flex flex-col p-4 rounded-xl border border-sky-400/50 dark:border-sky-500/50 bg-sky-50/60 dark:bg-sky-950/20 cursor-pointer transition" id="mode-r1-card">
+              <input type="radio" name="model-mode" value="r1" checked onchange="updateModelMode('r1')" class="sr-only">
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="font-bold text-xs text-sky-900 dark:text-sky-200">DeepSeek-R1</span>
+                <span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-sky-500 text-slate-950">Reasoning CoT</span>
+              </div>
+              <p class="text-[11px] text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="r1_desc">
+                Triggers recursive internal &lt;think&gt; reasoning, edge-case probing, and self-verification.
+              </p>
+            </label>
+
+            <label class="relative flex flex-col p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-950/40 cursor-pointer transition opacity-70 hover:opacity-100" id="mode-v3-card">
+              <input type="radio" name="model-mode" value="v3" onchange="updateModelMode('v3')" class="sr-only">
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="font-bold text-xs text-slate-800 dark:text-slate-200">DeepSeek-V3</span>
+                <span class="px-1.5 py-0.5 rounded text-[10px] font-semibold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Fast Execution</span>
+              </div>
+              <p class="text-[11px] text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="v3_desc">
+                High-throughput, direct instruction-following without thinking token overhead.
+              </p>
+            </label>
+          </div>
+        </div>
+
+        <!-- Step 2: Task Preset & Role -->
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 shadow-lg space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-bold text-xs uppercase tracking-wider text-slate-700 dark:text-slate-200 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-indigo-500"></span>
+              <span data-i18n="sec2_title">2. Task Domain & Role Persona</span>
+            </h3>
+            <button onclick="randomizePreset()" class="text-xs text-sky-600 dark:text-sky-400 hover:underline flex items-center gap-1 font-medium">
+              <span>🎲</span>
+              <span data-i18n="btn_random">Random Example</span>
+            </button>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-xs" id="task-preset-buttons">
+            <button onclick="setTaskPreset('code')" id="preset-code" class="p-2.5 rounded-xl border border-sky-500/50 bg-sky-50 dark:bg-sky-950/40 text-sky-700 dark:text-sky-300 font-semibold transition text-center">💻 Code Refactor</button>
+            <button onclick="setTaskPreset('math')" id="preset-math" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-400 text-slate-700 dark:text-slate-300 transition text-center">🧠 Logic & Proof</button>
+            <button onclick="setTaskPreset('research')" id="preset-research" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-400 text-slate-700 dark:text-slate-300 transition text-center">🔬 Deep Research</button>
+            <button onclick="setTaskPreset('system')" id="preset-system" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-400 text-slate-700 dark:text-slate-300 transition text-center">🎭 System Prompt</button>
+            <button onclick="setTaskPreset('json')" id="preset-json" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-400 text-slate-700 dark:text-slate-300 transition text-center">📄 Structured Data</button>
+          </div>
+
+          <!-- Role Persona Input -->
+          <div>
+            <label class="block text-[11px] font-semibold text-slate-600 dark:text-slate-400 mb-1" data-i18n="lbl_role">Expert Persona / System Authority</label>
+            <input type="text" id="role-input" oninput="generatePrompt()" value="Senior Staff Software Engineer specializing in high-concurrency distributed systems" class="w-full bg-slate-50 dark:bg-[#07090e] border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-xs font-mono text-slate-800 dark:text-slate-200 focus:outline-none focus:border-sky-500">
+          </div>
+        </div>
+
+        <!-- Step 3: Core Objective & User Content -->
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 shadow-lg space-y-4">
+          <h3 class="font-bold text-xs uppercase tracking-wider text-slate-700 dark:text-slate-200 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-teal-500"></span>
+            <span data-i18n="sec3_title">3. Raw Goal & Context Payload</span>
+          </h3>
+
+          <div>
+            <label class="block text-[11px] font-semibold text-slate-600 dark:text-slate-400 mb-1" data-i18n="lbl_task">What do you want DeepSeek to accomplish?</label>
+            <textarea id="task-input" rows="3" oninput="generatePrompt()" class="w-full bg-slate-50 dark:bg-[#07090e] border border-slate-200 dark:border-slate-800 rounded-xl p-3 text-xs font-mono text-slate-800 dark:text-slate-200 focus:outline-none focus:border-sky-500" placeholder="e.g. Refactor this slow PostgreSQL query into an indexed CTE with zero sub-query overhead..."></textarea>
+          </div>
+
+          <div>
+            <label class="block text-[11px] font-semibold text-slate-600 dark:text-slate-400 mb-1" data-i18n="lbl_context">Background Code / Data / Reference Context (Optional)</label>
+            <textarea id="context-input" rows="3" oninput="generatePrompt()" class="w-full bg-slate-50 dark:bg-[#07090e] border border-slate-200 dark:border-slate-800 rounded-xl p-3 text-xs font-mono text-slate-800 dark:text-slate-200 focus:outline-none focus:border-sky-500" placeholder="Paste relevant code snippets, JSON schemas, or error stack traces..."></textarea>
+          </div>
+        </div>
+
+        <!-- Step 4: Strict Guardrails & Negative Constraints -->
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 shadow-lg space-y-4">
+          <h3 class="font-bold text-xs uppercase tracking-wider text-slate-700 dark:text-slate-200 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-rose-500"></span>
+            <span data-i18n="sec4_title">4. Negative Constraints & Reasoning Directives</span>
+          </h3>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs">
+            <label class="flex items-center gap-2 p-2 rounded-lg bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 cursor-pointer">
+              <input type="checkbox" id="guard-no-filler" checked onchange="generatePrompt()" class="w-4 h-4 rounded text-sky-600 accent-sky-500">
+              <span class="font-medium" data-i18n="guard_no_filler">No polite filler (Start directly with code/answer)</span>
+            </label>
+            <label class="flex items-center gap-2 p-2 rounded-lg bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 cursor-pointer">
+              <input type="checkbox" id="guard-self-verify" checked onchange="generatePrompt()" class="w-4 h-4 rounded text-sky-600 accent-sky-500">
+              <span class="font-medium" data-i18n="guard_self_verify">Explicit verification of edge cases & proofs</span>
+            </label>
+            <label class="flex items-center gap-2 p-2 rounded-lg bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 cursor-pointer">
+              <input type="checkbox" id="guard-no-assumptions" checked onchange="generatePrompt()" class="w-4 h-4 rounded text-sky-600 accent-sky-500">
+              <span class="font-medium" data-i18n="guard_no_assumptions">Never invent APIs; state unknown boundaries</span>
+            </label>
+            <label class="flex items-center gap-2 p-2 rounded-lg bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 cursor-pointer">
+              <input type="checkbox" id="guard-xml-tags" checked onchange="generatePrompt()" class="w-4 h-4 rounded text-sky-600 accent-sky-500">
+              <span class="font-medium" data-i18n="guard_xml_tags">Structure response inside explicit XML tags</span>
+            </label>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+            <div>
+              <label class="block text-[11px] font-semibold text-slate-600 dark:text-slate-400 mb-1" data-i18n="lbl_format">Target Output Format</label>
+              <select id="output-format-select" onchange="generatePrompt()" class="w-full bg-slate-50 dark:bg-[#07090e] border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-xs font-mono text-slate-800 dark:text-slate-200 focus:outline-none focus:border-sky-500">
+                <option value="markdown">Production Markdown with Headers</option>
+                <option value="json">Valid Pure JSON Object (RFC 8259)</option>
+                <option value="xml">XML Tagged (&lt;analysis&gt; &amp; &lt;output&gt;)</option>
+                <option value="code_only">Pure Code Only (No explanations)</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-[11px] font-semibold text-slate-600 dark:text-slate-400 mb-1" data-i18n="lbl_cot">Reasoning Intensity (R1 Only)</label>
+              <select id="cot-depth-select" onchange="generatePrompt()" class="w-full bg-slate-50 dark:bg-[#07090e] border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-xs font-mono text-slate-800 dark:text-slate-200 focus:outline-none focus:border-sky-500">
+                <option value="deep">Deep Chain-of-Thought (Multi-pass verification)</option>
+                <option value="balanced">Balanced CoT (Key assumptions &amp; logic)</option>
+                <option value="concise">Concise Reasoning (Direct path proof)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Output & Action Panel (5 cols) -->
+      <div class="lg:col-span-5 space-y-4 lg:sticky lg:top-20">
+
+        <!-- Live Output Box -->
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 shadow-xl glow-deepseek">
+          <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-200 dark:border-slate-800">
+            <div class="flex items-center space-x-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-sky-400 animate-pulse"></span>
+              <span class="font-bold text-xs uppercase tracking-wider text-slate-700 dark:text-slate-200" data-i18n="output_title">Synthesized DeepSeek Prompt</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <span id="prompt-stats" class="text-[11px] font-mono text-slate-500">~0 words</span>
+            </div>
+          </div>
+
+          <textarea id="prompt-output" rows="14" class="w-full bg-slate-50 dark:bg-[#07090e] border border-slate-200 dark:border-slate-800 rounded-xl p-4 text-xs font-mono text-slate-800 dark:text-slate-200 leading-relaxed focus:outline-none focus:border-sky-500 select-all"></textarea>
+
+          <!-- Action Buttons -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-4">
+            <button onclick="copyGeneratedPrompt()" id="copy-btn" class="w-full py-2.5 px-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-xs shadow-md shadow-sky-500/20 transition flex items-center justify-center gap-1.5">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+              <span data-i18n="btn_copy">Copy Prompt</span>
+            </button>
+            <a href="https://chat.deepseek.com/" target="_blank" rel="noopener noreferrer" onclick="trackLaunchChat()" class="w-full py-2.5 px-3 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-semibold text-xs border border-slate-200 dark:border-slate-700 transition flex items-center justify-center gap-1.5">
+              <span>🚀 Launch DeepSeek</span>
+              <span>↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Token Arbitrage & Cost Savings Calculator Card -->
+        <div class="p-5 rounded-2xl bg-gradient-to-r from-emerald-500/10 via-sky-500/10 to-indigo-500/10 border border-emerald-500/30 dark:border-emerald-500/30 shadow-md">
+          <div class="flex items-center justify-between mb-2">
+            <span class="font-bold text-xs text-slate-900 dark:text-white flex items-center gap-1.5">
+              <span>💰</span>
+              <span data-i18n="calc_title">DeepSeek API Arbitrage Savings</span>
+            </span>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-bold border border-emerald-500/30">95%+ Cheaper</span>
+          </div>
+          <p class="text-[11px] text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="calc_desc">
+            Running 1M tokens on DeepSeek-V3 ($0.14) vs OpenAI o1 ($15.00) saves ~$14.86 per million tokens with equivalent reasoning performance.
+          </p>
+          <div class="mt-3 pt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs font-mono">
+            <span class="text-slate-500">DeepSeek-R1 API:</span>
+            <span class="text-emerald-600 dark:text-emerald-400 font-bold">$0.55 / 1M Cache Miss</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Educational & AEO Section -->
+  <section id="faq" class="max-w-5xl mx-auto px-4 py-16 border-t border-slate-200 dark:border-slate-800/80 mt-16 transition-colors duration-200">
+    <div class="text-center mb-12">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-sky-600 dark:text-sky-400 text-xs mb-3 font-mono">
+        <span data-i18n="faq_tag">DEEPSEEK ENGINEERING SPEC</span>
+      </div>
+      <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-2" data-i18n="faq_title">DeepSeek-R1 & V3 Prompt Engineering Standards</h2>
+      <p class="text-slate-600 dark:text-slate-400 text-sm" data-i18n="faq_subtitle">Architectural principles to extract maximum reasoning power from DeepSeek models.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+      <div class="bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800/80 rounded-xl p-5 shadow-sm transition-colors duration-200">
+        <h3 class="font-semibold text-slate-900 dark:text-slate-200 mb-2" data-i18n="faq1_q">Why does DeepSeek-R1 outperform with Zero-Shot?</h3>
+        <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-xs" data-i18n="faq1_a">
+          Unlike older LLMs that required elaborate few-shot examples, DeepSeek-R1 was trained with large-scale reinforcement learning (RL) on long Chain-of-Thought (CoT) exploration. Providing strict few-shot examples actually biases and prematurely narrows its search tree. Give R1 the destination and constraints, and let its internal thinking loop find the proof.
+        </p>
+      </div>
+
+      <div class="bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800/80 rounded-xl p-5 shadow-sm transition-colors duration-200">
+        <h3 class="font-semibold text-slate-900 dark:text-slate-200 mb-2" data-i18n="faq2_q">What is the optimal Temperature for DeepSeek-R1?</h3>
+        <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-xs" data-i18n="faq2_a">
+          The official DeepSeek team recommends setting the temperature between <strong>0.5 and 0.7</strong> (0.6 recommended). Setting temperature to 0.0 or 0.1 may cause recursive looping in the &lt;think&gt; phase, while anything above 0.8 causes mathematical hallucinations.
+        </p>
+      </div>
+
+      <div class="bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800/80 rounded-xl p-5 shadow-sm transition-colors duration-200">
+        <h3 class="font-semibold text-slate-900 dark:text-slate-200 mb-2" data-i18n="faq3_q">Why are XML Tags essential in DeepSeek Prompts?</h3>
+        <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-xs" data-i18n="faq3_a">
+          DeepSeek's tokenizer and attention layers parse structured markdown and XML with high fidelity. Wrapping instructions inside &lt;instructions&gt;, data in &lt;context&gt;, and boundaries in &lt;constraints&gt; completely isolates directives from messy user data, eliminating prompt injection risks.
+        </p>
+      </div>
+
+      <div class="bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800/80 rounded-xl p-5 shadow-sm transition-colors duration-200">
+        <h3 class="font-semibold text-slate-900 dark:text-slate-200 mb-2" data-i18n="faq4_q">When should I choose V3 over R1?</h3>
+        <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-xs" data-i18n="faq4_a">
+          Use <strong>DeepSeek-V3</strong> for routine programming boilerplate, HTML/CSS generation, copyediting, and latency-sensitive API pipelines. Reserve <strong>DeepSeek-R1</strong> for complex logic, competitive math, AST-level refactors, and multi-step algorithm proofs.
+        </p>
+      </div>
+    </div>
+
+    <!-- RelNav: PaceBowl Ecosystem Matrix Grid -->
+    <div class="mt-12 pt-8 border-t border-slate-200 dark:border-slate-800/80">
+      <div class="flex items-center justify-between mb-5">
+        <div>
+          <h3 class="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-sky-500"></span>
+            <span data-i18n="relnav_title">Explore PaceBowl Suite Matrix</span>
+          </h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5" data-i18n="relnav_sub">Zero-friction client-side power tools crafted for the modern AI workflow.</p>
+        </div>
+        <a href="https://pacebowl.com" class="text-xs text-sky-600 dark:text-sky-400 hover:underline font-medium hidden sm:inline" data-i18n="relnav_hub">Mothership Hub →</a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+        <!-- Card 1: Cursor Rules -->
+        <a href="https://cursor.pacebowl.com" class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 hover:border-indigo-500/60 transition group flex flex-col justify-between shadow-xs">
+          <div class="flex items-center gap-3 mb-2.5">
+            <div class="w-9 h-9 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-bold text-xs shadow-sm">CR</div>
+            <div>
+              <h4 class="text-sm font-bold text-slate-900 dark:text-white group-hover:text-indigo-400 transition" data-i18n="rel_cr_title">Cursor Rules Studio</h4>
+              <span class="text-[10px] font-mono text-slate-500">cursor.pacebowl.com</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="rel_cr_desc">Modular .cursor/rules/*.mdc generator with Next.js 15 and FastAPI.</p>
+        </a>
+
+        <!-- Card 2: ComfyUI Studio -->
+        <a href="https://comfy.pacebowl.com" class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 hover:border-sky-500/60 transition group flex flex-col justify-between shadow-xs">
+          <div class="flex items-center gap-3 mb-2.5">
+            <div class="w-9 h-9 rounded-lg bg-sky-600 flex items-center justify-center text-white font-bold text-xs shadow-sm">CF</div>
+            <div>
+              <h4 class="text-sm font-bold text-slate-900 dark:text-white group-hover:text-sky-400 transition" data-i18n="rel_cf_title">ComfyUI Studio</h4>
+              <span class="text-[10px] font-mono text-slate-500">comfy.pacebowl.com</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="rel_cf_desc">Flux.1 prompt studio and 1MP empty latent resolution calculator.</p>
+        </a>
+
+        <!-- Card 3: AI Radar & Hotlist -->
+        <a href="https://hot.pacebowl.com" class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 hover:border-rose-500/60 transition group flex flex-col justify-between shadow-xs">
+          <div class="flex items-center gap-3 mb-2.5">
+            <div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-rose-500 to-amber-500 flex items-center justify-center text-white text-base shadow-sm">🔥</div>
+            <div>
+              <h4 class="text-sm font-bold text-slate-900 dark:text-white group-hover:text-rose-400 transition" data-i18n="rel_hot_title">AI Radar & Hotlist</h4>
+              <span class="text-[10px] font-mono text-slate-500">hot.pacebowl.com</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="rel_hot_desc">24/7 automated tech radar tracking frontier papers and LLM digests.</p>
+        </a>
+
+        <!-- Card 4: OpenGEO Studio -->
+        <a href="https://geo.pacebowl.com" class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 hover:border-emerald-500/60 transition group flex flex-col justify-between shadow-xs">
+          <div class="flex items-center gap-3 mb-2.5">
+            <div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-emerald-500 to-teal-600 flex items-center justify-center text-white font-bold text-xs shadow-sm">GEO</div>
+            <div>
+              <h4 class="text-sm font-bold text-slate-900 dark:text-white group-hover:text-emerald-400 transition" data-i18n="rel_geo_title">OpenGEO Attribution</h4>
+              <span class="text-[10px] font-mono text-slate-500">geo.pacebowl.com</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="rel_geo_desc">Track AI search referrals and conversions from ChatGPT and Perplexity.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 dark:border-slate-800/80 bg-white dark:bg-[#07090e] py-8 text-center text-xs text-slate-500 transition-colors duration-200">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        <span data-i18n="footer_brand">PaceBowl &copy; 2026. Part of the <a href="https://pacebowl.com" class="text-sky-600 dark:text-sky-400 hover:underline">PaceBowl Suite Matrix</a>.</span>
+      </div>
+      <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-slate-600 dark:text-slate-400">
+        <a href="https://hot.pacebowl.com" class="hover:text-rose-500 dark:hover:text-rose-400 text-rose-600 dark:text-rose-300/80 transition font-medium">🔥 AI Radar</a>
+        <a href="https://cursor.pacebowl.com" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 transition font-medium">⚡ Cursor Rules</a>
+        <a href="https://comfy.pacebowl.com" class="text-sky-600 dark:text-sky-400 hover:text-sky-500 transition font-medium">🎨 ComfyUI Studio</a>
+        <a href="#faq" class="hover:text-slate-900 dark:hover:text-slate-200 transition" data-i18n="footer_faq">R1 FAQ</a>
+        <a href="https://buymeacoffee.com/pacebowl" target="_blank" rel="noopener noreferrer" class="text-amber-600 dark:text-amber-400 hover:underline flex items-center gap-1 font-medium">☕ <span data-i18n="footer_coffee">Buy me a coffee</span></a>
+        <a href="https://chat.deepseek.com" target="_blank" rel="noopener" class="hover:text-slate-900 dark:hover:text-slate-200 transition">DeepSeek Official</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script>
+    const I18N = {
+      en: {
+        suite_btn: 'PaceBowl Suite',
+        suite_title: 'PaceBowl Ecosystem',
+        suite_hub: 'PaceBowl Mothership',
+        suite_hub_sub: 'Central Hub & Runbooks',
+        suite_deepseek: 'DeepSeek Studio',
+        suite_deepseek_sub: 'Active • R1 CoT Builder',
+        suite_cursor: 'Cursor Rules Studio',
+        suite_cursor_sub: 'Next.js & FastAPI .mdc',
+        suite_comfy: 'ComfyUI Prompt Studio',
+        suite_comfy_sub: 'Flux & Latent Calc',
+        suite_hot: 'AI Radar & Hotlist',
+        suite_hot_sub: '24h Automated Tech Intel',
+        nav_coffee: 'Sponsor',
+        nav_faq: 'R1 Best Practices',
+        footer_coffee: 'Buy me a coffee',
+        footer_faq: 'R1 FAQ',
+        hero_badge1: '⚡ DeepSeek-R1 CoT & V3 Specialized',
+        hero_badge2: '100% Free & Client-Side',
+        hero_title: 'The Modern <span class="bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500 dark:from-sky-400 dark:via-blue-300 dark:to-indigo-400 bg-clip-text text-transparent">DeepSeek Prompt Generator</span>',
+        hero_desc: 'Synthesize high-precision prompts tailored for DeepSeek-R1\'s deep reasoning engine and DeepSeek-V3\'s rapid code generation. Eliminate hallucinations with structured XML tags and verifiable constraints.',
+        sec1_title: '1. Target Model Architecture',
+        sec1_sub: 'Select engine capability',
+        r1_desc: 'Triggers recursive internal <think> reasoning, edge-case probing, and self-verification.',
+        v3_desc: 'High-throughput, direct instruction-following without thinking token overhead.',
+        sec2_title: '2. Task Domain & Role Persona',
+        btn_random: 'Random Example',
+        lbl_role: 'Expert Persona / System Authority',
+        sec3_title: '3. Raw Goal & Context Payload',
+        lbl_task: 'What do you want DeepSeek to accomplish?',
+        lbl_context: 'Background Code / Data / Reference Context (Optional)',
+        sec4_title: '4. Negative Constraints & Reasoning Directives',
+        guard_no_filler: 'No polite filler (Start directly with code/answer)',
+        guard_self_verify: 'Explicit verification of edge cases & proofs',
+        guard_no_assumptions: 'Never invent APIs; state unknown boundaries',
+        guard_xml_tags: 'Structure response inside explicit XML tags',
+        lbl_format: 'Target Output Format',
+        lbl_cot: 'Reasoning Intensity (R1 Only)',
+        output_title: 'Synthesized DeepSeek Prompt',
+        btn_copy: 'Copy Prompt',
+        calc_title: 'DeepSeek API Arbitrage Savings',
+        calc_desc: 'Running 1M tokens on DeepSeek-V3 ($0.14) vs OpenAI o1 ($15.00) saves ~$14.86 per million tokens with equivalent reasoning performance.',
+        faq_tag: 'DEEPSEEK ENGINEERING SPEC',
+        faq_title: 'DeepSeek-R1 & V3 Prompt Engineering Standards',
+        faq_subtitle: 'Architectural principles to extract maximum reasoning power from DeepSeek models.',
+        faq1_q: 'Why does DeepSeek-R1 outperform with Zero-Shot?',
+        faq1_a: 'Unlike older LLMs that required elaborate few-shot examples, DeepSeek-R1 was trained with large-scale reinforcement learning (RL) on long Chain-of-Thought (CoT) exploration. Providing strict few-shot examples actually biases and prematurely narrows its search tree. Give R1 the destination and constraints, and let its internal thinking loop find the proof.',
+        faq2_q: 'What is the optimal Temperature for DeepSeek-R1?',
+        faq2_a: 'The official DeepSeek team recommends setting the temperature between 0.5 and 0.7 (0.6 recommended). Setting temperature to 0.0 or 0.1 may cause recursive looping in the <think> phase, while anything above 0.8 causes mathematical hallucinations.',
+        faq3_q: 'Why are XML Tags essential in DeepSeek Prompts?',
+        faq3_a: 'DeepSeek\'s tokenizer and attention layers parse structured markdown and XML with high fidelity. Wrapping instructions inside <instructions>, data in <context>, and boundaries in <constraints> completely isolates directives from messy user data, eliminating prompt injection risks.',
+        faq4_q: 'When should I choose V3 over R1?',
+        faq4_a: 'Use DeepSeek-V3 for routine programming boilerplate, HTML/CSS generation, copyediting, and latency-sensitive API pipelines. Reserve DeepSeek-R1 for complex logic, competitive math, AST-level refactors, and multi-step algorithm proofs.',
+        relnav_title: 'Explore PaceBowl Suite Matrix',
+        relnav_sub: 'Zero-friction client-side power tools crafted for the modern AI workflow.',
+        relnav_hub: 'Mothership Hub →',
+        rel_cr_title: 'Cursor Rules Studio',
+        rel_cr_desc: 'Modular .cursor/rules/*.mdc generator with Next.js 15 and FastAPI.',
+        rel_cf_title: 'ComfyUI Studio',
+        rel_cf_desc: 'Flux.1 prompt studio and 1MP empty latent resolution calculator.',
+        rel_hot_title: 'AI Radar & Hotlist',
+        rel_hot_desc: '24/7 automated tech radar tracking frontier papers and LLM digests.',
+        rel_geo_title: 'OpenGEO Attribution',
+        rel_geo_desc: 'Track AI search referrals and conversions from ChatGPT and Perplexity.',
+        footer_brand: 'PaceBowl &copy; 2026. Part of the <a href="https://pacebowl.com" class="text-sky-600 dark:text-sky-400 hover:underline">PaceBowl Suite Matrix</a>.'
+      },
+      zh: {
+        suite_btn: 'PaceBowl 套件',
+        suite_title: 'PaceBowl 生态矩阵',
+        suite_hub: 'PaceBowl 母舰枢纽',
+        suite_hub_sub: '中心枢纽与实战指南',
+        suite_deepseek: 'DeepSeek 提示词工坊',
+        suite_deepseek_sub: '活跃中 • R1 思维链生成',
+        suite_cursor: 'Cursor 规则工坊',
+        suite_cursor_sub: 'Next.js & FastAPI .mdc',
+        suite_comfy: 'ComfyUI 提示词工坊',
+        suite_comfy_sub: 'Flux & 潜空间计算器',
+        suite_hot: '科技热榜 · AI Radar',
+        suite_hot_sub: '24h 自动化 AI 情报雷达',
+        nav_coffee: '赞助项目',
+        nav_faq: 'R1 最佳实践',
+        footer_coffee: '请作者喝杯咖啡',
+        footer_faq: '常见问题',
+        hero_badge1: '⚡ DeepSeek-R1 思维链 & V3 深度特化',
+        hero_badge2: '100% 免费纯客户端运行',
+        hero_title: '现代 <span class="bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500 dark:from-sky-400 dark:via-blue-300 dark:to-indigo-400 bg-clip-text text-transparent">DeepSeek 提示词生成器 (Prompt Generator)</span>',
+        hero_desc: '为 DeepSeek-R1 深度推理思维链与 DeepSeek-V3 高速代码生成量身定制。依托 XML 语义标签与硬性边界约束，彻底杜绝模型幻觉与无用寒暄。',
+        sec1_title: '1. 目标模型底模架构',
+        sec1_sub: '切换推理引擎',
+        r1_desc: '触发内置 <think> 递归推理、反向边界验证与多轮自查闭环。',
+        v3_desc: '高吞吐量、敏捷遵从指令，无额外思考 Token 耗时与开销。',
+        sec2_title: '2. 任务场景与专家角色',
+        btn_random: '随机填入预设',
+        lbl_role: '设定专家身份 / 系统权限人设',
+        sec3_title: '3. 核心诉求与上下文数据',
+        lbl_task: '你希望 DeepSeek 为你解决什么具体问题？',
+        lbl_context: '相关代码片段 / 数据结构 / 报错上下文 (选填)',
+        sec4_title: '4. 负向约束与思维指令',
+        guard_no_filler: '禁止礼貌废话（直接输出最终代码或答案）',
+        guard_self_verify: '强制自我验证边缘用例与逻辑漏洞',
+        guard_no_assumptions: '严禁臆造不存在的 API；遇未说明状态保持客观',
+        guard_xml_tags: '在结构化 XML 标签中封装最终结果',
+        lbl_format: '最终产出格式规范',
+        lbl_cot: '思维链深度 (R1 特化)',
+        output_title: '已合成的结构化 DeepSeek 提示词',
+        btn_copy: '复制提示词',
+        calc_title: 'DeepSeek 算力套利成本评估',
+        calc_desc: '在 DeepSeek-V3 运行 100 万 Token 仅需约 $0.14，对比 OpenAI o1 ($15.00) 节省超 95% 以上 API 成本，性能平替。',
+        faq_tag: 'DEEPSEEK 工业级规范',
+        faq_title: 'DeepSeek-R1 与 V3 提示工程最佳实践',
+        faq_subtitle: '充分释放 DeepSeek 大模型终极推理潜力的核心技术准则。',
+        faq1_q: '为什么 DeepSeek-R1 更推荐 Zero-Shot（零样本）提示？',
+        faq1_a: 'DeepSeek 官方技术团队证实：R1 经过大规模强化学习 (RL) 训练，具备内生性的超长思维链 (CoT) 探索机制。在提示词中生硬塞入 Few-Shot 样本反而会干扰并束缚其自主推理搜索树。直接明确目标边界与断言，让 R1 自主寻找证明路径。',
+        faq2_q: 'DeepSeek-R1 最佳的 Temperature（采样温度）是多少？',
+        faq2_a: '官方推荐将 Temperature 保持在 0.5 到 0.7 之间（推荐 0.6）。调为 0 会导致模型在 <think> 阶段陷入无限循环自证，高于 0.8 则会引发数学与逻辑幻觉。',
+        faq3_q: '为什么在提示词中使用 XML 标签至关重要？',
+        faq3_a: 'DeepSeek 的 Tokenizer 与注意力机制对 XML 标签极其敏感。用 <instructions> 包裹要求、用 <context> 包裹外部代码、用 <constraints> 划定边界，能构建坚不可摧的语义防火墙，彻底阻断提示词逃逸与混淆。',
+        faq4_q: '我该在什么时候选用 V3 而不是 R1？',
+        faq4_a: '写普通样板代码、HTML/CSS 布局、常规文案润色用 DeepSeek-V3（极速低价）；遇到高难度算法、跨文件重构、竞赛级数学证明与复杂系统架构设计，选用 DeepSeek-R1。',
+        relnav_title: '探索 PaceBowl 生产力工具矩阵',
+        relnav_sub: '专为现代 AI 创作者与全栈工程师打造的零摩擦纯客户端工具箱。',
+        relnav_hub: '母舰大厅 →',
+        rel_cr_title: 'Cursor 规则工坊',
+        rel_cr_desc: 'Next.js 15、FastAPI 模块化 .mdc 规则生成器。',
+        rel_cf_title: 'ComfyUI 提示词工坊',
+        rel_cf_desc: 'Flux.1 自然语言提示词与 1MP 潜空间计算器。',
+        rel_hot_title: '科技热榜 · AI Radar',
+        rel_hot_desc: '24h 全天候自主追踪全球大模型突破与开源论文速报。',
+        rel_geo_title: 'OpenGEO 商业归因',
+        rel_geo_desc: '监控 Perplexity、ChatGPT 带来的搜索引流与转化。',
+        footer_brand: 'PaceBowl &copy; 2026. 隶属于 <a href="https://pacebowl.com" class="text-sky-600 dark:text-sky-400 hover:underline">PaceBowl Suite 生态矩阵</a>。'
+      }
+    };
+
+    // Preset Data
+    const PRESETS = {
+      code: {
+        role_en: 'Principal Software Architect & Performance Engineer specializing in TypeScript, Next.js, and low-latency databases',
+        role_zh: '资深全栈软件架构师与性能优化专家，精通 TypeScript、Next.js 15 与高并发数据库系统',
+        task_en: 'Refactor this database query handler to eliminate N+1 bottlenecks, apply strict Zod input validation, and return an atomic transaction result.',
+        task_zh: '重构这段数据库查询处理逻辑，彻底消除 N+1 瓶颈，加入严格的 Zod 入参类型校验，并使用事务保证原子性。',
+        context_en: '// Existing handler snippet\nexport async function updateUserProfile(userId: string, data: any) {\n  const user = await db.user.findUnique({ where: { id: userId } });\n  // ... multiple sequential await queries\n}',
+        context_zh: '// 现存问题代码\nexport async function updateUserProfile(userId: string, data: any) {\n  const user = await db.user.findUnique({ where: { id: userId } });\n  // ... 多处串行 await 耗时查询\n}'
+      },
+      math: {
+        role_en: 'Distinguished Professor of Discrete Mathematics & Theoretical Computer Science',
+        role_zh: '离散数学与理论计算机科学讲席教授，精通形式化证明与复杂度分析',
+        task_en: 'Prove whether there exists an O(N log N) algorithm for this dynamic interval partitioning problem, and provide a formal inductive proof.',
+        task_zh: '严格证明该动态区间覆盖划分问题是否存在 O(N log N) 解法，并给出形式化的数学归纳法证明。',
+        context_en: 'Given N weighted intervals on a 1D line that can dynamically insert and delete points...',
+        context_zh: '给定一维线段上的 N 个带权区间，支持动态插入与删除点坐标...'
+      },
+      research: {
+        role_en: 'Senior Research Fellow in AI Systems & Empirical Machine Learning',
+        role_zh: '人工智能系统与经验主义机器学习资深研究员',
+        task_en: 'Synthesize the architectural trade-offs between Mixture-of-Experts (MoE) routing vs Dense Transformer models for edge deployment.',
+        task_zh: '深度评估在边缘设备部署场景下，混合专家模型 (MoE) 动态门控路由对比稠密 Transformer 模型的显存与推理延迟权衡。',
+        context_en: 'Focus on 14B-32B parameter regime, quantized 4-bit weights, and memory bandwidth constraints.',
+        context_zh: '重点分析 14B~32B 参数区间、4-bit 权重位宽以及内存带宽瓶颈。'
+      },
+      system: {
+        role_en: 'Enterprise Security Compliance Officer & Prompt Defense Architect',
+        role_zh: '企业级安全合规总监兼提示词攻防架构师',
+        task_en: 'Draft a production-grade system prompt for a financial advisory bot that prevents jailbreaks, enforces tenant isolation, and cites specific source IDs.',
+        task_zh: '编写一套生产级金融投资顾问系统提示词，具备防越狱机制、租户数据隔离，且回答必须附带严格的事实溯源引用 ID。',
+        context_en: 'Must conform to FINRA compliance and reject hypothetical speculation.',
+        context_zh: '必须严格符合合规要求，拒绝任何无依据的主观猜测与金融预测。'
+      },
+      json: {
+        role_en: 'Senior Data Engineer specializing in Automated Document Extraction & JSON Schema Compliance',
+        role_zh: '高级数据处理工程师，精通非结构化文档提取与严格 JSON Schema 转换',
+        task_en: 'Extract all invoice line items, tax IDs, payment terms, and vendor metadata into a single RFC 8259 compliant JSON object.',
+        task_zh: '从非结构化文本中精准抽取发票行项目、税号、付款账期与供应商元数据，输出符合 RFC 8259 规范的合法 JSON。',
+        context_en: 'Vendor: Acme Corp | Invoice #9482 | Date: 2026-10-01 | Total: $4,250.00 (Tax 8% included: $314.81)...',
+        context_zh: '开票单位: 科技有限公司 | 发票号 #9482 | 开票日期: 2026-10-01 | 总额: ￥42,500.00...'
+      }
+    };
+
+    let currentModelMode = 'r1';
+    let currentTaskPreset = 'code';
+
+    // Shared State Protocol
+    function getSharedCookie(name) {
+      var m = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
+      return m ? decodeURIComponent(m[1]) : null;
+    }
+
+    function setSharedState(key, val) {
+      try { localStorage.setItem(key, val); } catch(e) {}
+      try {
+        var hostname = window.location.hostname;
+        var domain = (hostname.endsWith('pacebowl.com') || hostname === 'pacebowl.com') ? '; domain=.pacebowl.com' : '';
+        document.cookie = key + '=' + encodeURIComponent(val) + domain + '; path=/; max-age=31536000; SameSite=Lax';
+      } catch(e) {}
+    }
+
+    function getSharedTheme() {
+      var t = getSharedCookie('pacebowl-theme') || localStorage.getItem('pacebowl-theme');
+      if (t === 'light' || t === 'dark') return t;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    function getSharedLang() {
+      var l = getSharedCookie('pacebowl-lang') || localStorage.getItem('pacebowl-lang');
+      if (l === 'zh' || l === 'en') return l;
+      return (navigator.language && navigator.language.startsWith('zh')) ? 'zh' : 'en';
+    }
+
+    let currentLang = getSharedLang();
+
+    function updateThemeUI(isDark) {
+      const sun = document.getElementById('theme-sun-icon');
+      const moon = document.getElementById('theme-moon-icon');
+      if (!sun || !moon) return;
+      if (isDark) {
+        sun.classList.remove('hidden');
+        moon.classList.add('hidden');
+      } else {
+        sun.classList.add('hidden');
+        moon.classList.remove('hidden');
+      }
+    }
+
+    function applyTheme(isDark, persist) {
+      if (isDark) {
+        document.documentElement.classList.remove('light');
+        document.documentElement.classList.add('dark');
+        if (persist) setSharedState('pacebowl-theme', 'dark');
+        updateThemeUI(true);
+      } else {
+        document.documentElement.classList.remove('dark');
+        document.documentElement.classList.add('light');
+        if (persist) setSharedState('pacebowl-theme', 'light');
+        updateThemeUI(false);
+      }
+    }
+
+    function toggleTheme() {
+      const isDark = document.documentElement.classList.contains('dark');
+      applyTheme(!isDark, true);
+    }
+
+    function updateLanguageUI() {
+      const label = document.getElementById('lang-label');
+      if (label) {
+        label.textContent = currentLang === 'zh' ? 'EN' : '中文';
+      }
+      document.documentElement.lang = currentLang === 'zh' ? 'zh-CN' : 'en';
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (I18N[currentLang] && I18N[currentLang][key] !== undefined) {
+          el.innerHTML = I18N[currentLang][key];
+        }
+      });
+      generatePrompt();
+    }
+
+    function applyLanguage(lang, persist) {
+      currentLang = lang;
+      if (persist) setSharedState('pacebowl-lang', lang);
+      updateLanguageUI();
+    }
+
+    function toggleLanguage() {
+      const nextLang = currentLang === 'zh' ? 'en' : 'zh';
+      applyLanguage(nextLang, true);
+    }
+
+    function updateModelMode(mode) {
+      currentModelMode = mode;
+      const r1Card = document.getElementById('mode-r1-card');
+      const v3Card = document.getElementById('mode-v3-card');
+      if (mode === 'r1') {
+        r1Card.className = 'relative flex flex-col p-4 rounded-xl border border-sky-400/50 dark:border-sky-500/50 bg-sky-50/60 dark:bg-sky-950/20 cursor-pointer transition';
+        v3Card.className = 'relative flex flex-col p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-950/40 cursor-pointer transition opacity-70 hover:opacity-100';
+      } else {
+        v3Card.className = 'relative flex flex-col p-4 rounded-xl border border-sky-400/50 dark:border-sky-500/50 bg-sky-50/60 dark:bg-sky-950/20 cursor-pointer transition';
+        r1Card.className = 'relative flex flex-col p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-950/40 cursor-pointer transition opacity-70 hover:opacity-100';
+      }
+      generatePrompt();
+    }
+
+    function setTaskPreset(presetKey) {
+      currentTaskPreset = presetKey;
+      ['code', 'math', 'research', 'system', 'json'].forEach(k => {
+        const btn = document.getElementById('preset-' + k);
+        if (!btn) return;
+        if (k === presetKey) {
+          btn.className = 'p-2.5 rounded-xl border border-sky-500/50 bg-sky-50 dark:bg-sky-950/40 text-sky-700 dark:text-sky-300 font-semibold transition text-center shadow-xs';
+        } else {
+          btn.className = 'p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-400 text-slate-700 dark:text-slate-300 transition text-center';
+        }
+      });
+
+      const preset = PRESETS[presetKey];
+      if (preset) {
+        document.getElementById('role-input').value = currentLang === 'zh' ? preset.role_zh : preset.role_en;
+        document.getElementById('task-input').value = currentLang === 'zh' ? preset.task_zh : preset.task_en;
+        document.getElementById('context-input').value = currentLang === 'zh' ? preset.context_zh : preset.context_en;
+        generatePrompt();
+      }
+    }
+
+    function randomizePreset() {
+      const keys = ['code', 'math', 'research', 'system', 'json'];
+      const filtered = keys.filter(k => k !== currentTaskPreset);
+      const next = filtered[Math.floor(Math.random() * filtered.length)];
+      setTaskPreset(next);
+      showToast(currentLang === 'zh' ? '已填入随机生产级实战案例' : 'Loaded random production scenario');
+    }
+
+    function generatePrompt() {
+      const role = document.getElementById('role-input').value.trim();
+      const task = document.getElementById('task-input').value.trim();
+      const context = document.getElementById('context-input').value.trim();
+      const format = document.getElementById('output-format-select').value;
+      const cotDepth = document.getElementById('cot-depth-select').value;
+
+      const noFiller = document.getElementById('guard-no-filler').checked;
+      const selfVerify = document.getElementById('guard-self-verify').checked;
+      const noAssumptions = document.getElementById('guard-no-assumptions').checked;
+      const useXml = document.getElementById('guard-xml-tags').checked;
+
+      let prompt = '';
+
+      if (useXml) {
+        prompt += `<role>\n${role || 'Senior Technical Subject Matter Expert'}\n</role>\n\n`;
+
+        if (currentModelMode === 'r1') {
+          prompt += `<reasoning_directive>\n`;
+          prompt += `- Leverage internal recursive Chain-of-Thought (<think>) to rigorously formulate, test, and self-correct hypotheses before producing the final output.\n`;
+          if (cotDepth === 'deep') {
+            prompt += `- Perform thorough multi-pass verification. Consider alternative edge cases, performance bottlenecks, and potential counter-examples.\n`;
+          } else if (cotDepth === 'balanced') {
+            prompt += `- Balance depth with clarity. Formulate explicit intermediate reasoning steps without redundant looping.\n`;
+          } else {
+            prompt += `- Focus reasoning on immediate proofs, minimal steps, and core execution path.\n`;
+          }
+          prompt += `</reasoning_directive>\n\n`;
+        }
+
+        prompt += `<instructions>\n${task || 'Execute the core objective with high precision and production-level standards.'}\n</instructions>\n\n`;
+
+        if (context) {
+          prompt += `<context>\n${context}\n</context>\n\n`;
+        }
+
+        prompt += `<constraints>\n`;
+        if (noFiller) prompt += `- Do not include conversational pleasantries, introductory throat-clearing, or concluding remarks. Begin directly with the answer.\n`;
+        if (selfVerify) prompt += `- Verify all logical steps, edge conditions, and bounds checking before concluding.\n`;
+        if (noAssumptions) prompt += `- Never hallucinate non-existent libraries or undocumented methods. State unknowns explicitly.\n`;
+        
+        if (format === 'json') {
+          prompt += `- Return the final response as a strictly valid, unescaped JSON object conforming to RFC 8259. Do not wrap in markdown quotes if possible.\n`;
+        } else if (format === 'xml') {
+          prompt += `- Wrap final output strictly inside <output>...</output> tags.\n`;
+        } else if (format === 'code_only') {
+          prompt += `- Output executable code only. Zero prose, zero walkthrough.\n`;
+        } else {
+          prompt += `- Format with clean, structured Markdown headers, code blocks with explicit language tags, and bullet points.\n`;
+        }
+        prompt += `</constraints>`;
+
+      } else {
+        // Plain Markdown structure
+        prompt += `### Role & Persona\n${role || 'Senior Technical Expert'}\n\n`;
+
+        if (currentModelMode === 'r1') {
+          prompt += `### Reasoning Mode (DeepSeek-R1 CoT)\n`;
+          prompt += `Please utilize your internal Chain-of-Thought (<think>) reasoning loop. Reason through intermediate steps, test edge cases, and self-correct errors before delivering the final answer.\n\n`;
+        }
+
+        prompt += `### Objective & Instructions\n${task}\n\n`;
+
+        if (context) {
+          prompt += `### Background Context\n${context}\n\n`;
+        }
+
+        prompt += `### Constraints & Guardrails\n`;
+        if (noFiller) prompt += `- Skip all conversational filler. Provide the answer immediately.\n`;
+        if (selfVerify) prompt += `- Verify logic and mathematical soundness across edge cases.\n`;
+        if (noAssumptions) prompt += `- Do not fabricate APIs or invent parameters.\n`;
+        prompt += `- Output format: ${format}.\n`;
+      }
+
+      const outputEl = document.getElementById('prompt-output');
+      if (outputEl) {
+        outputEl.value = prompt;
+        const words = prompt.trim().split(/\s+/).filter(Boolean).length;
+        const approxTokens = Math.round(words * 1.35);
+        const statsEl = document.getElementById('prompt-stats');
+        if (statsEl) {
+          statsEl.textContent = `~${words} words • ~${approxTokens} tokens`;
+        }
+      }
+    }
+
+    function copyGeneratedPrompt() {
+      const outputEl = document.getElementById('prompt-output');
+      if (!outputEl) return;
+
+      navigator.clipboard.writeText(outputEl.value).then(() => {
+        showToast('✓ DeepSeek Prompt copied to clipboard!');
+        const btn = document.getElementById('copy-btn');
+        if (btn) {
+          const orig = btn.innerHTML;
+          btn.innerHTML = `<span class="text-slate-950 font-bold">✓ Copied!</span>`;
+          setTimeout(() => { btn.innerHTML = orig; }, 2000);
+        }
+      });
+    }
+
+    function trackLaunchChat() {
+      showToast('🚀 Launching DeepSeek. Paste your copied prompt into chat!');
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      if (!toast) return;
+      toast.querySelector('span').textContent = msg;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 2500);
+    }
+
+    // Initialize
+    window.addEventListener('DOMContentLoaded', () => {
+      const theme = getSharedTheme();
+      applyTheme(theme === 'dark', false);
+      applyLanguage(getSharedLang(), false);
+      setTaskPreset('code');
+    });
+  </script>
+</body>
+</html>
