@@ -378,17 +378,17 @@
           </div>
 
           <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-xs" id="task-preset-buttons">
-            <button onclick="setTaskPreset('code')" id="preset-code" class="p-2.5 rounded-xl border border-sky-500/50 bg-sky-50 dark:bg-sky-950/40 text-sky-700 dark:text-sky-300 font-semibold transition text-center">💻 Code Refactor</button>
-            <button onclick="setTaskPreset('math')" id="preset-math" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-400 text-slate-700 dark:text-slate-300 transition text-center">🧠 Logic & Proof</button>
-            <button onclick="setTaskPreset('research')" id="preset-research" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-400 text-slate-700 dark:text-slate-300 transition text-center">🔬 Deep Research</button>
-            <button onclick="setTaskPreset('system')" id="preset-system" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-400 text-slate-700 dark:text-slate-300 transition text-center">🎭 System Prompt</button>
-            <button onclick="setTaskPreset('json')" id="preset-json" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-400 text-slate-700 dark:text-slate-300 transition text-center">📄 Structured Data</button>
+            <button onclick="setTaskPreset('code')" id="preset-code" class="p-2.5 rounded-xl border border-sky-500/50 bg-sky-50 dark:bg-sky-950/40 text-sky-700 dark:text-sky-300 font-semibold transition text-center" data-i18n="preset_code">💻 Code Refactor</button>
+            <button onclick="setTaskPreset('math')" id="preset-math" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-400 text-slate-700 dark:text-slate-300 transition text-center" data-i18n="preset_math">🧠 Logic & Proof</button>
+            <button onclick="setTaskPreset('research')" id="preset-research" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-400 text-slate-700 dark:text-slate-300 transition text-center" data-i18n="preset_research">🔬 Deep Research</button>
+            <button onclick="setTaskPreset('system')" id="preset-system" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-400 text-slate-700 dark:text-slate-300 transition text-center" data-i18n="preset_system">🎭 System Prompt</button>
+            <button onclick="setTaskPreset('json')" id="preset-json" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-400 text-slate-700 dark:text-slate-300 transition text-center" data-i18n="preset_json">📄 Structured Data</button>
           </div>
 
           <!-- Role Persona Input -->
           <div>
             <label class="block text-[11px] font-semibold text-slate-600 dark:text-slate-400 mb-1" data-i18n="lbl_role">Expert Persona / System Authority</label>
-            <input type="text" id="role-input" oninput="generatePrompt()" value="Senior Staff Software Engineer specializing in high-concurrency distributed systems" class="w-full bg-slate-50 dark:bg-[#07090e] border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-xs font-mono text-slate-800 dark:text-slate-200 focus:outline-none focus:border-sky-500">
+            <input type="text" id="role-input" oninput="markUserCustomized(); generatePrompt()" value="Senior Staff Software Engineer specializing in high-concurrency distributed systems" class="w-full bg-slate-50 dark:bg-[#07090e] border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-xs font-mono text-slate-800 dark:text-slate-200 focus:outline-none focus:border-sky-500">
           </div>
         </div>
 
@@ -401,12 +401,12 @@
 
           <div>
             <label class="block text-[11px] font-semibold text-slate-600 dark:text-slate-400 mb-1" data-i18n="lbl_task">What do you want DeepSeek to accomplish?</label>
-            <textarea id="task-input" rows="3" oninput="generatePrompt()" class="w-full bg-slate-50 dark:bg-[#07090e] border border-slate-200 dark:border-slate-800 rounded-xl p-3 text-xs font-mono text-slate-800 dark:text-slate-200 focus:outline-none focus:border-sky-500" placeholder="e.g. Refactor this slow PostgreSQL query into an indexed CTE with zero sub-query overhead..."></textarea>
+            <textarea id="task-input" rows="3" oninput="markUserCustomized(); generatePrompt()" data-i18n-placeholder="ph_task" class="w-full bg-slate-50 dark:bg-[#07090e] border border-slate-200 dark:border-slate-800 rounded-xl p-3 text-xs font-mono text-slate-800 dark:text-slate-200 focus:outline-none focus:border-sky-500" placeholder="e.g. Refactor this slow PostgreSQL query into an indexed CTE with zero sub-query overhead..."></textarea>
           </div>
 
           <div>
             <label class="block text-[11px] font-semibold text-slate-600 dark:text-slate-400 mb-1" data-i18n="lbl_context">Background Code / Data / Reference Context (Optional)</label>
-            <textarea id="context-input" rows="3" oninput="generatePrompt()" class="w-full bg-slate-50 dark:bg-[#07090e] border border-slate-200 dark:border-slate-800 rounded-xl p-3 text-xs font-mono text-slate-800 dark:text-slate-200 focus:outline-none focus:border-sky-500" placeholder="Paste relevant code snippets, JSON schemas, or error stack traces..."></textarea>
+            <textarea id="context-input" rows="3" oninput="markUserCustomized(); generatePrompt()" data-i18n-placeholder="ph_context" class="w-full bg-slate-50 dark:bg-[#07090e] border border-slate-200 dark:border-slate-800 rounded-xl p-3 text-xs font-mono text-slate-800 dark:text-slate-200 focus:outline-none focus:border-sky-500" placeholder="Paste relevant code snippets, JSON schemas, or error stack traces..."></textarea>
           </div>
         </div>
 
@@ -449,18 +449,18 @@
             <div>
               <label class="block text-[11px] font-semibold text-slate-600 dark:text-slate-400 mb-1" data-i18n="lbl_format">Target Output Format</label>
               <select id="output-format-select" onchange="generatePrompt()" class="w-full bg-slate-50 dark:bg-[#07090e] border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-xs font-mono text-slate-800 dark:text-slate-200 focus:outline-none focus:border-sky-500">
-                <option value="markdown">Production Markdown with Headers</option>
-                <option value="json">Valid Pure JSON Object (RFC 8259)</option>
-                <option value="xml">XML Tagged (&lt;analysis&gt; &amp; &lt;output&gt;)</option>
-                <option value="code_only">Pure Code Only (No explanations)</option>
+                <option value="markdown" data-i18n="opt_format_md">Production Markdown with Headers</option>
+                <option value="json" data-i18n="opt_format_json">Valid Pure JSON Object (RFC 8259)</option>
+                <option value="xml" data-i18n="opt_format_xml">XML Tagged (&lt;analysis&gt; &amp; &lt;output&gt;)</option>
+                <option value="code_only" data-i18n="opt_format_code">Pure Code Only (No explanations)</option>
               </select>
             </div>
             <div>
               <label class="block text-[11px] font-semibold text-slate-600 dark:text-slate-400 mb-1" data-i18n="lbl_cot">Reasoning Detail & Depth</label>
               <select id="cot-depth-select" onchange="generatePrompt()" class="w-full bg-slate-50 dark:bg-[#07090e] border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-xs font-mono text-slate-800 dark:text-slate-200 focus:outline-none focus:border-sky-500">
-                <option value="deep">Deep Chain-of-Thought (Multi-pass verification)</option>
-                <option value="balanced">Balanced CoT (Key assumptions &amp; logic)</option>
-                <option value="concise">Concise Reasoning (Direct path proof)</option>
+                <option value="deep" data-i18n="opt_cot_deep">Deep Chain-of-Thought (Multi-pass verification)</option>
+                <option value="balanced" data-i18n="opt_cot_balanced">Balanced CoT (Key assumptions &amp; logic)</option>
+                <option value="concise" data-i18n="opt_cot_concise">Concise Reasoning (Direct path proof)</option>
               </select>
             </div>
           </div>
@@ -473,12 +473,18 @@
 
         <!-- Live Output Box -->
         <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 shadow-xl glow-deepseek">
-          <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-200 dark:border-slate-800">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 mb-3 border-b border-slate-200 dark:border-slate-800">
             <div class="flex items-center space-x-2">
               <span class="w-2.5 h-2.5 rounded-full bg-sky-400 animate-pulse"></span>
               <span class="font-bold text-xs uppercase tracking-wider text-slate-700 dark:text-slate-200" data-i18n="output_title">Synthesized DeepSeek Prompt</span>
             </div>
-            <div class="flex items-center space-x-2">
+            
+            <div class="flex items-center gap-2">
+              <!-- Prompt Language Mode Switcher -->
+              <div class="inline-flex rounded-lg p-0.5 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-[10px]">
+                <button type="button" id="prompt-lang-zh" onclick="setPromptLanguage('zh')" class="px-2 py-0.5 rounded-md font-bold transition text-slate-700 dark:text-slate-300" title="生成中文指令结构提示词">🇨🇳 中文</button>
+                <button type="button" id="prompt-lang-en" onclick="setPromptLanguage('en')" class="px-2 py-0.5 rounded-md font-bold transition text-slate-700 dark:text-slate-300" title="Generate English instruction prompt">🇺🇸 EN</button>
+              </div>
               <span id="prompt-stats" class="text-[11px] font-mono text-slate-500">~0 words</span>
             </div>
           </div>
@@ -695,9 +701,16 @@
         sec2_title: '2. Task Domain & Role Persona',
         btn_random: 'Random Example',
         lbl_role: 'Expert Persona / System Authority',
+        preset_code: '💻 Code Refactor',
+        preset_math: '🧠 Logic & Proof',
+        preset_research: '🔬 Deep Research',
+        preset_system: '🎭 System Prompt',
+        preset_json: '📄 Structured Data',
         sec3_title: '3. Raw Goal & Context Payload',
         lbl_task: 'What do you want DeepSeek to accomplish?',
         lbl_context: 'Background Code / Data / Reference Context (Optional)',
+        ph_task: 'e.g. Refactor this slow PostgreSQL query into an indexed CTE with zero sub-query overhead...',
+        ph_context: 'Paste relevant code snippets, JSON schemas, or error stack traces...',
         sec4_title: '4. Negative Constraints & Reasoning Directives',
         guard_no_filler: 'No polite filler (Start directly with code/answer)',
         guard_self_verify: 'Explicit verification of edge cases & proofs',
@@ -706,9 +719,20 @@
         guard_1m_context: '1M Token Context Anchor (Prevent middle-loss)',
         guard_multimodal: 'Multimodal Vision & OCR Directives (V4.1)',
         lbl_format: 'Target Output Format',
+        opt_format_md: 'Production Markdown with Headers',
+        opt_format_json: 'Valid Pure JSON Object (RFC 8259)',
+        opt_format_xml: 'XML Tagged (&lt;analysis&gt; &amp; &lt;output&gt;)',
+        opt_format_code: 'Pure Code Only (No explanations)',
         lbl_cot: 'Reasoning Detail & Depth',
+        opt_cot_deep: 'Deep Chain-of-Thought (Multi-pass verification)',
+        opt_cot_balanced: 'Balanced CoT (Key assumptions &amp; logic)',
+        opt_cot_concise: 'Concise Reasoning (Direct path proof)',
         output_title: 'Synthesized DeepSeek Prompt',
         btn_copy: 'Copy Prompt',
+        toast_copied: '✓ DeepSeek Prompt copied to clipboard!',
+        toast_random: 'Loaded random production scenario',
+        stats_words: 'words',
+        stats_tokens: 'tokens',
         calc_title: 'DeepSeek V4.1 Arbitrage Savings',
         calc_desc: 'Running 1M tokens on DeepSeek-V4.1-Flash ($0.28 standard, $0.08 cached) vs OpenAI o1/GPT-4o ($15.00) saves ~$14.72+ per million tokens with native 1M context window and vision reasoning.',
         faq_tag: 'DEEPSEEK V4 SPEC',
@@ -774,9 +798,16 @@
         sec2_title: '2. 任务场景与专家角色',
         btn_random: '随机填入预设',
         lbl_role: '设定专家身份 / 系统权限人设',
+        preset_code: '💻 代码重构',
+        preset_math: '🧠 数理逻辑',
+        preset_research: '🔬 深度研究',
+        preset_system: '🎭 系统提示词',
+        preset_json: '📄 结构化数据',
         sec3_title: '3. 核心诉求与上下文数据',
         lbl_task: '你希望 DeepSeek 为你解决什么具体问题？',
         lbl_context: '相关代码片段 / 数据结构 / 报错上下文 (选填)',
+        ph_task: '例如：重构这段耗时较长的 PostgreSQL 查询，消除 N+1 瓶颈，并加入严格类型验证...',
+        ph_context: '粘贴相关代码片段、JSON 结构体或错误堆栈日志 (选填)...',
         sec4_title: '4. 负向约束与思维指令',
         guard_no_filler: '禁止礼貌废话（直接输出最终代码或答案）',
         guard_self_verify: '强制自我验证边缘用例与逻辑漏洞',
@@ -785,9 +816,20 @@
         guard_1m_context: '100万 Token 上下文定位锚点 (防止中间信息遗忘)',
         guard_multimodal: '多模态视觉识别与 OCR 结构化指令 (V4.1 特化)',
         lbl_format: '最终产出格式规范',
+        opt_format_md: '带标题的工程级 Markdown',
+        opt_format_json: '合规纯 JSON 对象 (RFC 8259)',
+        opt_format_xml: 'XML 标签封装 (&lt;analysis&gt; 与 &lt;output&gt;)',
+        opt_format_code: '纯可执行代码 (零解释/零寒暄)',
         lbl_cot: '推理链粒度与自验深度',
+        opt_cot_deep: '深度思维链 (多轮反思证伪与推演)',
+        opt_cot_balanced: '均衡思维链 (核心假设与逻辑推导)',
+        opt_cot_concise: '精简思维链 (最简证明与执行路径)',
         output_title: '已合成的结构化 DeepSeek 提示词',
         btn_copy: '复制提示词',
+        toast_copied: '✓ DeepSeek 提示词已成功复制到剪贴板！',
+        toast_random: '已填入随机生产级实战案例',
+        stats_words: '词/字符',
+        stats_tokens: 'Token',
         calc_title: 'DeepSeek V4.1 算力套利成本评估',
         calc_desc: '在 DeepSeek-V4.1-Flash 运行 100 万 Token 仅需 $0.28（命中缓存仅 $0.08），对比 OpenAI o1/GPT-4o ($15.00) 节省超 98% 成本，兼备百万上下文与多模态视觉。',
         faq_tag: 'DEEPSEEK V4 规范',
@@ -867,6 +909,12 @@
     let currentModelMode = 'v4_flash';
     let currentThinkingMode = 'standard';
     let currentTaskPreset = 'code';
+    let currentPromptLang = 'zh';
+    let userHasCustomized = false;
+
+    function markUserCustomized() {
+      userHasCustomized = true;
+    }
 
     // Shared State Protocol
     function getSharedCookie(name) {
@@ -929,18 +977,53 @@
       applyTheme(!isDark, true);
     }
 
+    function setPromptLanguage(lang, triggerRegen) {
+      currentPromptLang = lang;
+      const zhBtn = document.getElementById('prompt-lang-zh');
+      const enBtn = document.getElementById('prompt-lang-en');
+
+      const activeCls = 'px-2 py-0.5 rounded-md font-bold transition bg-sky-500 text-slate-950 shadow-xs';
+      const inactiveCls = 'px-2 py-0.5 rounded-md font-medium transition text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white';
+
+      if (zhBtn) zhBtn.className = lang === 'zh' ? activeCls : inactiveCls;
+      if (enBtn) enBtn.className = lang === 'en' ? activeCls : inactiveCls;
+
+      if (triggerRegen !== false) {
+        generatePrompt();
+      }
+    }
+
     function updateLanguageUI() {
       const label = document.getElementById('lang-label');
       if (label) {
         label.textContent = currentLang === 'zh' ? 'EN' : '中文';
       }
       document.documentElement.lang = currentLang === 'zh' ? 'zh-CN' : 'en';
+
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (I18N[currentLang] && I18N[currentLang][key] !== undefined) {
           el.innerHTML = I18N[currentLang][key];
         }
       });
+
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        if (I18N[currentLang] && I18N[currentLang][key] !== undefined) {
+          el.setAttribute('placeholder', I18N[currentLang][key]);
+        }
+      });
+
+      if (!userHasCustomized) {
+        const preset = PRESETS[currentTaskPreset];
+        if (preset) {
+          document.getElementById('role-input').value = currentLang === 'zh' ? preset.role_zh : preset.role_en;
+          document.getElementById('task-input').value = currentLang === 'zh' ? preset.task_zh : preset.task_en;
+          document.getElementById('context-input').value = currentLang === 'zh' ? preset.context_zh : preset.context_en;
+        }
+      }
+
+      setPromptLanguage(currentLang, false);
       setThinkingMode(currentThinkingMode);
       generatePrompt();
     }
@@ -1000,6 +1083,7 @@
 
     function setTaskPreset(presetKey) {
       currentTaskPreset = presetKey;
+      userHasCustomized = false;
       ['code', 'math', 'research', 'system', 'json'].forEach(k => {
         const btn = document.getElementById('preset-' + k);
         if (!btn) return;
@@ -1024,7 +1108,7 @@
       const filtered = keys.filter(k => k !== currentTaskPreset);
       const next = filtered[Math.floor(Math.random() * filtered.length)];
       setTaskPreset(next);
-      showToast(currentLang === 'zh' ? '已填入随机生产级实战案例' : 'Loaded random production scenario');
+      showToast(I18N[currentLang].toast_random || 'Loaded random scenario');
     }
 
     function generatePrompt() {
@@ -1041,33 +1125,53 @@
       const guard1m = document.getElementById('guard-1m-context') ? document.getElementById('guard-1m-context').checked : false;
       const guardVision = document.getElementById('guard-multimodal') ? document.getElementById('guard-multimodal').checked : false;
 
+      const isZh = currentPromptLang === 'zh';
       let prompt = '';
 
       if (useXml) {
-        prompt += `<role>\n${role || 'Senior Technical Subject Matter Expert'}\n</role>\n\n`;
+        const defaultRole = isZh ? '资深全栈系统架构师与领域专家' : 'Senior Technical Subject Matter Expert';
+        prompt += `<role>\n${role || defaultRole}\n</role>\n\n`;
 
         // Model & Thinking directives
         if (currentModelMode === 'v4_flash' || currentModelMode === 'v4_pro') {
           const modelName = currentModelMode === 'v4_flash' ? 'DeepSeek-V4.1-Flash' : 'DeepSeek-V4-Pro';
           prompt += `<thinking_directive mode="${currentThinkingMode}" target_model="${modelName}">\n`;
           if (currentThinkingMode === 'none') {
-            prompt += `- Do not generate intermediate <think> tokens. Prioritize minimal latency and direct output production.\n`;
+            prompt += isZh
+              ? `- 禁止生成中间思考 <think> 标签，以极致低延迟直接输出最终生产级结果。\n`
+              : `- Do not generate intermediate <think> tokens. Prioritize minimal latency and direct output production.\n`;
           } else if (currentThinkingMode === 'max') {
-            prompt += `- Engage exhaustive Max Thinking mode. Conduct multi-pass recursive self-verification, falsification checks, and edge-case boundary testing before formulating output.\n`;
-            if (cotDepth === 'deep') prompt += `- Explore multiple parallel solution trajectories and state comparative trade-offs in reasoning.\n`;
+            prompt += isZh
+              ? `- 启用极致深度思考模式。在输出前必须进行多轮递归自审、反向边界验证与极端用例证伪。\n`
+              : `- Engage exhaustive Max Thinking mode. Conduct multi-pass recursive self-verification, falsification checks, and edge-case boundary testing before formulating output.\n`;
+            if (cotDepth === 'deep') {
+              prompt += isZh
+                ? `- 探索多条并行解决方案路径，并在思考中深入对比各方案架构权衡。\n`
+                : `- Explore multiple parallel solution trajectories and state comparative trade-offs in reasoning.\n`;
+            }
           } else {
-            prompt += `- Use standard Chain-of-Thought (<think>) to outline logic, verify assumptions, and validate constraints before outputting.\n`;
+            prompt += isZh
+              ? `- 运用标准思维链 (<think>) 梳理逻辑骨架、核验核心假设并校验边界约束后再输出。\n`
+              : `- Use standard Chain-of-Thought (<think>) to outline logic, verify assumptions, and validate constraints before outputting.\n`;
           }
           prompt += `</thinking_directive>\n\n`;
         } else if (currentModelMode === 'r1') {
           prompt += `<reasoning_directive model="DeepSeek-R1">\n`;
-          prompt += `- Leverage internal recursive Chain-of-Thought (<think>) to rigorously formulate, test, and self-correct hypotheses before producing the final output.\n`;
+          prompt += isZh
+            ? `- 依托内置超长思维链 (<think>) 进行递归深度探索，在输出前验证边界假设并闭环自查。\n`
+            : `- Leverage internal recursive Chain-of-Thought (<think>) to rigorously formulate, test, and self-correct hypotheses before producing the final output.\n`;
           if (cotDepth === 'deep') {
-            prompt += `- Perform thorough multi-pass verification. Consider alternative edge cases, performance bottlenecks, and potential counter-examples.\n`;
+            prompt += isZh
+              ? `- 执行详尽的多轮反思自查，穷举边缘用例、性能瓶颈与潜在反例。\n`
+              : `- Perform thorough multi-pass verification. Consider alternative edge cases, performance bottlenecks, and potential counter-examples.\n`;
           } else if (cotDepth === 'balanced') {
-            prompt += `- Balance depth with clarity. Formulate explicit intermediate reasoning steps without redundant looping.\n`;
+            prompt += isZh
+              ? `- 兼顾思维深度与清晰度，列出明确的中间推导步骤，杜绝无效死循环。\n`
+              : `- Balance depth with clarity. Formulate explicit intermediate reasoning steps without redundant looping.\n`;
           } else {
-            prompt += `- Focus reasoning on immediate proofs, minimal steps, and core execution path.\n`;
+            prompt += isZh
+              ? `- 聚焦于核心证明链条与极简执行路径，快速推导结论。\n`
+              : `- Focus reasoning on immediate proofs, minimal steps, and core execution path.\n`;
           }
           prompt += `</reasoning_directive>\n\n`;
         }
@@ -1075,21 +1179,32 @@
         // Multimodal Vision Guidance
         if (guardVision) {
           prompt += `<multimodal_vision_guidance>\n`;
-          prompt += `- Perform structural high-resolution analysis of attached images, UI mockups, or architectural diagrams.\n`;
-          prompt += `- Transcribe tabular layouts into clean markdown tables; convert diagrams into functional Mermaid.js or AST representations.\n`;
-          prompt += `- Cross-reference visual coordinates with code implementations without hallucinating unrendered UI elements.\n`;
+          if (isZh) {
+            prompt += `- 对附件图片、UI 原型或系统架构图进行高分辨率结构化解析。\n`;
+            prompt += `- 将表格精确转为 Markdown 表格；将流程图转为规范 Mermaid.js 或 AST 树形结构。\n`;
+            prompt += `- 将视觉坐标精准映射到前端代码实现，严禁臆造未渲染的界面元素。\n`;
+          } else {
+            prompt += `- Perform structural high-resolution analysis of attached images, UI mockups, or architectural diagrams.\n`;
+            prompt += `- Transcribe tabular layouts into clean markdown tables; convert diagrams into functional Mermaid.js or AST representations.\n`;
+            prompt += `- Cross-reference visual coordinates with code implementations without hallucinating unrendered UI elements.\n`;
+          }
           prompt += `</multimodal_vision_guidance>\n\n`;
         }
 
         // Instructions
-        prompt += `<instructions>\n${task || 'Execute the core objective with high precision and production-level standards.'}\n</instructions>\n\n`;
+        const defaultTask = isZh ? '以高精度与工业级生产标准执行核心任务。' : 'Execute the core objective with high precision and production-level standards.';
+        prompt += `<instructions>\n${task || defaultTask}\n</instructions>\n\n`;
 
         // Context with 1M Anchor if selected
         if (context) {
           if (guard1m) {
             prompt += `<context_window_spec max_tokens="1000000" retrieval_mode="high_precision">\n`;
             prompt += `<context>\n${context}\n</context>\n`;
-            prompt += `<context_anchor_directive>\n- Reference specific document sections using explicit bracketed tags (e.g. [doc:line]) to eliminate middle-context attenuation.\n</context_anchor_directive>\n`;
+            prompt += `<context_anchor_directive>\n`;
+            prompt += isZh
+              ? `- 引用文档段落时使用显式标记（如 [doc:行号]），彻底消除百万 Token 上下文中间衰减与遗忘。\n`
+              : `- Reference specific document sections using explicit bracketed tags (e.g. [doc:line]) to eliminate middle-context attenuation.\n`;
+            prompt += `</context_anchor_directive>\n`;
             prompt += `</context_window_spec>\n\n`;
           } else {
             prompt += `<context>\n${context}\n</context>\n\n`;
@@ -1097,67 +1212,96 @@
         }
 
         prompt += `<constraints>\n`;
-        if (noFiller) prompt += `- Do not include conversational pleasantries, introductory throat-clearing, or concluding remarks. Begin directly with the answer.\n`;
-        if (selfVerify) prompt += `- Verify all logical steps, edge conditions, and bounds checking before concluding.\n`;
-        if (noAssumptions) prompt += `- Never hallucinate non-existent libraries or undocumented methods. State unknowns explicitly.\n`;
-        if (guard1m && !context) prompt += `- Maintain context anchor awareness across long token sequences without skipping intermediate constraints.\n`;
+        if (noFiller) {
+          prompt += isZh
+            ? `- 禁止任何开场寒暄、礼貌废话与总结陈词。直接输出最终代码或答案。\n`
+            : `- Do not include conversational pleasantries, introductory throat-clearing, or concluding remarks. Begin directly with the answer.\n`;
+        }
+        if (selfVerify) {
+          prompt += isZh
+            ? `- 在得出结论前，强制自查所有逻辑步骤、边界用例与断言边界。\n`
+            : `- Verify all logical steps, edge conditions, and bounds checking before concluding.\n`;
+        }
+        if (noAssumptions) {
+          prompt += isZh
+            ? `- 严禁臆造不存在的第三方库或未公开 API。遇未说明条件需保持客观并显式声明。\n`
+            : `- Never hallucinate non-existent libraries or undocumented methods. State unknowns explicitly.\n`;
+        }
+        if (guard1m && !context) {
+          prompt += isZh
+            ? `- 在超长 Token 序列中持续保持上下文锚点感知，不可遗漏中间约束。\n`
+            : `- Maintain context anchor awareness across long token sequences without skipping intermediate constraints.\n`;
+        }
         
         if (format === 'json') {
-          prompt += `- Return the final response as a strictly valid, unescaped JSON object conforming to RFC 8259. Do not wrap in markdown quotes if possible.\n`;
+          prompt += isZh
+            ? `- 最终结果必须为严格符合 RFC 8259 规范的有效 JSON 对象，无需 Markdown 代码块包裹。\n`
+            : `- Return the final response as a strictly valid, unescaped JSON object conforming to RFC 8259. Do not wrap in markdown quotes if possible.\n`;
         } else if (format === 'xml') {
-          prompt += `- Wrap final output strictly inside <output>...</output> tags.\n`;
+          prompt += isZh
+            ? `- 最终交付物必须严格包裹在 <output>...</output> 标签内部。\n`
+            : `- Wrap final output strictly inside <output>...</output> tags.\n`;
         } else if (format === 'code_only') {
-          prompt += `- Output executable code only. Zero prose, zero walkthrough.\n`;
+          prompt += isZh
+            ? `- 仅输出可直接执行的代码。零解释、零文字说明。\n`
+            : `- Output executable code only. Zero prose, zero walkthrough.\n`;
         } else {
-          prompt += `- Format with clean, structured Markdown headers, code blocks with explicit language tags, and bullet points.\n`;
+          prompt += isZh
+            ? `- 输出结构化 Markdown，包含清晰多级标题、带语言标识的代码块与要点清单。\n`
+            : `- Format with clean, structured Markdown headers, code blocks with explicit language tags, and bullet points.\n`;
         }
         prompt += `</constraints>`;
 
       } else {
         // Plain Markdown structure
-        prompt += `### Role & Persona\n${role || 'Senior Technical Expert'}\n\n`;
+        const defaultRole = isZh ? '资深高级技术架构师' : 'Senior Technical Expert';
+        prompt += isZh ? `### 角色与系统人设\n${role || defaultRole}\n\n` : `### Role & Persona\n${role || defaultRole}\n\n`;
 
         if (currentModelMode === 'v4_flash' || currentModelMode === 'v4_pro') {
           const modelName = currentModelMode === 'v4_flash' ? 'DeepSeek-V4.1-Flash' : 'DeepSeek-V4-Pro';
-          prompt += `### Engine Directive (${modelName})\n`;
+          prompt += isZh ? `### 引擎执行指令 (${modelName})\n` : `### Engine Directive (${modelName})\n`;
           if (currentThinkingMode === 'none') {
-            prompt += `Thinking Mode: Off. Execute directly without <think> deliberation.\n\n`;
+            prompt += isZh ? `思考模式: 关闭。直接执行指令，跳过 <think> 思考过程。\n\n` : `Thinking Mode: Off. Execute directly without <think> deliberation.\n\n`;
           } else if (currentThinkingMode === 'max') {
-            prompt += `Thinking Mode: Max Thinking. Execute deep recursive verification and multi-trajectory evaluation in <think>.\n\n`;
+            prompt += isZh ? `思考模式: 极致深度思考。在 <think> 阶段进行深层递归自查与多方案证伪评估。\n\n` : `Thinking Mode: Max Thinking. Execute deep recursive verification and multi-trajectory evaluation in <think>.\n\n`;
           } else {
-            prompt += `Thinking Mode: Standard CoT. Reason step-by-step in <think> prior to final output.\n\n`;
+            prompt += isZh ? `思考模式: 标准思维链。在 <think> 中按步骤严谨推演逻辑后交付结果。\n\n` : `Thinking Mode: Standard CoT. Reason step-by-step in <think> prior to final output.\n\n`;
           }
         } else if (currentModelMode === 'r1') {
-          prompt += `### Reasoning Mode (DeepSeek-R1 CoT)\n`;
-          prompt += `Please utilize your internal Chain-of-Thought (<think>) reasoning loop. Reason through intermediate steps, test edge cases, and self-correct errors before delivering the final answer.\n\n`;
+          prompt += isZh ? `### 推理模式 (DeepSeek-R1 CoT)\n请充分调用你的内部思维链 (<think>) 循环，推演中间逻辑并自我验证边缘用例，最后交付最终成果。\n\n` : `### Reasoning Mode (DeepSeek-R1 CoT)\nPlease utilize your internal Chain-of-Thought (<think>) reasoning loop. Reason through intermediate steps, test edge cases, and self-correct errors before delivering the final answer.\n\n`;
         }
 
         if (guardVision) {
-          prompt += `### Multimodal Vision Guidance\nParse diagrams and images structurally into code/markdown tables; avoid visual hallucinations.\n\n`;
+          prompt += isZh ? `### 多模态视觉指导\n对图片与架构图进行高分辨率结构化解析并转换为代码或表格，禁止视觉臆造。\n\n` : `### Multimodal Vision Guidance\nParse diagrams and images structurally into code/markdown tables; avoid visual hallucinations.\n\n`;
         }
 
-        prompt += `### Objective & Instructions\n${task}\n\n`;
+        prompt += isZh ? `### 核心目标与任务诉求\n${task}\n\n` : `### Objective & Instructions\n${task}\n\n`;
 
         if (context) {
-          prompt += `### Background Context\n${context}\n\n`;
+          prompt += isZh ? `### 背景数据与参考上下文\n${context}\n\n` : `### Background Context\n${context}\n\n`;
         }
 
-        prompt += `### Constraints & Guardrails\n`;
-        if (noFiller) prompt += `- Skip all conversational filler. Provide the answer immediately.\n`;
-        if (selfVerify) prompt += `- Verify logic and mathematical soundness across edge cases.\n`;
-        if (noAssumptions) prompt += `- Do not fabricate APIs or invent parameters.\n`;
-        if (guard1m) prompt += `- Preserve precision across 1M context tokens without middle degradation.\n`;
-        prompt += `- Output format: ${format}.\n`;
+        prompt += isZh ? `### 负向约束与边界防线\n` : `### Constraints & Guardrails\n`;
+        if (noFiller) prompt += isZh ? `- 跳过所有开场客套废话，直接输出结果。\n` : `- Skip all conversational filler. Provide the answer immediately.\n`;
+        if (selfVerify) prompt += isZh ? `- 严格验证各分支逻辑与边界用例的正确性。\n` : `- Verify logic and mathematical soundness across edge cases.\n`;
+        if (noAssumptions) prompt += isZh ? `- 严禁臆造 API 或假定未给出的环境参数。\n` : `- Do not fabricate APIs or invent parameters.\n`;
+        if (guard1m) prompt += isZh ? `- 在 100 万 Token 上下文跨度中确保关键信息不遗忘。\n` : `- Preserve precision across 1M context tokens without middle degradation.\n`;
+        prompt += isZh ? `- 产出格式: ${format}。\n` : `- Output format: ${format}.\n`;
       }
 
       const outputEl = document.getElementById('prompt-output');
       if (outputEl) {
         outputEl.value = prompt;
         const words = prompt.trim().split(/\s+/).filter(Boolean).length;
+        const chars = prompt.length;
         const approxTokens = Math.round(words * 1.35);
         const statsEl = document.getElementById('prompt-stats');
         if (statsEl) {
-          statsEl.textContent = `~${words} words • ~${approxTokens} tokens`;
+          if (isZh) {
+            statsEl.textContent = `~${chars} 字符 • ~${approxTokens} Token`;
+          } else {
+            statsEl.textContent = `~${words} words • ~${approxTokens} tokens`;
+          }
         }
       }
     }
@@ -1167,18 +1311,19 @@
       if (!outputEl) return;
 
       navigator.clipboard.writeText(outputEl.value).then(() => {
-        showToast('✓ DeepSeek Prompt copied to clipboard!');
+        const msg = (I18N[currentLang] && I18N[currentLang].toast_copied) ? I18N[currentLang].toast_copied : '✓ Prompt copied!';
+        showToast(msg);
         const btn = document.getElementById('copy-btn');
         if (btn) {
           const orig = btn.innerHTML;
-          btn.innerHTML = `<span class="text-slate-950 font-bold">✓ Copied!</span>`;
+          btn.innerHTML = `<span class="text-slate-950 font-bold">${currentLang === 'zh' ? '✓ 已复制！' : '✓ Copied!'}</span>`;
           setTimeout(() => { btn.innerHTML = orig; }, 2000);
         }
       });
     }
 
     function trackLaunchChat() {
-      showToast('🚀 Launching DeepSeek. Paste your copied prompt into chat!');
+      showToast(currentLang === 'zh' ? '🚀 正在前往 DeepSeek，请直接粘贴刚复制的提示词！' : '🚀 Launching DeepSeek. Paste your copied prompt into chat!');
     }
 
     function showToast(msg) {
