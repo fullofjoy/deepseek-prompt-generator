@@ -699,10 +699,18 @@
             覆盖公司经营、工程、设计、营销等 20 个部门架构。点击任意角色一键装填至 DeepSeek-V4/R1 生成器。
           </p>
         </div>
-        <div class="flex items-center gap-2.5">
-          <a href="https://github.com/jnMetaCode/agency-agents-zh" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg border border-slate-200 dark:border-slate-800 text-[11px] text-slate-600 dark:text-slate-400 hover:border-slate-400 transition" title="Open Source on GitHub">
+        <div class="flex items-center gap-2 sm:gap-2.5">
+          <!-- Dual Language Selector for Agents Hub -->
+          <div class="inline-flex rounded-lg p-0.5 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs">
+            <button type="button" id="modal-lang-zh" onclick="setPromptLanguage('zh')" class="px-2.5 py-1 rounded-md font-bold transition bg-sky-500 text-slate-950 shadow-xs" title="查看并复制中文指令">🇨🇳 中文</button>
+            <button type="button" id="modal-lang-en" onclick="setPromptLanguage('en')" class="px-2.5 py-1 rounded-md font-medium transition text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white" title="View & copy English prompts">🇺🇸 EN</button>
+          </div>
+          <a href="https://github.com/msitarzewski/agency-agents" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg border border-slate-200 dark:border-slate-800 text-[11px] text-slate-600 dark:text-slate-400 hover:border-slate-400 transition" title="Upstream msitarzewski/agency-agents">
             <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-            <span>GitHub 源码</span>
+            <span>Upstream 原作</span>
+          </a>
+          <a href="https://github.com/jnMetaCode/agency-agents-zh" target="_blank" rel="noopener noreferrer" class="hidden lg:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg border border-slate-200 dark:border-slate-800 text-[11px] text-slate-600 dark:text-slate-400 hover:border-slate-400 transition" title="jnMetaCode/agency-agents-zh">
+            <span>中文社区版</span>
           </a>
           <button onclick="closeAgentHubModal()" class="w-8 h-8 rounded-lg flex items-center justify-center text-slate-500 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-slate-800 transition" title="Close Modal (Esc)">
             ✕
@@ -1028,6 +1036,7 @@
     let currentThinkingMode = 'standard';
     let currentTaskPreset = 'code';
     let currentPromptLang = 'zh';
+    let currentLoadedAgentId = null;
     let userHasCustomized = false;
 
     function markUserCustomized() {
@@ -1099,12 +1108,41 @@
       currentPromptLang = lang;
       const zhBtn = document.getElementById('prompt-lang-zh');
       const enBtn = document.getElementById('prompt-lang-en');
+      const mZhBtn = document.getElementById('modal-lang-zh');
+      const mEnBtn = document.getElementById('modal-lang-en');
 
       const activeCls = 'px-2 py-0.5 rounded-md font-bold transition bg-sky-500 text-slate-950 shadow-xs';
       const inactiveCls = 'px-2 py-0.5 rounded-md font-medium transition text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white';
+      const mActiveCls = 'px-2.5 py-1 rounded-md font-bold transition bg-sky-500 text-slate-950 shadow-xs';
+      const mInactiveCls = 'px-2.5 py-1 rounded-md font-medium transition text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white';
 
       if (zhBtn) zhBtn.className = lang === 'zh' ? activeCls : inactiveCls;
       if (enBtn) enBtn.className = lang === 'en' ? activeCls : inactiveCls;
+      if (mZhBtn) mZhBtn.className = lang === 'zh' ? mActiveCls : mInactiveCls;
+      if (mEnBtn) mEnBtn.className = lang === 'en' ? mActiveCls : mInactiveCls;
+
+      // If an agent is loaded into the generator, sync inputs to the chosen language
+      if (currentLoadedAgentId && window.AGENTS_DATA) {
+        const agent = window.AGENTS_DATA.find(a => a.id === currentLoadedAgentId);
+        if (agent) {
+          const roleInput = document.getElementById('role-input');
+          const taskInput = document.getElementById('task-input');
+          const contextInput = document.getElementById('context-input');
+          if (lang === 'en') {
+            if (roleInput) roleInput.value = `${agent.name_en || agent.name} (${agent.department_en || agent.department})`;
+            if (taskInput) taskInput.value = agent.task_en || agent.task;
+            if (contextInput) contextInput.value = agent.context_en || agent.context;
+          } else {
+            if (roleInput) roleInput.value = `${agent.name_zh || agent.name} (${agent.department})`;
+            if (taskInput) taskInput.value = agent.task_zh || agent.task;
+            if (contextInput) contextInput.value = agent.context_zh || agent.context;
+          }
+        }
+      }
+
+      if (agentHubInitialized) {
+        filterAndRenderAgents();
+      }
 
       if (triggerRegen !== false) {
         generatePrompt();
@@ -1206,6 +1244,7 @@
 
     function setTaskPreset(presetKey) {
       currentTaskPreset = presetKey;
+      currentLoadedAgentId = null;
       userHasCustomized = false;
       ['code', 'math', 'research', 'system', 'json'].forEach(k => {
         const btn = document.getElementById('preset-' + k);
@@ -1662,11 +1701,16 @@
         emptyState.classList.remove('flex');
       }
 
+      const isEn = currentPromptLang === 'en';
       const isZh = currentLang === 'zh';
       const cardsHtml = filtered.map(a => {
         const isPro = a.recommended && a.recommended.model && a.recommended.model.includes('pro');
         const badgeColor = isPro ? 'bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800/50' : 'bg-sky-50 dark:bg-sky-950/40 text-sky-600 dark:text-sky-400 border border-sky-200 dark:border-sky-800/50';
         const modelLabel = isPro ? '🧠 V4-Pro CoT' : '⚡ V4.1-Flash';
+
+        const displayName = isEn ? (a.name_en || a.name) : (a.name_zh || a.name);
+        const displayDept = isEn ? (a.department_en || a.department) : a.department;
+        const displayDesc = isEn ? (a.desc_en || a.desc) : (a.desc_zh || a.desc);
 
         return `
           <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800/90 hover:border-sky-400/60 dark:hover:border-sky-500/50 rounded-xl p-4 flex flex-col justify-between transition-all hover:shadow-md group">
@@ -1675,31 +1719,31 @@
                 <div class="flex items-center gap-2 min-w-0">
                   <span class="text-xl p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center shrink-0 shadow-xs">${a.emoji || '🤖'}</span>
                   <div class="truncate">
-                    <h4 class="text-xs sm:text-sm font-bold text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition truncate">${a.name}</h4>
-                    <span class="text-[10px] text-slate-500 dark:text-slate-400 font-medium">${a.department}</span>
+                    <h4 class="text-xs sm:text-sm font-bold text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition truncate">${displayName}</h4>
+                    <span class="text-[10px] text-slate-500 dark:text-slate-400 font-medium">${displayDept}</span>
                   </div>
                 </div>
                 <div class="flex flex-col items-end gap-1 shrink-0">
-                  ${a.is_china_original ? '<span class="px-1.5 py-0.5 rounded text-[9px] font-bold bg-rose-50 dark:bg-rose-950/50 border border-rose-200 dark:border-rose-900/60 text-rose-600 dark:text-rose-400">🇨🇳 原创</span>' : ''}
+                  ${a.is_china_original ? '<span class="px-1.5 py-0.5 rounded text-[9px] font-bold bg-rose-50 dark:bg-rose-950/50 border border-rose-200 dark:border-rose-900/60 text-rose-600 dark:text-rose-400">🇨🇳 原创</span>' : '<span class="px-1.5 py-0.5 rounded text-[9px] font-medium bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700/60">🌐 Upstream</span>'}
                   <span class="px-1.5 py-0.5 rounded text-[9px] font-mono font-medium ${badgeColor}">${modelLabel}</span>
                 </div>
               </div>
-              <p class="text-[11px] text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-3 mb-3" title="${a.desc.replace(/"/g, '&quot;')}">
-                ${a.desc}
+              <p class="text-[11px] text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-3 mb-3" title="${displayDesc.replace(/"/g, '&quot;')}">
+                ${displayDesc}
               </p>
             </div>
             <div class="pt-2.5 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between gap-2">
-              <button onclick="copyAgentSystemPrompt('${a.id}')" class="px-2.5 py-1.5 rounded-lg border border-slate-200 dark:border-slate-800 hover:border-slate-400 dark:hover:border-slate-700 text-[11px] font-medium text-slate-600 dark:text-slate-300 transition flex items-center gap-1" title="复制原生提示词">
+              <button onclick="copyAgentSystemPrompt('${a.id}')" class="px-2.5 py-1.5 rounded-lg border border-slate-200 dark:border-slate-800 hover:border-slate-400 dark:hover:border-slate-700 text-[11px] font-medium text-slate-600 dark:text-slate-300 transition flex items-center gap-1" title="${isEn ? 'Copy Persona' : '复制原生提示词'}">
                 <span>📋</span>
-                <span>${isZh ? '复制人设' : 'Copy'}</span>
+                <span>${isEn ? 'Copy' : '复制人设'}</span>
               </button>
-              <a href="agents/${a.id}.html" target="_blank" class="px-2 py-1.5 rounded-lg border border-slate-200 dark:border-slate-800 hover:border-slate-400 dark:hover:border-slate-700 text-[11px] text-slate-500 hover:text-slate-900 dark:hover:text-white transition flex items-center gap-1" title="查看专属独立落地页与规范文档">
+              <a href="agents/${a.id}.html" target="_blank" class="px-2 py-1.5 rounded-lg border border-slate-200 dark:border-slate-800 hover:border-slate-400 dark:hover:border-slate-700 text-[11px] text-slate-500 hover:text-slate-900 dark:hover:text-white transition flex items-center gap-1" title="${isEn ? 'View Spec' : '查看专属独立落地页与规范文档'}">
                 <span>📖</span>
-                <span class="hidden sm:inline">${isZh ? '详情' : 'Doc'}</span>
+                <span class="hidden sm:inline">${isEn ? 'Spec' : '详情'}</span>
               </a>
               <button onclick="loadAgentToGenerator('${a.id}')" class="flex-1 px-3 py-1.5 rounded-lg bg-sky-50 dark:bg-sky-950/60 hover:bg-sky-500 hover:text-slate-950 dark:hover:bg-sky-400 dark:hover:text-slate-950 border border-sky-300 dark:border-sky-500/40 text-[11px] font-bold text-sky-700 dark:text-sky-300 transition shadow-xs flex items-center justify-center gap-1">
                 <span>⚡</span>
-                <span>${isZh ? '一键装填' : 'Load'}</span>
+                <span>${isEn ? 'Load' : '一键装填'}</span>
               </button>
             </div>
           </div>
@@ -1714,19 +1758,24 @@
       const agent = window.AGENTS_DATA.find(a => a.id === agentId);
       if (!agent) return;
 
+      currentLoadedAgentId = agentId;
+      const isEn = currentPromptLang === 'en';
+
       const roleInput = document.getElementById('role-input');
       if (roleInput) {
-        roleInput.value = `${agent.name} (${agent.department})`;
+        roleInput.value = isEn 
+          ? `${agent.name_en || agent.name} (${agent.department_en || agent.department})`
+          : `${agent.name_zh || agent.name} (${agent.department})`;
       }
 
       const taskInput = document.getElementById('task-input');
       if (taskInput) {
-        taskInput.value = agent.task;
+        taskInput.value = isEn ? (agent.task_en || agent.task) : (agent.task_zh || agent.task);
       }
 
       const contextInput = document.getElementById('context-input');
       if (contextInput) {
-        contextInput.value = agent.context;
+        contextInput.value = isEn ? (agent.context_en || agent.context) : (agent.context_zh || agent.context);
       }
 
       if (agent.recommended && agent.recommended.model) {
@@ -1751,7 +1800,8 @@
         outputEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
 
-      const toastMsg = currentLang === 'zh' ? `✓ 已成功装载【${agent.name}】专家角色与专属任务！` : `✓ Loaded 【${agent.name}】 expert persona and directives!`;
+      const agentName = isEn ? (agent.name_en || agent.name) : (agent.name_zh || agent.name);
+      const toastMsg = currentLang === 'zh' ? `✓ 已成功装载【${agentName}】专家角色与专属任务！` : `✓ Loaded 【${agentName}】 expert persona and directives!`;
       showToast(toastMsg);
     }
 
@@ -1760,13 +1810,14 @@
       const agent = window.AGENTS_DATA.find(a => a.id === agentId);
       if (!agent) return;
 
-      const isZh = currentLang === 'zh';
-      const promptText = isZh 
-        ? `你是一位专业的【${agent.name}】（${agent.department}）。\n\n【角色定位与专长】\n${agent.desc}\n\n${agent.task}\n\n${agent.context}`
-        : `You are an expert ${agent.name} (${agent.department}).\n\n[Core Mission & Domain]\n${agent.desc}\n\n${agent.task}\n\n${agent.context}`;
+      const isEn = currentPromptLang === 'en';
+      const promptText = isEn 
+        ? (agent.full_prompt_en || `You are an expert ${agent.name_en || agent.name} (${agent.department_en || agent.department}).\n\n[Core Mission & Domain]\n${agent.desc_en || agent.desc}\n\n${agent.task_en || agent.task}\n\n${agent.context_en || agent.context}`)
+        : (agent.full_prompt_zh || agent.full_prompt || `你是一位专业的【${agent.name}】（${agent.department}）。\n\n【角色定位与专长】\n${agent.desc}\n\n${agent.task}\n\n${agent.context}`);
 
+      const name = isEn ? (agent.name_en || agent.name) : (agent.name_zh || agent.name);
       navigator.clipboard.writeText(promptText).then(() => {
-        showToast(isZh ? `✓ 【${agent.name}】专家提示词已复制到剪贴板！` : `✓ 【${agent.name}】 persona copied to clipboard!`);
+        showToast(isEn ? `✓ 【${name}】 persona copied to clipboard!` : `✓ 【${name}】专家提示词已复制到剪贴板！`);
       });
     }
 
@@ -1779,8 +1830,13 @@
       // Pre-warm agents database
       initAgentHub();
 
-      // Check URL parameters for direct agent loading (?load_agent=xxx or ?agent=xxx)
+      // Check URL parameters for direct agent loading (?load_agent=xxx or ?agent=xxx) & prompt language (?prompt_lang=en|zh)
       const urlParams = new URLSearchParams(window.location.search);
+      const targetLang = urlParams.get('prompt_lang') || urlParams.get('lang');
+      if (targetLang === 'en' || targetLang === 'zh') {
+        setPromptLanguage(targetLang, false);
+      }
+
       const targetAgentId = urlParams.get('load_agent') || urlParams.get('agent');
       if (targetAgentId) {
         const pollAndLoad = () => {
