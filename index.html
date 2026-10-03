@@ -391,12 +391,13 @@
             </div>
           </div>
 
-          <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-xs" id="task-preset-buttons">
+          <div class="grid grid-cols-2 sm:grid-cols-6 gap-2 text-xs" id="task-preset-buttons">
             <button onclick="setTaskPreset('code')" id="preset-code" class="p-2.5 rounded-xl border border-sky-500/50 bg-sky-50 dark:bg-sky-950/40 text-sky-700 dark:text-sky-300 font-semibold transition text-center" data-i18n="preset_code">💻 Code Refactor</button>
             <button onclick="setTaskPreset('math')" id="preset-math" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-400 text-slate-700 dark:text-slate-300 transition text-center" data-i18n="preset_math">🧠 Logic & Proof</button>
             <button onclick="setTaskPreset('research')" id="preset-research" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-400 text-slate-700 dark:text-slate-300 transition text-center" data-i18n="preset_research">🔬 Deep Research</button>
             <button onclick="setTaskPreset('system')" id="preset-system" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-400 text-slate-700 dark:text-slate-300 transition text-center" data-i18n="preset_system">🎭 System Prompt</button>
             <button onclick="setTaskPreset('json')" id="preset-json" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-400 text-slate-700 dark:text-slate-300 transition text-center" data-i18n="preset_json">📄 Structured Data</button>
+            <button onclick="setTaskPreset('reddit')" id="preset-reddit" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-400 text-slate-700 dark:text-slate-300 transition text-center" data-i18n="preset_reddit">👾 Reddit 增长</button>
           </div>
 
           <!-- Role Persona Input -->
@@ -859,6 +860,7 @@
         preset_research: '🔬 Deep Research',
         preset_system: '🎭 System Prompt',
         preset_json: '📄 Structured Data',
+        preset_reddit: '👾 Reddit Growth',
         sec3_title: '3. Raw Goal & Context Payload',
         lbl_task: 'What do you want DeepSeek to accomplish?',
         lbl_context: 'Background Code / Data / Reference Context (Optional)',
@@ -981,6 +983,7 @@
         preset_research: '🔬 深度研究',
         preset_system: '🎭 系统提示词',
         preset_json: '📄 结构化数据',
+        preset_reddit: '👾 Reddit 增长',
         sec3_title: '3. 核心诉求与上下文数据',
         lbl_task: '你希望 DeepSeek 为你解决什么具体问题？',
         lbl_context: '相关代码片段 / 数据结构 / 报错上下文 (选填)',
@@ -1106,6 +1109,14 @@
         task_zh: '从非结构化文本中精准抽取发票行项目、税号、付款账期与供应商元数据，输出符合 RFC 8259 规范的合法 JSON。',
         context_en: 'Vendor: Acme Corp | Invoice #9482 | Date: 2026-10-01 | Total: $4,250.00 (Tax 8% included: $314.81)...',
         context_zh: '开票单位: 科技有限公司 | 发票号 #9482 | 开票日期: 2026-10-01 | 总额: ￥42,500.00...'
+      },
+      reddit: {
+        role_en: 'Elite Reddit Growth Strategist & Community Infiltration Specialist skilled in organic Karma acceleration, AutoMod evasion, and value-first tool seeding',
+        role_zh: '资深 Reddit 社区增长操盘手与隐形布道专家，精通高 Karma 冷启动、AutoMod 版规攻防与价值优先型软植入',
+        task_en: 'Craft an organic, high-engagement Reddit comment and submission strategy for my 4-month-old account (0 Karma) to farm initial Karma safely, followed by natural non-promotional tool seeding.',
+        task_zh: '针对我注册 4 个月但目前 0 Karma 的 Reddit 老号，制定极速合规起号与截流回帖策略：先在无门槛版块零风控积累 50~100 Karma，再切入 r/comfyui 与 r/LocalLLaMA 进行价值输出并自然植入工具。',
+        context_en: 'Account Age: 4 months (Passed age filters!). Current Karma: 0 (Needs Comment Karma first). Target tools: ComfyUI Latent Calculator & DeepSeek Prompt Studio. Strict rule: 9:1 value-to-promo ratio, authentic redditor voice, no corporate tone.',
+        context_zh: '账号状态：已注册 4 个月（完美避开新号沙盒期！）。当前 Karma：0（首要任务是快速获取 Comment Karma）。目标引导工具：ComfyUI 潜空间计算器与 DeepSeek 提示词工坊。核心铁律：9:1 价值与推广比，地道 Reddit 网民口吻，严禁营销话术。'
       }
     };
 
@@ -1323,7 +1334,7 @@
       currentTaskPreset = presetKey;
       currentLoadedAgentId = null;
       userHasCustomized = false;
-      ['code', 'math', 'research', 'system', 'json'].forEach(k => {
+      ['code', 'math', 'research', 'system', 'json', 'reddit'].forEach(k => {
         const btn = document.getElementById('preset-' + k);
         if (!btn) return;
         if (k === presetKey) {
@@ -1343,7 +1354,7 @@
     }
 
     function randomizePreset() {
-      const keys = ['code', 'math', 'research', 'system', 'json'];
+      const keys = ['code', 'math', 'research', 'system', 'json', 'reddit'];
       const filtered = keys.filter(k => k !== currentTaskPreset);
       const next = filtered[Math.floor(Math.random() * filtered.length)];
       setTaskPreset(next);
