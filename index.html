@@ -517,8 +517,9 @@
             </a>
           </div>
 
-          <!-- High-Converting Partner API Banner (SiliconFlow) -->
-          <div class="mt-3 pt-3 border-t border-slate-100 dark:border-slate-800/80">
+          <!-- Partner Recommendations: API (SiliconFlow) & Desktop Client (TypingMind) -->
+          <div class="mt-3 pt-3 border-t border-slate-100 dark:border-slate-800/80 space-y-2">
+            <!-- SiliconFlow API Banner -->
             <a href="go/siliconflow" target="_blank" rel="noopener nofollow sponsored" class="group flex items-center justify-between p-2.5 rounded-xl bg-gradient-to-r from-sky-500/10 via-indigo-500/10 to-purple-500/10 hover:from-sky-500/20 hover:to-purple-500/20 border border-sky-400/30 dark:border-sky-500/30 transition shadow-xs">
               <div class="flex items-center gap-2 min-w-0">
                 <span class="text-base p-1 rounded-lg bg-sky-500 text-slate-950 font-bold shrink-0 shadow-xs">⚡</span>
@@ -531,6 +532,21 @@
                 </div>
               </div>
               <span class="text-xs text-sky-600 dark:text-sky-400 font-bold shrink-0 ml-2 group-hover:translate-x-0.5 transition" data-i18n="aff_sf_btn">直达 →</span>
+            </a>
+
+            <!-- TypingMind Client Banner -->
+            <a href="go/typingmind" target="_blank" rel="noopener nofollow sponsored" class="group flex items-center justify-between p-2.5 rounded-xl bg-slate-50 dark:bg-slate-950/60 hover:bg-slate-100 dark:hover:bg-slate-800/60 border border-slate-200 dark:border-slate-800 hover:border-indigo-400/50 transition shadow-xs">
+              <div class="flex items-center gap-2 min-w-0">
+                <span class="text-base p-1 rounded-lg bg-indigo-500 text-white font-bold shrink-0 shadow-xs">💻</span>
+                <div class="truncate">
+                  <div class="flex items-center gap-1.5 flex-wrap">
+                    <span class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-indigo-400 transition" data-i18n="aff_tm_title">桌面常驻？推荐 TypingMind 客户端</span>
+                    <span class="px-1.5 py-0.2 rounded text-[9px] font-bold bg-indigo-500/15 text-indigo-600 dark:text-indigo-300 border border-indigo-500/30">买断制 • 隐私直连</span>
+                  </div>
+                  <p class="text-[11px] text-slate-500 dark:text-slate-400 truncate" data-i18n="aff_tm_desc">跨平台原生 UI，支持自定义 277 位专家人设与插件，填入 DeepSeek API Key 即可永久使用</p>
+                </div>
+              </div>
+              <span class="text-xs text-indigo-600 dark:text-indigo-400 font-bold shrink-0 ml-2 group-hover:translate-x-0.5 transition" data-i18n="aff_tm_btn">体验 →</span>
             </a>
           </div>
         </div>
@@ -768,6 +784,17 @@
         <div class="flex items-center gap-1.5 overflow-x-auto pb-1 text-xs" style="scrollbar-width: thin;" id="agent-dept-pills">
           <!-- Dynamically populated -->
         </div>
+
+        <!-- Recommended Native Client: TypingMind -->
+        <div class="px-3 py-2 rounded-xl bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs">
+          <div class="flex items-center gap-2 text-slate-600 dark:text-slate-300">
+            <span>💡</span>
+            <span class="text-[11px]" data-i18n="modal_tm_tip">想把 277 位专家常驻桌面/手机？推荐使用 <strong>TypingMind</strong> 客户端（本地买断 • 直连 DeepSeek API）</span>
+          </div>
+          <a href="go/typingmind" target="_blank" rel="noopener nofollow sponsored" class="text-sky-600 dark:text-sky-400 font-bold hover:underline whitespace-nowrap text-[11px] flex items-center gap-0.5 ml-2" data-i18n="modal_tm_action">
+            <span>探索 TypingMind →</span>
+          </a>
+        </div>
       </div>
 
       <!-- Agent Cards Grid Container -->
@@ -864,6 +891,11 @@
         aff_sf_title: 'DeepSeek Busy? Zero-Queue Fast API Route',
         aff_sf_desc: 'SiliconFlow high-speed V4 & R1 inference. Register via partner link for 20M free tokens',
         aff_sf_btn: 'Get 20M Tokens →',
+        aff_tm_title: 'Desktop Client? TypingMind Recommendation',
+        aff_tm_desc: 'Premium cross-platform UI. Load 277 agents with your DeepSeek API Key directly with zero monthly sub',
+        aff_tm_btn: 'Explore →',
+        modal_tm_tip: 'Want to keep 277 agents in your desktop/mobile dock? Try <strong>TypingMind</strong> (One-time purchase • Direct DeepSeek API)',
+        modal_tm_action: 'Explore TypingMind →',
         calc_aff_label: '🎁 Partner Free Compute Node:',
         calc_aff_action: 'SiliconFlow (Claim 20M Free Tokens) →',
         faq_tag: 'DEEPSEEK V4 SPEC',
@@ -979,6 +1011,11 @@
         aff_sf_title: '官方拥堵？免排队极速 API 专线',
         aff_sf_desc: '硅基流动 SiliconFlow 极速部署 V4 & R1，专属通道注册即送 2000万 Token 算力',
         aff_sf_btn: '领 2000万 Token →',
+        aff_tm_title: '桌面常驻？推荐 TypingMind 客户端',
+        aff_tm_desc: '跨平台原生 UI，支持自定义 277 位专家人设与插件，填入 DeepSeek API Key 即可永久使用',
+        aff_tm_btn: '体验 →',
+        modal_tm_tip: '想把 277 位专家常驻桌面/手机？推荐使用 <strong>TypingMind</strong> 客户端（本地买断 • 直连 DeepSeek API）',
+        modal_tm_action: '探索 TypingMind →',
         calc_aff_label: '🎁 专属免费算力节点:',
         calc_aff_action: '硅基流动 SiliconFlow (领 2000万 Token) →',
         faq_tag: 'DEEPSEEK V4 规范',
