@@ -1693,9 +1693,13 @@
                 <span>📋</span>
                 <span>${isZh ? '复制人设' : 'Copy'}</span>
               </button>
+              <a href="agents/${a.id}.html" target="_blank" class="px-2 py-1.5 rounded-lg border border-slate-200 dark:border-slate-800 hover:border-slate-400 dark:hover:border-slate-700 text-[11px] text-slate-500 hover:text-slate-900 dark:hover:text-white transition flex items-center gap-1" title="查看专属独立落地页与规范文档">
+                <span>📖</span>
+                <span class="hidden sm:inline">${isZh ? '详情' : 'Doc'}</span>
+              </a>
               <button onclick="loadAgentToGenerator('${a.id}')" class="flex-1 px-3 py-1.5 rounded-lg bg-sky-50 dark:bg-sky-950/60 hover:bg-sky-500 hover:text-slate-950 dark:hover:bg-sky-400 dark:hover:text-slate-950 border border-sky-300 dark:border-sky-500/40 text-[11px] font-bold text-sky-700 dark:text-sky-300 transition shadow-xs flex items-center justify-center gap-1">
                 <span>⚡</span>
-                <span>${isZh ? '一键装填到生成器' : 'Load to DeepSeek'}</span>
+                <span>${isZh ? '一键装填' : 'Load'}</span>
               </button>
             </div>
           </div>
@@ -1774,6 +1778,20 @@
       setTaskPreset('code');
       // Pre-warm agents database
       initAgentHub();
+
+      // Check URL parameters for direct agent loading (?load_agent=xxx or ?agent=xxx)
+      const urlParams = new URLSearchParams(window.location.search);
+      const targetAgentId = urlParams.get('load_agent') || urlParams.get('agent');
+      if (targetAgentId) {
+        const pollAndLoad = () => {
+          if (window.AGENTS_DATA && window.AGENTS_DATA.length > 0) {
+            loadAgentToGenerator(targetAgentId);
+          } else {
+            setTimeout(pollAndLoad, 80);
+          }
+        };
+        pollAndLoad();
+      }
     });
   </script>
 </body>
