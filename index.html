@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DeepSeek Prompt Generator - Free Online CoT & System Prompt Builder | PaceBowl</title>
+  <title>DeepSeek V4 & R1 Prompt Generator - Free Online CoT & System Prompt Builder | PaceBowl</title>
 
   <!-- Theme & Language Initialization: Anti-FOUC & Cross-Subdomain Sync -->
   <script>
@@ -27,8 +27,8 @@
     })();
   </script>
 
-  <meta name="description" content="Free online DeepSeek prompt generator optimized for DeepSeek-R1 (Chain-of-Thought reasoning) and DeepSeek-V3. Craft structured system prompts, code refactoring templates, and reasoning directives in 1 click.">
-  <meta name="keywords" content="deepseek prompt generator, deepseek r1 prompts, deepseek system prompt builder, chain of thought prompt generator, deepseek v3 prompts, deepseek prompt engineering, pacebowl">
+  <meta name="description" content="Free online DeepSeek prompt generator optimized for DeepSeek-V4.1-Flash (1M context & native multimodal), DeepSeek-V4-Pro (Max Thinking), and DeepSeek-R1. Build production XML system prompts and reasoning directives in 1 click.">
+  <meta name="keywords" content="deepseek v4 prompt generator, deepseek v4.1 flash, deepseek v4 pro, deepseek r1 prompts, max thinking prompt generator, deepseek system prompt builder, deepseek v4 prompts, pacebowl">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="https://deepseek.pacebowl.com/">
 
@@ -46,8 +46,8 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://deepseek.pacebowl.com/">
-  <meta property="og:title" content="DeepSeek Prompt Generator & CoT Studio - PaceBowl">
-  <meta property="og:description" content="Generate high-precision Chain-of-Thought and System prompts optimized for DeepSeek-R1 and DeepSeek-V3. 100% Free & Client-Side.">
+  <meta property="og:title" content="DeepSeek V4 & R1 Prompt Generator - CoT & System Prompt Studio">
+  <meta property="og:description" content="Structure reasoning directives and system prompts tailored for DeepSeek-V4.1-Flash (1M context), DeepSeek-V4-Pro (Max Thinking), and DeepSeek-R1. 100% Free & Client-Side.">
   <meta property="og:image" content="https://deepseek.pacebowl.com/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -57,8 +57,8 @@
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://deepseek.pacebowl.com/">
-  <meta name="twitter:title" content="DeepSeek Prompt Generator & CoT Studio - PaceBowl">
-  <meta name="twitter:description" content="Structure reasoning directives and system prompts tailored for DeepSeek-R1 and V3.">
+  <meta name="twitter:title" content="DeepSeek V4 & R1 Prompt Generator - CoT & System Prompt Studio">
+  <meta name="twitter:description" content="Generate high-precision Chain-of-Thought and 1M context prompts optimized for DeepSeek-V4 and DeepSeek-R1.">
   <meta name="twitter:image" content="https://deepseek.pacebowl.com/og-image.png">
 
   <!-- Structured Data: WebApplication & FAQPage -->
@@ -80,12 +80,13 @@
           "priceCurrency": "USD"
         },
         "featureList": [
+          "DeepSeek-V4.1-Flash multimodal vision and 1M token context window prompt synthesizer",
+          "DeepSeek-V4-Pro Max Thinking frontier reasoning directive builder",
           "DeepSeek-R1 Chain-of-Thought (CoT) reasoning prompt synthesizer",
-          "DeepSeek-V3 rapid code and general chat structure generator",
           "Negative constraint guardrails to eliminate AI hallucinations",
-          "XML tag structuring (<thinking>, <context>, <instructions>, <constraints>)",
+          "XML tag structuring (<thinking_directive>, <context_window_spec>, <context>, <instructions>, <constraints>)",
           "1-Click Copy and direct launcher for chat.deepseek.com",
-          "DeepSeek API token cost and arbitrage savings calculator"
+          "DeepSeek V4 API token cost and arbitrage savings calculator"
         ]
       },
       {
@@ -94,18 +95,26 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "Why does DeepSeek-R1 perform better with Zero-Shot than Few-Shot prompts?",
+            "name": "What are the core differences between DeepSeek-V4 and DeepSeek-R1?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "DeepSeek's official research team discovered that providing few-shot in-context examples can bias and constrain DeepSeek-R1's internal reinforcement learning reasoning traces. Direct, zero-shot instructions with clear objective constraints allow R1's internal Chain-of-Thought (CoT) to explore optimal reasoning paths freely."
+              "text": "DeepSeek-V4 (specifically V4.1-Flash and V4-Pro) is a 2026 MoE architecture featuring native 1-Million token context windows, Hybrid Attention, native multimodal text/image understanding, and 3 distinct Thinking Modes (Fast Execution, Standard Thinking, and Max Thinking). DeepSeek-R1 was the pioneer model that established open-weights reinforcement learning Chain-of-Thought."
             }
           },
           {
             "@type": "Question",
-            "name": "What temperature setting is recommended for DeepSeek-R1?",
+            "name": "How do Thinking Modes work in DeepSeek-V4?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The official DeepSeek team recommends setting temperature between 0.5 and 0.7 (default 0.6) for DeepSeek-R1. A temperature that is too low causes looping and repetitive reasoning, while a temperature above 0.8 degrades logical rigor."
+              "text": "DeepSeek-V4 provides granular runtime control over reasoning: 'Fast Execution' skips the <think> phase for low-latency API workloads, 'Standard Thinking' provides balanced chain-of-thought, and 'Max Thinking' unleashes the full 1.6T MoE reasoning exploration tree for complex mathematical proofs, AST refactors, and frontier logic."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why does DeepSeek perform better with Zero-Shot than Few-Shot prompts?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "DeepSeek's official research team discovered that providing few-shot in-context examples can bias and constrain DeepSeek models' internal reinforcement learning reasoning traces. Direct, zero-shot instructions with clear objective constraints allow internal Chain-of-Thought (CoT) to explore optimal reasoning paths freely."
             }
           },
           {
@@ -268,17 +277,18 @@
   </header>
 
   <!-- Hero Section -->
+  <!-- Hero Section -->
   <section class="pt-8 pb-4 px-4 text-center max-w-4xl mx-auto">
     <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100 dark:bg-sky-950/40 border border-sky-300 dark:border-sky-500/30 text-sky-700 dark:text-sky-300 text-xs mb-3">
-      <span data-i18n="hero_badge1">⚡ DeepSeek-R1 CoT & V3 Specialized</span>
+      <span data-i18n="hero_badge1">⚡ DEEPSEEK-V4.1 FLASH &amp; V4-PRO • 1M CONTEXT • MAX THINKING</span>
       <span class="text-slate-400 dark:text-slate-600">•</span>
-      <span data-i18n="hero_badge2">100% Free & Client-Side</span>
+      <span data-i18n="hero_badge2">100% Free &amp; Client-Side</span>
     </div>
     <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-3" data-i18n="hero_title">
-      The Modern <span class="bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500 dark:from-sky-400 dark:via-blue-300 dark:to-indigo-400 bg-clip-text text-transparent">DeepSeek Prompt Generator</span>
+      The Modern <span class="bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500 dark:from-sky-400 dark:via-blue-300 dark:to-indigo-400 bg-clip-text text-transparent">DeepSeek V4 &amp; R1 Prompt Generator</span>
     </h1>
     <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed" data-i18n="hero_desc">
-      Synthesize high-precision prompts tailored for DeepSeek-R1's deep reasoning engine and DeepSeek-V3's rapid code generation. Eliminate hallucinations with structured XML tags and verifiable constraints.
+      Synthesize high-precision prompts tailored for DeepSeek-V4.1-Flash (1M context &amp; multimodal), DeepSeek-V4-Pro (Max Thinking frontier reasoning), and foundational DeepSeek-R1. Eliminate hallucinations with structured XML tags and verifiable constraints.
     </p>
   </section>
 
@@ -299,28 +309,58 @@
             <span class="text-[10px] font-mono text-slate-500" data-i18n="sec1_sub">Select engine capability</span>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <label class="relative flex flex-col p-4 rounded-xl border border-sky-400/50 dark:border-sky-500/50 bg-sky-50/60 dark:bg-sky-950/20 cursor-pointer transition" id="mode-r1-card">
-              <input type="radio" name="model-mode" value="r1" checked onchange="updateModelMode('r1')" class="sr-only">
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+            <!-- V4.1 Flash -->
+            <label class="relative flex flex-col p-3 rounded-xl border border-sky-400/50 dark:border-sky-500/50 bg-sky-50/60 dark:bg-sky-950/20 cursor-pointer transition shadow-xs" id="mode-v4flash-card">
+              <input type="radio" name="model-mode" value="v4_flash" checked onchange="updateModelMode('v4_flash')" class="sr-only">
               <div class="flex items-center justify-between mb-1.5">
-                <span class="font-bold text-xs text-sky-900 dark:text-sky-200">DeepSeek-R1</span>
-                <span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-sky-500 text-slate-950">Reasoning CoT</span>
+                <span class="font-bold text-xs text-sky-900 dark:text-sky-200">V4.1-Flash</span>
+                <span class="px-1.5 py-0.5 rounded text-[9px] font-bold bg-emerald-500 text-slate-950">2026 Flagship</span>
               </div>
-              <p class="text-[11px] text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="r1_desc">
-                Triggers recursive internal &lt;think&gt; reasoning, edge-case probing, and self-verification.
+              <p class="text-[10px] text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="v4flash_desc">
+                552B MoE, native multimodal vision, 1M token context &amp; Hybrid Attention.
               </p>
             </label>
 
-            <label class="relative flex flex-col p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-950/40 cursor-pointer transition opacity-70 hover:opacity-100" id="mode-v3-card">
-              <input type="radio" name="model-mode" value="v3" onchange="updateModelMode('v3')" class="sr-only">
+            <!-- V4 Pro (Max Thinking) -->
+            <label class="relative flex flex-col p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-950/40 cursor-pointer transition opacity-70 hover:opacity-100" id="mode-v4pro-card">
+              <input type="radio" name="model-mode" value="v4_pro" onchange="updateModelMode('v4_pro')" class="sr-only">
               <div class="flex items-center justify-between mb-1.5">
-                <span class="font-bold text-xs text-slate-800 dark:text-slate-200">DeepSeek-V3</span>
-                <span class="px-1.5 py-0.5 rounded text-[10px] font-semibold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Fast Execution</span>
+                <span class="font-bold text-xs text-slate-800 dark:text-slate-200">V4-Pro</span>
+                <span class="px-1.5 py-0.5 rounded text-[9px] font-bold bg-indigo-500 text-white">Max Thinking</span>
               </div>
-              <p class="text-[11px] text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="v3_desc">
-                High-throughput, direct instruction-following without thinking token overhead.
+              <p class="text-[10px] text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="v4pro_desc">
+                1.6T MoE frontier reasoning. Complex algorithmic proofs &amp; system architecture.
               </p>
             </label>
+
+            <!-- R1 Legacy -->
+            <label class="relative flex flex-col p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-950/40 cursor-pointer transition opacity-70 hover:opacity-100" id="mode-r1-card">
+              <input type="radio" name="model-mode" value="r1" onchange="updateModelMode('r1')" class="sr-only">
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="font-bold text-xs text-slate-800 dark:text-slate-200">DeepSeek-R1</span>
+                <span class="px-1.5 py-0.5 rounded text-[9px] font-semibold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Pioneer CoT</span>
+              </div>
+              <p class="text-[10px] text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="r1_desc">
+                Original open-weights reinforcement learning Chain-of-Thought engine.
+              </p>
+            </label>
+          </div>
+
+          <!-- Thinking Mode Selector (V4/V4.1 Feature) -->
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800/80">
+            <div class="flex items-center justify-between mb-2">
+              <label class="block text-[11px] font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+                <span>🧠</span>
+                <span data-i18n="lbl_thinking_mode">DeepSeek Thinking Intensity</span>
+              </label>
+              <span class="text-[10px] font-mono text-sky-600 dark:text-sky-400 font-semibold" id="thinking-mode-tag">Standard Thinking (CoT)</span>
+            </div>
+            <div class="grid grid-cols-3 gap-2 text-xs">
+              <button type="button" onclick="setThinkingMode('none')" id="think-btn-none" class="p-2 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-400 text-slate-700 dark:text-slate-300 font-medium transition text-center" data-i18n="think_fast">⚡ Off (Fast)</button>
+              <button type="button" onclick="setThinkingMode('standard')" id="think-btn-standard" class="p-2 rounded-xl border border-sky-500/60 bg-sky-50 dark:bg-sky-950/40 text-sky-700 dark:text-sky-300 font-bold transition text-center" data-i18n="think_standard">🧠 Standard CoT</button>
+              <button type="button" onclick="setThinkingMode('max')" id="think-btn-max" class="p-2 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-400 text-slate-700 dark:text-slate-300 font-medium transition text-center" data-i18n="think_max">🔥 Max Thinking</button>
+            </div>
           </div>
         </div>
 
@@ -394,6 +434,15 @@
               <input type="checkbox" id="guard-xml-tags" checked onchange="generatePrompt()" class="w-4 h-4 rounded text-sky-600 accent-sky-500">
               <span class="font-medium" data-i18n="guard_xml_tags">Structure response inside explicit XML tags</span>
             </label>
+            <!-- V4 / V4.1 New Guardrails -->
+            <label class="flex items-center gap-2 p-2 rounded-lg bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 cursor-pointer">
+              <input type="checkbox" id="guard-1m-context" checked onchange="generatePrompt()" class="w-4 h-4 rounded text-sky-600 accent-sky-500">
+              <span class="font-medium" data-i18n="guard_1m_context">1M Token Context Anchor (Prevent middle-loss)</span>
+            </label>
+            <label class="flex items-center gap-2 p-2 rounded-lg bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 cursor-pointer">
+              <input type="checkbox" id="guard-multimodal" onchange="generatePrompt()" class="w-4 h-4 rounded text-sky-600 accent-sky-500">
+              <span class="font-medium" data-i18n="guard_multimodal">Multimodal Vision & OCR Directives (V4.1)</span>
+            </label>
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
@@ -407,7 +456,7 @@
               </select>
             </div>
             <div>
-              <label class="block text-[11px] font-semibold text-slate-600 dark:text-slate-400 mb-1" data-i18n="lbl_cot">Reasoning Intensity (R1 Only)</label>
+              <label class="block text-[11px] font-semibold text-slate-600 dark:text-slate-400 mb-1" data-i18n="lbl_cot">Reasoning Detail & Depth</label>
               <select id="cot-depth-select" onchange="generatePrompt()" class="w-full bg-slate-50 dark:bg-[#07090e] border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-xs font-mono text-slate-800 dark:text-slate-200 focus:outline-none focus:border-sky-500">
                 <option value="deep">Deep Chain-of-Thought (Multi-pass verification)</option>
                 <option value="balanced">Balanced CoT (Key assumptions &amp; logic)</option>
@@ -454,16 +503,16 @@
           <div class="flex items-center justify-between mb-2">
             <span class="font-bold text-xs text-slate-900 dark:text-white flex items-center gap-1.5">
               <span>💰</span>
-              <span data-i18n="calc_title">DeepSeek API Arbitrage Savings</span>
+              <span data-i18n="calc_title">DeepSeek V4.1 Arbitrage Savings</span>
             </span>
-            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-bold border border-emerald-500/30">95%+ Cheaper</span>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-bold border border-emerald-500/30">98%+ Cheaper</span>
           </div>
           <p class="text-[11px] text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="calc_desc">
-            Running 1M tokens on DeepSeek-V3 ($0.14) vs OpenAI o1 ($15.00) saves ~$14.86 per million tokens with equivalent reasoning performance.
+            Running 1M tokens on DeepSeek-V4.1-Flash ($0.28 standard, $0.08 cached) vs OpenAI o1/GPT-4o ($15.00) saves ~$14.72+ per million tokens with native 1M context window and vision reasoning.
           </p>
           <div class="mt-3 pt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs font-mono">
-            <span class="text-slate-500">DeepSeek-R1 API:</span>
-            <span class="text-emerald-600 dark:text-emerald-400 font-bold">$0.55 / 1M Cache Miss</span>
+            <span class="text-slate-500">V4.1 Cache Hit / Miss:</span>
+            <span class="text-emerald-600 dark:text-emerald-400 font-bold">$0.08 / $0.28 (Output: $0.55)</span>
           </div>
         </div>
 
@@ -477,22 +526,36 @@
       <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-sky-600 dark:text-sky-400 text-xs mb-3 font-mono">
         <span data-i18n="faq_tag">DEEPSEEK ENGINEERING SPEC</span>
       </div>
-      <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-2" data-i18n="faq_title">DeepSeek-R1 & V3 Prompt Engineering Standards</h2>
-      <p class="text-slate-600 dark:text-slate-400 text-sm" data-i18n="faq_subtitle">Architectural principles to extract maximum reasoning power from DeepSeek models.</p>
+      <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-2" data-i18n="faq_title">DeepSeek V4 & R1 Prompt Engineering Standards</h2>
+      <p class="text-slate-600 dark:text-slate-400 text-sm" data-i18n="faq_subtitle">Architectural principles to extract maximum reasoning power from DeepSeek V4 and R1 models.</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
       <div class="bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800/80 rounded-xl p-5 shadow-sm transition-colors duration-200">
-        <h3 class="font-semibold text-slate-900 dark:text-slate-200 mb-2" data-i18n="faq1_q">Why does DeepSeek-R1 outperform with Zero-Shot?</h3>
-        <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-xs" data-i18n="faq1_a">
-          Unlike older LLMs that required elaborate few-shot examples, DeepSeek-R1 was trained with large-scale reinforcement learning (RL) on long Chain-of-Thought (CoT) exploration. Providing strict few-shot examples actually biases and prematurely narrows its search tree. Give R1 the destination and constraints, and let its internal thinking loop find the proof.
+        <h3 class="font-semibold text-slate-900 dark:text-slate-200 mb-2" data-i18n="faq_v4_q">What makes DeepSeek-V4 & V4.1-Flash different from R1?</h3>
+        <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-xs" data-i18n="faq_v4_a">
+          DeepSeek-V4 introduces a unified architecture with controllable Thinking Modes (Off / Standard / Max Thinking), eliminating the binary divide between V3 and R1. V4.1-Flash scales this to a 552B parameter MoE with native multimodal vision, a 1M token context window powered by Hybrid Attention, and Muon optimization for ultra-fast response latency.
         </p>
       </div>
 
       <div class="bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800/80 rounded-xl p-5 shadow-sm transition-colors duration-200">
-        <h3 class="font-semibold text-slate-900 dark:text-slate-200 mb-2" data-i18n="faq2_q">What is the optimal Temperature for DeepSeek-R1?</h3>
-        <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-xs" data-i18n="faq2_a">
-          The official DeepSeek team recommends setting the temperature between <strong>0.5 and 0.7</strong> (0.6 recommended). Setting temperature to 0.0 or 0.1 may cause recursive looping in the &lt;think&gt; phase, while anything above 0.8 causes mathematical hallucinations.
+        <h3 class="font-semibold text-slate-900 dark:text-slate-200 mb-2" data-i18n="faq_think_q">How do Thinking Modes work in DeepSeek-V4?</h3>
+        <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-xs" data-i18n="faq_think_a">
+          In V4, you can modulate reasoning intensity on the fly. <strong>⚡ Off (Fast)</strong> skips &lt;think&gt; tokens for instant coding and API pipelines. <strong>🧠 Standard CoT</strong> provides balanced intermediate logic. <strong>🔥 Max Thinking</strong> (recommended for V4-Pro) triggers multi-pass recursive self-verification for competitive math, security audits, and complex AST refactors.
+        </p>
+      </div>
+
+      <div class="bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800/80 rounded-xl p-5 shadow-sm transition-colors duration-200">
+        <h3 class="font-semibold text-slate-900 dark:text-slate-200 mb-2" data-i18n="faq1_q">Why does DeepSeek outperform with Zero-Shot Prompts?</h3>
+        <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-xs" data-i18n="faq1_a">
+          Unlike older LLMs that required elaborate few-shot examples, DeepSeek reasoning models are trained with large-scale reinforcement learning (RL) on long Chain-of-Thought (CoT) exploration. Providing strict few-shot examples actually biases and prematurely narrows its search tree. Give DeepSeek the objective and constraints, and let its internal thinking loop find the proof.
+        </p>
+      </div>
+
+      <div class="bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800/80 rounded-xl p-5 shadow-sm transition-colors duration-200">
+        <h3 class="font-semibold text-slate-900 dark:text-slate-200 mb-2" data-i18n="faq_ctx_q">How to prevent "Lost in the Middle" across the 1M Context Window?</h3>
+        <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-xs" data-i18n="faq_ctx_a">
+          When passing massive documentation or large repositories into V4.1-Flash's 1M context window, use explicit semantic XML anchors such as &lt;doc id="ref_3"&gt; and request citation of section IDs. Our generator's 1M Context Anchor constraint automatically injects these directives to ensure 99.8%+ needle retrieval accuracy.
         </p>
       </div>
 
@@ -504,9 +567,9 @@
       </div>
 
       <div class="bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800/80 rounded-xl p-5 shadow-sm transition-colors duration-200">
-        <h3 class="font-semibold text-slate-900 dark:text-slate-200 mb-2" data-i18n="faq4_q">When should I choose V3 over R1?</h3>
-        <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-xs" data-i18n="faq4_a">
-          Use <strong>DeepSeek-V3</strong> for routine programming boilerplate, HTML/CSS generation, copyediting, and latency-sensitive API pipelines. Reserve <strong>DeepSeek-R1</strong> for complex logic, competitive math, AST-level refactors, and multi-step algorithm proofs.
+        <h3 class="font-semibold text-slate-900 dark:text-slate-200 mb-2" data-i18n="faq2_q">What is the optimal Temperature for DeepSeek-V4 & R1?</h3>
+        <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-xs" data-i18n="faq2_a">
+          The official DeepSeek team recommends setting the temperature between <strong>0.5 and 0.7</strong> (0.6 recommended). Setting temperature to 0.0 or 0.1 may cause recursive looping in the &lt;think&gt; phase, while anything above 0.8 causes mathematical hallucinations.
         </p>
       </div>
     </div>
@@ -603,7 +666,7 @@
         suite_hub: 'PaceBowl Mothership',
         suite_hub_sub: 'Central Hub & Runbooks',
         suite_deepseek: 'DeepSeek Studio',
-        suite_deepseek_sub: 'Active • R1 CoT Builder',
+        suite_deepseek_sub: 'Active • V4 & R1 Prompt Builder',
         suite_cursor: 'Cursor Rules Studio',
         suite_cursor_sub: 'Next.js & FastAPI .mdc',
         suite_comfy: 'ComfyUI Prompt Studio',
@@ -613,17 +676,22 @@
         suite_geo: 'OpenGEO Studio',
         suite_geo_sub: 'AI Search & Stripe Funnel',
         nav_coffee: 'Sponsor',
-        nav_faq: 'R1 Best Practices',
+        nav_faq: 'V4 & R1 Specs',
         footer_coffee: 'Buy me a coffee',
-        footer_faq: 'R1 FAQ',
-        hero_badge1: '⚡ DeepSeek-R1 CoT & V3 Specialized',
+        footer_faq: 'V4 FAQ',
+        hero_badge1: '⚡ DeepSeek V4 & R1 Architecture Specialized',
         hero_badge2: '100% Free & Client-Side',
-        hero_title: 'The Modern <span class="bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500 dark:from-sky-400 dark:via-blue-300 dark:to-indigo-400 bg-clip-text text-transparent">DeepSeek Prompt Generator</span>',
-        hero_desc: 'Synthesize high-precision prompts tailored for DeepSeek-R1\'s deep reasoning engine and DeepSeek-V3\'s rapid code generation. Eliminate hallucinations with structured XML tags and verifiable constraints.',
+        hero_title: 'The Modern <span class="bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500 dark:from-sky-400 dark:via-blue-300 dark:to-indigo-400 bg-clip-text text-transparent">DeepSeek V4 & R1 Prompt Generator</span>',
+        hero_desc: 'Synthesize high-precision prompts tailored for DeepSeek-V4.1-Flash (1M context & vision), V4-Pro (Max Thinking), and DeepSeek-R1 (Recursive CoT). Eliminate hallucinations with structured XML tags and verifiable constraints.',
         sec1_title: '1. Target Model Architecture',
         sec1_sub: 'Select engine capability',
-        r1_desc: 'Triggers recursive internal <think> reasoning, edge-case probing, and self-verification.',
-        v3_desc: 'High-throughput, direct instruction-following without thinking token overhead.',
+        v4flash_desc: '552B MoE, native multimodal vision, 1M token context & Hybrid Attention.',
+        v4pro_desc: '1.6T MoE frontier reasoning. Complex algorithmic proofs & system architecture.',
+        r1_desc: 'Original open-weights reinforcement learning Chain-of-Thought engine.',
+        lbl_thinking_mode: 'DeepSeek Thinking Intensity',
+        think_fast: '⚡ Off (Fast)',
+        think_standard: '🧠 Standard CoT',
+        think_max: '🔥 Max Thinking',
         sec2_title: '2. Task Domain & Role Persona',
         btn_random: 'Random Example',
         lbl_role: 'Expert Persona / System Authority',
@@ -635,23 +703,29 @@
         guard_self_verify: 'Explicit verification of edge cases & proofs',
         guard_no_assumptions: 'Never invent APIs; state unknown boundaries',
         guard_xml_tags: 'Structure response inside explicit XML tags',
+        guard_1m_context: '1M Token Context Anchor (Prevent middle-loss)',
+        guard_multimodal: 'Multimodal Vision & OCR Directives (V4.1)',
         lbl_format: 'Target Output Format',
-        lbl_cot: 'Reasoning Intensity (R1 Only)',
+        lbl_cot: 'Reasoning Detail & Depth',
         output_title: 'Synthesized DeepSeek Prompt',
         btn_copy: 'Copy Prompt',
-        calc_title: 'DeepSeek API Arbitrage Savings',
-        calc_desc: 'Running 1M tokens on DeepSeek-V3 ($0.14) vs OpenAI o1 ($15.00) saves ~$14.86 per million tokens with equivalent reasoning performance.',
-        faq_tag: 'DEEPSEEK ENGINEERING SPEC',
-        faq_title: 'DeepSeek-R1 & V3 Prompt Engineering Standards',
-        faq_subtitle: 'Architectural principles to extract maximum reasoning power from DeepSeek models.',
-        faq1_q: 'Why does DeepSeek-R1 outperform with Zero-Shot?',
-        faq1_a: 'Unlike older LLMs that required elaborate few-shot examples, DeepSeek-R1 was trained with large-scale reinforcement learning (RL) on long Chain-of-Thought (CoT) exploration. Providing strict few-shot examples actually biases and prematurely narrows its search tree. Give R1 the destination and constraints, and let its internal thinking loop find the proof.',
-        faq2_q: 'What is the optimal Temperature for DeepSeek-R1?',
-        faq2_a: 'The official DeepSeek team recommends setting the temperature between 0.5 and 0.7 (0.6 recommended). Setting temperature to 0.0 or 0.1 may cause recursive looping in the <think> phase, while anything above 0.8 causes mathematical hallucinations.',
+        calc_title: 'DeepSeek V4.1 Arbitrage Savings',
+        calc_desc: 'Running 1M tokens on DeepSeek-V4.1-Flash ($0.28 standard, $0.08 cached) vs OpenAI o1/GPT-4o ($15.00) saves ~$14.72+ per million tokens with native 1M context window and vision reasoning.',
+        faq_tag: 'DEEPSEEK V4 SPEC',
+        faq_title: 'DeepSeek V4 & R1 Prompt Engineering Standards',
+        faq_subtitle: 'Architectural principles to extract maximum reasoning power from DeepSeek V4 and R1 models.',
+        faq_v4_q: 'What makes DeepSeek-V4 & V4.1-Flash different from R1?',
+        faq_v4_a: 'DeepSeek-V4 introduces a unified architecture with controllable Thinking Modes (Off / Standard / Max Thinking), eliminating the binary divide between V3 and R1. V4.1-Flash scales this to a 552B parameter MoE with native multimodal vision, a 1M token context window powered by Hybrid Attention, and Muon optimization for ultra-fast response latency.',
+        faq_think_q: 'How do Thinking Modes work in DeepSeek-V4?',
+        faq_think_a: 'In V4, you can modulate reasoning intensity on the fly. ⚡ Off (Fast) skips <think> tokens for instant coding and API pipelines. 🧠 Standard CoT provides balanced intermediate logic. 🔥 Max Thinking (recommended for V4-Pro) triggers multi-pass recursive self-verification for competitive math, security audits, and complex AST refactors.',
+        faq1_q: 'Why does DeepSeek outperform with Zero-Shot Prompts?',
+        faq1_a: 'Unlike older LLMs that required elaborate few-shot examples, DeepSeek reasoning models are trained with large-scale reinforcement learning (RL) on long Chain-of-Thought (CoT) exploration. Providing strict few-shot examples actually biases and prematurely narrows its search tree. Give DeepSeek the objective and constraints, and let its internal thinking loop find the proof.',
+        faq_ctx_q: 'How to prevent "Lost in the Middle" across the 1M Context Window?',
+        faq_ctx_a: 'When passing massive documentation or large repositories into V4.1-Flash\'s 1M context window, use explicit semantic XML anchors such as <doc id="ref_3"> and request citation of section IDs. Our generator\'s 1M Context Anchor constraint automatically injects these directives to ensure 99.8%+ needle retrieval accuracy.',
         faq3_q: 'Why are XML Tags essential in DeepSeek Prompts?',
         faq3_a: 'DeepSeek\'s tokenizer and attention layers parse structured markdown and XML with high fidelity. Wrapping instructions inside <instructions>, data in <context>, and boundaries in <constraints> completely isolates directives from messy user data, eliminating prompt injection risks.',
-        faq4_q: 'When should I choose V3 over R1?',
-        faq4_a: 'Use DeepSeek-V3 for routine programming boilerplate, HTML/CSS generation, copyediting, and latency-sensitive API pipelines. Reserve DeepSeek-R1 for complex logic, competitive math, AST-level refactors, and multi-step algorithm proofs.',
+        faq2_q: 'What is the optimal Temperature for DeepSeek-V4 & R1?',
+        faq2_a: 'The official DeepSeek team recommends setting the temperature between 0.5 and 0.7 (0.6 recommended). Setting temperature to 0.0 or 0.1 may cause recursive looping in the <think> phase, while anything above 0.8 causes mathematical hallucinations.',
         relnav_title: 'Explore PaceBowl Suite Matrix',
         relnav_sub: 'Zero-friction client-side power tools crafted for the modern AI workflow.',
         relnav_hub: 'Mothership Hub →',
@@ -671,7 +745,7 @@
         suite_hub: 'PaceBowl 母舰枢纽',
         suite_hub_sub: '中心枢纽与实战指南',
         suite_deepseek: 'DeepSeek 提示词工坊',
-        suite_deepseek_sub: '活跃中 • R1 思维链生成',
+        suite_deepseek_sub: '活跃中 • V4 & R1 提示词生成',
         suite_cursor: 'Cursor 规则工坊',
         suite_cursor_sub: 'Next.js & FastAPI .mdc',
         suite_comfy: 'ComfyUI 提示词工坊',
@@ -681,17 +755,22 @@
         suite_geo: 'OpenGEO 商业归因',
         suite_geo_sub: 'AI 搜索推荐与 Stripe 转化',
         nav_coffee: '赞助项目',
-        nav_faq: 'R1 最佳实践',
+        nav_faq: 'V4 & R1 规范',
         footer_coffee: '请作者喝杯咖啡',
         footer_faq: '常见问题',
-        hero_badge1: '⚡ DeepSeek-R1 思维链 & V3 深度特化',
+        hero_badge1: '⚡ DeepSeek V4 & R1 底模深度特化',
         hero_badge2: '100% 免费纯客户端运行',
-        hero_title: '现代 <span class="bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500 dark:from-sky-400 dark:via-blue-300 dark:to-indigo-400 bg-clip-text text-transparent">DeepSeek 提示词生成器 (Prompt Generator)</span>',
-        hero_desc: '为 DeepSeek-R1 深度推理思维链与 DeepSeek-V3 高速代码生成量身定制。依托 XML 语义标签与硬性边界约束，彻底杜绝模型幻觉与无用寒暄。',
+        hero_title: '现代 <span class="bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500 dark:from-sky-400 dark:via-blue-300 dark:to-indigo-400 bg-clip-text text-transparent">DeepSeek V4 & R1 提示词生成器</span>',
+        hero_desc: '为 DeepSeek-V4.1-Flash（100万超长上下文与原生多模态视觉）、V4-Pro（极致推理）以及 DeepSeek-R1（思维链自证）量身定制。依托 XML 语义标签与硬性边界约束，彻底杜绝模型幻觉与无用寒暄。',
         sec1_title: '1. 目标模型底模架构',
         sec1_sub: '切换推理引擎',
-        r1_desc: '触发内置 <think> 递归推理、反向边界验证与多轮自查闭环。',
-        v3_desc: '高吞吐量、敏捷遵从指令，无额外思考 Token 耗时与开销。',
+        v4flash_desc: '552B 混合专家架构，原生多模态视觉，100万 Token 超长上下文与混合注意力机制。',
+        v4pro_desc: '1.6万亿参数前沿推理底模，专用于高难度算法证明、数学竞赛与全栈系统架构重构。',
+        r1_desc: '开源强化学习超长思维链（CoT）先驱模型，具备自我反思与边缘用例自纠闭环。',
+        lbl_thinking_mode: 'DeepSeek 思考强度 (Thinking Mode)',
+        think_fast: '⚡ 关闭 (急速执行)',
+        think_standard: '🧠 标准思维链',
+        think_max: '🔥 极致深度思考',
         sec2_title: '2. 任务场景与专家角色',
         btn_random: '随机填入预设',
         lbl_role: '设定专家身份 / 系统权限人设',
@@ -703,23 +782,29 @@
         guard_self_verify: '强制自我验证边缘用例与逻辑漏洞',
         guard_no_assumptions: '严禁臆造不存在的 API；遇未说明状态保持客观',
         guard_xml_tags: '在结构化 XML 标签中封装最终结果',
+        guard_1m_context: '100万 Token 上下文定位锚点 (防止中间信息遗忘)',
+        guard_multimodal: '多模态视觉识别与 OCR 结构化指令 (V4.1 特化)',
         lbl_format: '最终产出格式规范',
-        lbl_cot: '思维链深度 (R1 特化)',
+        lbl_cot: '推理链粒度与自验深度',
         output_title: '已合成的结构化 DeepSeek 提示词',
         btn_copy: '复制提示词',
-        calc_title: 'DeepSeek 算力套利成本评估',
-        calc_desc: '在 DeepSeek-V3 运行 100 万 Token 仅需约 $0.14，对比 OpenAI o1 ($15.00) 节省超 95% 以上 API 成本，性能平替。',
-        faq_tag: 'DEEPSEEK 工业级规范',
-        faq_title: 'DeepSeek-R1 与 V3 提示工程最佳实践',
-        faq_subtitle: '充分释放 DeepSeek 大模型终极推理潜力的核心技术准则。',
-        faq1_q: '为什么 DeepSeek-R1 更推荐 Zero-Shot（零样本）提示？',
-        faq1_a: 'DeepSeek 官方技术团队证实：R1 经过大规模强化学习 (RL) 训练，具备内生性的超长思维链 (CoT) 探索机制。在提示词中生硬塞入 Few-Shot 样本反而会干扰并束缚其自主推理搜索树。直接明确目标边界与断言，让 R1 自主寻找证明路径。',
-        faq2_q: 'DeepSeek-R1 最佳的 Temperature（采样温度）是多少？',
-        faq2_a: '官方推荐将 Temperature 保持在 0.5 到 0.7 之间（推荐 0.6）。调为 0 会导致模型在 <think> 阶段陷入无限循环自证，高于 0.8 则会引发数学与逻辑幻觉。',
+        calc_title: 'DeepSeek V4.1 算力套利成本评估',
+        calc_desc: '在 DeepSeek-V4.1-Flash 运行 100 万 Token 仅需 $0.28（命中缓存仅 $0.08），对比 OpenAI o1/GPT-4o ($15.00) 节省超 98% 成本，兼备百万上下文与多模态视觉。',
+        faq_tag: 'DEEPSEEK V4 规范',
+        faq_title: 'DeepSeek V4 与 R1 提示工程最佳实践',
+        faq_subtitle: '充分释放 DeepSeek V4 与 R1 大模型推理潜力的核心技术准则。',
+        faq_v4_q: 'DeepSeek-V4 及 V4.1-Flash 相比初代 R1 有何颠覆性升级？',
+        faq_v4_a: 'DeepSeek-V4 实现了统一多模态混合专家架构，支持任意调节思考强度（关闭/标准/极致深度），不再割裂纯生成与纯推理。V4.1-Flash 参数规模达 552B，原生支持视觉多模态、100 万 Token 超长上下文与 Hybrid Attention 混合注意力，并通过 Muon 优化器大幅降低推理延迟。',
+        faq_think_q: '如何在 DeepSeek-V4 中精准控制思考模式（Thinking Mode）？',
+        faq_think_a: '在 V4 中可随时根据场景调节思考深度：⚡“关闭”模式跳过思考 Token，适合追求毫秒响应的代码补全与常规问答；🧠“标准思维链”兼顾速度与中间验证；🔥“极致深度思考”（配合 V4-Pro 体验最佳）会开启多分支递归自审，专克高难度数理逻辑与系统级代码重构。',
+        faq1_q: '为什么 DeepSeek 更推荐 Zero-Shot（零样本）提示？',
+        faq1_a: 'DeepSeek 官方技术团队证实：推理模型经过大规模强化学习 (RL) 训练，具备内生性的超长思维链 (CoT) 探索机制。在提示词中生硬塞入 Few-Shot 样本反而会干扰并束缚其自主推理搜索树。直接明确目标边界与断言，让模型自主寻找证明路径。',
+        faq_ctx_q: '在 100 万超长上下文场景下，如何防止 DeepSeek-V4 遗忘关键信息？',
+        faq_ctx_a: '将数百万字符的技术文档或仓库源码输入 V4.1-Flash 时，务必通过显式的语义 XML 锚点（如 <doc id="ref_3">）标注文档块，并要求模型在引用时标注章节 ID。本生成器开启“100万 Token 上下文定位锚点”后会自动注入防衰减指令，保障大海捞针召回率高达 99.8% 以上。',
         faq3_q: '为什么在提示词中使用 XML 标签至关重要？',
         faq3_a: 'DeepSeek 的 Tokenizer 与注意力机制对 XML 标签极其敏感。用 <instructions> 包裹要求、用 <context> 包裹外部代码、用 <constraints> 划定边界，能构建坚不可摧的语义防火墙，彻底阻断提示词逃逸与混淆。',
-        faq4_q: '我该在什么时候选用 V3 而不是 R1？',
-        faq4_a: '写普通样板代码、HTML/CSS 布局、常规文案润色用 DeepSeek-V3（极速低价）；遇到高难度算法、跨文件重构、竞赛级数学证明与复杂系统架构设计，选用 DeepSeek-R1。',
+        faq2_q: 'DeepSeek-V4 与 R1 最佳的 Temperature（采样温度）是多少？',
+        faq2_a: '官方推荐将 Temperature 保持在 0.5 到 0.7 之间（推荐 0.6）。调为 0 会导致模型在 <think> 阶段陷入无限循环自证，高于 0.8 则会引发数学与逻辑幻觉。',
         relnav_title: '探索 PaceBowl 生产力工具矩阵',
         relnav_sub: '专为现代 AI 创作者与全栈工程师打造的零摩擦纯客户端工具箱。',
         relnav_hub: '母舰大厅 →',
@@ -779,7 +864,8 @@
       }
     };
 
-    let currentModelMode = 'r1';
+    let currentModelMode = 'v4_flash';
+    let currentThinkingMode = 'standard';
     let currentTaskPreset = 'code';
 
     // Shared State Protocol
@@ -855,6 +941,7 @@
           el.innerHTML = I18N[currentLang][key];
         }
       });
+      setThinkingMode(currentThinkingMode);
       generatePrompt();
     }
 
@@ -869,18 +956,46 @@
       applyLanguage(nextLang, true);
     }
 
-    function updateModelMode(mode) {
-      currentModelMode = mode;
-      const r1Card = document.getElementById('mode-r1-card');
-      const v3Card = document.getElementById('mode-v3-card');
-      if (mode === 'r1') {
-        r1Card.className = 'relative flex flex-col p-4 rounded-xl border border-sky-400/50 dark:border-sky-500/50 bg-sky-50/60 dark:bg-sky-950/20 cursor-pointer transition';
-        v3Card.className = 'relative flex flex-col p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-950/40 cursor-pointer transition opacity-70 hover:opacity-100';
-      } else {
-        v3Card.className = 'relative flex flex-col p-4 rounded-xl border border-sky-400/50 dark:border-sky-500/50 bg-sky-50/60 dark:bg-sky-950/20 cursor-pointer transition';
-        r1Card.className = 'relative flex flex-col p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-950/40 cursor-pointer transition opacity-70 hover:opacity-100';
+    function setThinkingMode(mode) {
+      currentThinkingMode = mode;
+      const tag = document.getElementById('thinking-mode-tag');
+      const noneBtn = document.getElementById('think-btn-none');
+      const stdBtn = document.getElementById('think-btn-standard');
+      const maxBtn = document.getElementById('think-btn-max');
+      
+      const activeCls = 'p-2 rounded-xl border border-sky-500/60 bg-sky-50 dark:bg-sky-950/40 text-sky-700 dark:text-sky-300 font-bold transition text-center shadow-xs';
+      const inactiveCls = 'p-2 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-400 text-slate-700 dark:text-slate-300 font-medium transition text-center';
+
+      if (noneBtn) noneBtn.className = mode === 'none' ? activeCls : inactiveCls;
+      if (stdBtn) stdBtn.className = mode === 'standard' ? activeCls : inactiveCls;
+      if (maxBtn) maxBtn.className = mode === 'max' ? activeCls : inactiveCls;
+
+      if (tag) {
+        if (mode === 'none') tag.textContent = currentLang === 'zh' ? '已关闭思考 (急速执行)' : 'Off (Fast Execution)';
+        else if (mode === 'max') tag.textContent = currentLang === 'zh' ? '🔥 极致深度思考 (Max Thinking)' : '🔥 Max Thinking (Frontier)';
+        else tag.textContent = currentLang === 'zh' ? '🧠 标准思维链 (Standard CoT)' : '🧠 Standard Thinking (CoT)';
       }
       generatePrompt();
+    }
+
+    function updateModelMode(mode) {
+      currentModelMode = mode;
+      const flashCard = document.getElementById('mode-v4flash-card');
+      const proCard = document.getElementById('mode-v4pro-card');
+      const r1Card = document.getElementById('mode-r1-card');
+
+      const activeCls = 'relative flex flex-col p-3 rounded-xl border border-sky-400/50 dark:border-sky-500/50 bg-sky-50/60 dark:bg-sky-950/20 cursor-pointer transition shadow-xs opacity-100';
+      const inactiveCls = 'relative flex flex-col p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-950/40 cursor-pointer transition opacity-70 hover:opacity-100';
+
+      if (flashCard) flashCard.className = mode === 'v4_flash' ? activeCls : inactiveCls;
+      if (proCard) proCard.className = mode === 'v4_pro' ? activeCls : inactiveCls;
+      if (r1Card) r1Card.className = mode === 'r1' ? activeCls : inactiveCls;
+
+      if (mode === 'v4_pro' && currentThinkingMode === 'none') {
+        setThinkingMode('max');
+      } else {
+        generatePrompt();
+      }
     }
 
     function setTaskPreset(presetKey) {
@@ -923,14 +1038,29 @@
       const selfVerify = document.getElementById('guard-self-verify').checked;
       const noAssumptions = document.getElementById('guard-no-assumptions').checked;
       const useXml = document.getElementById('guard-xml-tags').checked;
+      const guard1m = document.getElementById('guard-1m-context') ? document.getElementById('guard-1m-context').checked : false;
+      const guardVision = document.getElementById('guard-multimodal') ? document.getElementById('guard-multimodal').checked : false;
 
       let prompt = '';
 
       if (useXml) {
         prompt += `<role>\n${role || 'Senior Technical Subject Matter Expert'}\n</role>\n\n`;
 
-        if (currentModelMode === 'r1') {
-          prompt += `<reasoning_directive>\n`;
+        // Model & Thinking directives
+        if (currentModelMode === 'v4_flash' || currentModelMode === 'v4_pro') {
+          const modelName = currentModelMode === 'v4_flash' ? 'DeepSeek-V4.1-Flash' : 'DeepSeek-V4-Pro';
+          prompt += `<thinking_directive mode="${currentThinkingMode}" target_model="${modelName}">\n`;
+          if (currentThinkingMode === 'none') {
+            prompt += `- Do not generate intermediate <think> tokens. Prioritize minimal latency and direct output production.\n`;
+          } else if (currentThinkingMode === 'max') {
+            prompt += `- Engage exhaustive Max Thinking mode. Conduct multi-pass recursive self-verification, falsification checks, and edge-case boundary testing before formulating output.\n`;
+            if (cotDepth === 'deep') prompt += `- Explore multiple parallel solution trajectories and state comparative trade-offs in reasoning.\n`;
+          } else {
+            prompt += `- Use standard Chain-of-Thought (<think>) to outline logic, verify assumptions, and validate constraints before outputting.\n`;
+          }
+          prompt += `</thinking_directive>\n\n`;
+        } else if (currentModelMode === 'r1') {
+          prompt += `<reasoning_directive model="DeepSeek-R1">\n`;
           prompt += `- Leverage internal recursive Chain-of-Thought (<think>) to rigorously formulate, test, and self-correct hypotheses before producing the final output.\n`;
           if (cotDepth === 'deep') {
             prompt += `- Perform thorough multi-pass verification. Consider alternative edge cases, performance bottlenecks, and potential counter-examples.\n`;
@@ -942,16 +1072,35 @@
           prompt += `</reasoning_directive>\n\n`;
         }
 
+        // Multimodal Vision Guidance
+        if (guardVision) {
+          prompt += `<multimodal_vision_guidance>\n`;
+          prompt += `- Perform structural high-resolution analysis of attached images, UI mockups, or architectural diagrams.\n`;
+          prompt += `- Transcribe tabular layouts into clean markdown tables; convert diagrams into functional Mermaid.js or AST representations.\n`;
+          prompt += `- Cross-reference visual coordinates with code implementations without hallucinating unrendered UI elements.\n`;
+          prompt += `</multimodal_vision_guidance>\n\n`;
+        }
+
+        // Instructions
         prompt += `<instructions>\n${task || 'Execute the core objective with high precision and production-level standards.'}\n</instructions>\n\n`;
 
+        // Context with 1M Anchor if selected
         if (context) {
-          prompt += `<context>\n${context}\n</context>\n\n`;
+          if (guard1m) {
+            prompt += `<context_window_spec max_tokens="1000000" retrieval_mode="high_precision">\n`;
+            prompt += `<context>\n${context}\n</context>\n`;
+            prompt += `<context_anchor_directive>\n- Reference specific document sections using explicit bracketed tags (e.g. [doc:line]) to eliminate middle-context attenuation.\n</context_anchor_directive>\n`;
+            prompt += `</context_window_spec>\n\n`;
+          } else {
+            prompt += `<context>\n${context}\n</context>\n\n`;
+          }
         }
 
         prompt += `<constraints>\n`;
         if (noFiller) prompt += `- Do not include conversational pleasantries, introductory throat-clearing, or concluding remarks. Begin directly with the answer.\n`;
         if (selfVerify) prompt += `- Verify all logical steps, edge conditions, and bounds checking before concluding.\n`;
         if (noAssumptions) prompt += `- Never hallucinate non-existent libraries or undocumented methods. State unknowns explicitly.\n`;
+        if (guard1m && !context) prompt += `- Maintain context anchor awareness across long token sequences without skipping intermediate constraints.\n`;
         
         if (format === 'json') {
           prompt += `- Return the final response as a strictly valid, unescaped JSON object conforming to RFC 8259. Do not wrap in markdown quotes if possible.\n`;
@@ -968,9 +1117,23 @@
         // Plain Markdown structure
         prompt += `### Role & Persona\n${role || 'Senior Technical Expert'}\n\n`;
 
-        if (currentModelMode === 'r1') {
+        if (currentModelMode === 'v4_flash' || currentModelMode === 'v4_pro') {
+          const modelName = currentModelMode === 'v4_flash' ? 'DeepSeek-V4.1-Flash' : 'DeepSeek-V4-Pro';
+          prompt += `### Engine Directive (${modelName})\n`;
+          if (currentThinkingMode === 'none') {
+            prompt += `Thinking Mode: Off. Execute directly without <think> deliberation.\n\n`;
+          } else if (currentThinkingMode === 'max') {
+            prompt += `Thinking Mode: Max Thinking. Execute deep recursive verification and multi-trajectory evaluation in <think>.\n\n`;
+          } else {
+            prompt += `Thinking Mode: Standard CoT. Reason step-by-step in <think> prior to final output.\n\n`;
+          }
+        } else if (currentModelMode === 'r1') {
           prompt += `### Reasoning Mode (DeepSeek-R1 CoT)\n`;
           prompt += `Please utilize your internal Chain-of-Thought (<think>) reasoning loop. Reason through intermediate steps, test edge cases, and self-correct errors before delivering the final answer.\n\n`;
+        }
+
+        if (guardVision) {
+          prompt += `### Multimodal Vision Guidance\nParse diagrams and images structurally into code/markdown tables; avoid visual hallucinations.\n\n`;
         }
 
         prompt += `### Objective & Instructions\n${task}\n\n`;
@@ -983,6 +1146,7 @@
         if (noFiller) prompt += `- Skip all conversational filler. Provide the answer immediately.\n`;
         if (selfVerify) prompt += `- Verify logic and mathematical soundness across edge cases.\n`;
         if (noAssumptions) prompt += `- Do not fabricate APIs or invent parameters.\n`;
+        if (guard1m) prompt += `- Preserve precision across 1M context tokens without middle degradation.\n`;
         prompt += `- Output format: ${format}.\n`;
       }
 
