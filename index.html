@@ -199,6 +199,14 @@
       </div>
 
       <div class="flex items-center space-x-2 sm:space-x-3">
+        <!-- 277+ AI Expert Agents Hub Button -->
+        <button id="agent-hub-btn" onclick="openAgentHubModal()" class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg bg-gradient-to-r from-sky-500/10 via-indigo-500/10 to-purple-500/10 hover:from-sky-500/20 hover:to-purple-500/20 border border-sky-400/40 dark:border-sky-500/40 text-xs font-semibold text-sky-800 dark:text-sky-300 transition shadow-sm hover:scale-[1.02]" title="277+ AI Expert Agents Hub">
+          <span>🎭</span>
+          <span class="hidden sm:inline" data-i18n="agent_hub_nav">277+ AI 专家库</span>
+          <span class="sm:hidden" data-i18n="agent_hub_nav_short">专家库</span>
+          <span class="px-1.5 py-0.2 rounded-full text-[9px] bg-sky-500 text-slate-950 font-bold font-mono">277</span>
+        </button>
+
         <!-- Language Switcher Button -->
         <button id="lang-toggle-btn" onclick="toggleLanguage()" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 hover:border-sky-400 text-xs text-slate-700 dark:text-slate-300 transition shadow-sm" title="Toggle English / 简体中文">
           <svg class="w-3.5 h-3.5 text-slate-500 dark:text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/></svg>
@@ -371,10 +379,16 @@
               <span class="w-2 h-2 rounded-full bg-indigo-500"></span>
               <span data-i18n="sec2_title">2. Task Domain & Role Persona</span>
             </h3>
-            <button onclick="randomizePreset()" class="text-xs text-sky-600 dark:text-sky-400 hover:underline flex items-center gap-1 font-medium">
-              <span>🎲</span>
-              <span data-i18n="btn_random">Random Example</span>
-            </button>
+            <div class="flex items-center gap-2">
+              <button onclick="openAgentHubModal()" class="text-xs text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 font-bold flex items-center gap-1 bg-indigo-50 dark:bg-indigo-950/60 hover:bg-indigo-100 dark:hover:bg-indigo-900/60 px-2.5 py-1 rounded-lg border border-indigo-200 dark:border-indigo-800/60 transition shadow-xs">
+                <span>🎭</span>
+                <span data-i18n="btn_browse_agents">浏览 277 位专家库</span>
+              </button>
+              <button onclick="randomizePreset()" class="text-xs text-sky-600 dark:text-sky-400 hover:underline flex items-center gap-1 font-medium">
+                <span>🎲</span>
+                <span data-i18n="btn_random">Random Example</span>
+              </button>
+            </div>
           </div>
 
           <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-xs" id="task-preset-buttons">
@@ -663,6 +677,84 @@
     </div>
   </footer>
 
+  <!-- 277+ AI Expert Agents Hub Modal -->
+  <div id="agent-hub-modal" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-slate-950/75 backdrop-blur-md hidden transition-opacity duration-200" onclick="handleAgentModalBackdrop(event)">
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl w-full max-w-5xl h-[90vh] flex flex-col shadow-2xl overflow-hidden" onclick="event.stopPropagation()">
+      <!-- Modal Header -->
+      <div class="p-4 sm:p-5 border-b border-slate-200 dark:border-slate-800/90 flex items-center justify-between bg-slate-50/60 dark:bg-slate-900/80">
+        <div>
+          <div class="flex items-center gap-2 mb-1 flex-wrap">
+            <span class="text-xl">🎭</span>
+            <h2 class="text-base sm:text-lg font-extrabold text-slate-900 dark:text-white" data-i18n="modal_agent_title">
+              277 位 AI 专家角色工坊
+            </h2>
+            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-sky-500/15 border border-sky-500/30 text-sky-700 dark:text-sky-300 font-mono">
+              277 Agents
+            </span>
+            <span class="inline-flex px-2 py-0.5 rounded-full text-[10px] font-semibold bg-rose-500/10 border border-rose-500/30 text-rose-600 dark:text-rose-400">
+              🇨🇳 64个中国市场原创
+            </span>
+          </div>
+          <p class="text-xs text-slate-500 dark:text-slate-400" data-i18n="modal_agent_sub">
+            覆盖公司经营、工程、设计、营销等 20 个部门架构。点击任意角色一键装填至 DeepSeek-V4/R1 生成器。
+          </p>
+        </div>
+        <div class="flex items-center gap-2.5">
+          <a href="https://github.com/jnMetaCode/agency-agents-zh" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg border border-slate-200 dark:border-slate-800 text-[11px] text-slate-600 dark:text-slate-400 hover:border-slate-400 transition" title="Open Source on GitHub">
+            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            <span>GitHub 源码</span>
+          </a>
+          <button onclick="closeAgentHubModal()" class="w-8 h-8 rounded-lg flex items-center justify-center text-slate-500 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-slate-800 transition" title="Close Modal (Esc)">
+            ✕
+          </button>
+        </div>
+      </div>
+
+      <!-- Search & Filters Bar -->
+      <div class="p-3 sm:p-4 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 space-y-3">
+        <!-- Search and Quick Filter Row -->
+        <div class="flex flex-col sm:flex-row items-center gap-2.5">
+          <div class="relative w-full sm:flex-1">
+            <svg class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            <input type="text" id="agent-search-input" oninput="handleAgentSearch(this.value)" placeholder="搜索角色名称、部门、关键词（如：小红书、微信、CTO、安全、上位机）..." data-i18n-placeholder="modal_search_ph" class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl pl-9 pr-8 py-2 text-xs font-medium text-slate-800 dark:text-slate-200 focus:outline-none focus:border-sky-500 transition">
+            <button id="agent-search-clear" onclick="clearAgentSearch()" class="hidden absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-xs">✕</button>
+          </div>
+
+          <div class="flex items-center gap-2 w-full sm:w-auto">
+            <!-- China Only Toggle -->
+            <button id="filter-china-btn" onclick="toggleChinaFilter()" class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:border-rose-400 transition">
+              <span>🇨🇳</span>
+              <span data-i18n="filter_china_only">仅看中国原创 (64)</span>
+            </button>
+            <span class="text-[11px] font-mono text-slate-400 whitespace-nowrap" id="agent-count-badge">277 位专家</span>
+          </div>
+        </div>
+
+        <!-- Department Category Pills (Scrollable) -->
+        <div class="flex items-center gap-1.5 overflow-x-auto pb-1 text-xs" style="scrollbar-width: thin;" id="agent-dept-pills">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+
+      <!-- Agent Cards Grid Container -->
+      <div id="agent-cards-container" class="flex-1 overflow-y-auto p-4 sm:p-5 bg-slate-50/50 dark:bg-[#07090e]/60">
+        <div id="agent-cards-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <!-- Cards rendered by JS -->
+        </div>
+        <!-- Empty State -->
+        <div id="agent-empty-state" class="hidden flex-col items-center justify-center py-16 text-center">
+          <div class="text-3xl mb-2">🔍</div>
+          <h4 class="text-sm font-bold text-slate-800 dark:text-slate-200 mb-1" data-i18n="agent_not_found">未找到匹配的专家角色</h4>
+          <p class="text-xs text-slate-500 mb-4" data-i18n="agent_try_another">请尝试输入其他关键词，或重置部门分类筛选。</p>
+          <button onclick="resetAgentFilters()" class="px-3.5 py-1.5 rounded-lg bg-sky-500 text-slate-950 text-xs font-bold shadow-sm" data-i18n="agent_reset_filter">重置所有筛选</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Agency Agents 277 Database -->
+  <script src="data/agents_data.js"></script>
+
   <!-- Application Logic -->
   <script>
     const I18N = {
@@ -761,6 +853,19 @@
         rel_hot_desc: '24/7 automated tech radar tracking frontier papers and LLM digests.',
         rel_geo_title: 'OpenGEO Attribution',
         rel_geo_desc: 'Track AI search referrals and conversions from ChatGPT and Perplexity.',
+        agent_hub_nav: '277+ AI Agents Hub',
+        agent_hub_nav_short: 'Agents',
+        btn_browse_agents: 'Browse 277+ Agents',
+        modal_agent_title: '277 AI Expert Agents Hub',
+        modal_agent_sub: 'Covering 20 corporate departments with 64 China market originals. Load directly into DeepSeek.',
+        modal_search_ph: 'Search agent name, department, or keywords (e.g. Xiaohongshu, WeChat, CTO, Security)...',
+        filter_china_only: 'China Market Originals (64)',
+        card_load: 'Load to DeepSeek',
+        card_copy: 'Copy Persona',
+        agent_not_found: 'No matching expert agents found',
+        agent_try_another: 'Try a different search term or reset the department filter.',
+        agent_reset_filter: 'Reset Filters',
+        tab_all: 'All',
         footer_brand: 'PaceBowl &copy; 2026. Part of the <a href="https://pacebowl.com" class="text-sky-600 dark:text-sky-400 hover:underline">PaceBowl Suite Matrix</a>.'
       },
       zh: {
@@ -858,6 +963,19 @@
         rel_hot_desc: '24h 全天候自主追踪全球大模型突破与开源论文速报。',
         rel_geo_title: 'OpenGEO 商业归因',
         rel_geo_desc: '监控 Perplexity、ChatGPT 带来的搜索引流与转化。',
+        agent_hub_nav: '277+ AI 专家库',
+        agent_hub_nav_short: '专家库',
+        btn_browse_agents: '浏览 277 位专家角色库',
+        modal_agent_title: '277 位 AI 专家角色工坊',
+        modal_agent_sub: '涵盖 20 个部门架构，包含 64 个中国市场独家原创角色。点击一键装填至 DeepSeek 生成器。',
+        modal_search_ph: '搜索角色名称、部门、关键词（如：小红书、微信、CTO、安全、上位机）...',
+        filter_china_only: '仅看中国原创 (64)',
+        card_load: '一键装填到生成器',
+        card_copy: '复制人设',
+        agent_not_found: '未找到匹配的专家角色',
+        agent_try_another: '请尝试输入其他关键词，或重置部门分类筛选。',
+        agent_reset_filter: '重置所有筛选',
+        tab_all: '全部',
         footer_brand: 'PaceBowl &copy; 2026. 隶属于 <a href="https://pacebowl.com" class="text-sky-600 dark:text-sky-400 hover:underline">PaceBowl Suite 生态矩阵</a>。'
       }
     };
@@ -1026,6 +1144,11 @@
       setPromptLanguage(currentLang, false);
       setThinkingMode(currentThinkingMode);
       generatePrompt();
+
+      if (agentHubInitialized) {
+        buildDepartmentPills();
+        filterAndRenderAgents();
+      }
     }
 
     function applyLanguage(lang, persist) {
@@ -1338,12 +1461,319 @@
       }, 2500);
     }
 
+    // ==========================================
+    // 277+ AI Expert Agents Hub Controller
+    // ==========================================
+    let agentSearchQuery = '';
+    let selectedDepartment = 'ALL';
+    let filterChinaOnly = false;
+    let agentHubInitialized = false;
+
+    function openAgentHubModal() {
+      const modal = document.getElementById('agent-hub-modal');
+      if (!modal) return;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+
+      if (!agentHubInitialized) {
+        initAgentHub();
+      }
+
+      setTimeout(() => {
+        const searchInput = document.getElementById('agent-search-input');
+        if (searchInput) searchInput.focus();
+      }, 100);
+
+      window.addEventListener('keydown', handleAgentModalEsc);
+    }
+
+    function closeAgentHubModal() {
+      const modal = document.getElementById('agent-hub-modal');
+      if (!modal) return;
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', handleAgentModalEsc);
+    }
+
+    function handleAgentModalBackdrop(e) {
+      if (e.target.id === 'agent-hub-modal') {
+        closeAgentHubModal();
+      }
+    }
+
+    function handleAgentModalEsc(e) {
+      if (e.key === 'Escape') {
+        closeAgentHubModal();
+      }
+    }
+
+    function initAgentHub() {
+      if (!window.AGENTS_DATA || !Array.isArray(window.AGENTS_DATA)) {
+        fetch('data/agents_index.json')
+          .then(r => r.json())
+          .then(data => {
+            window.AGENTS_DATA = data;
+            setupAgentHubUI();
+          })
+          .catch(err => {
+            console.error('Failed to load agents database:', err);
+          });
+      } else {
+        setupAgentHubUI();
+      }
+    }
+
+    function setupAgentHubUI() {
+      agentHubInitialized = true;
+      buildDepartmentPills();
+      filterAndRenderAgents();
+    }
+
+    function buildDepartmentPills() {
+      const pillsContainer = document.getElementById('agent-dept-pills');
+      if (!pillsContainer || !window.AGENTS_DATA) return;
+
+      const counts = {};
+      let chinaCount = 0;
+      window.AGENTS_DATA.forEach(a => {
+        counts[a.department] = (counts[a.department] || 0) + 1;
+        if (a.is_china_original) chinaCount++;
+      });
+
+      const depts = Object.keys(counts).sort((a, b) => counts[b] - counts[a]);
+      const isZh = currentLang === 'zh';
+
+      let html = `
+        <button onclick="selectDept('ALL')" id="dept-pill-ALL" class="dept-pill whitespace-nowrap px-3 py-1 rounded-full text-xs font-semibold ${selectedDepartment === 'ALL' ? 'bg-sky-500 text-slate-950 shadow-xs' : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'} transition">
+          ${isZh ? '全部' : 'All'} (${window.AGENTS_DATA.length})
+        </button>
+      `;
+
+      depts.forEach(d => {
+        const isActive = selectedDepartment === d;
+        html += `
+          <button onclick="selectDept('${d}')" id="dept-pill-${d}" class="dept-pill whitespace-nowrap px-3 py-1 rounded-full text-xs font-medium ${isActive ? 'bg-sky-500 text-slate-950 shadow-xs font-semibold' : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'} transition">
+            ${d} (${counts[d]})
+          </button>
+        `;
+      });
+
+      pillsContainer.innerHTML = html;
+    }
+
+    function selectDept(dept) {
+      selectedDepartment = dept;
+      buildDepartmentPills();
+      filterAndRenderAgents();
+    }
+
+    function toggleChinaFilter() {
+      filterChinaOnly = !filterChinaOnly;
+      const btn = document.getElementById('filter-china-btn');
+      if (btn) {
+        if (filterChinaOnly) {
+          btn.classList.add('bg-rose-50', 'dark:bg-rose-950/60', 'border-rose-400', 'text-rose-600', 'dark:text-rose-300');
+          btn.classList.remove('border-slate-200', 'dark:border-slate-800', 'text-slate-700', 'dark:text-slate-300');
+        } else {
+          btn.classList.remove('bg-rose-50', 'dark:bg-rose-950/60', 'border-rose-400', 'text-rose-600', 'dark:text-rose-300');
+          btn.classList.add('border-slate-200', 'dark:border-slate-800', 'text-slate-700', 'dark:text-slate-300');
+        }
+      }
+      filterAndRenderAgents();
+    }
+
+    function handleAgentSearch(val) {
+      agentSearchQuery = val.trim().toLowerCase();
+      const clearBtn = document.getElementById('agent-search-clear');
+      if (clearBtn) {
+        if (agentSearchQuery) {
+          clearBtn.classList.remove('hidden');
+        } else {
+          clearBtn.classList.add('hidden');
+        }
+      }
+      filterAndRenderAgents();
+    }
+
+    function clearAgentSearch() {
+      const input = document.getElementById('agent-search-input');
+      if (input) input.value = '';
+      agentSearchQuery = '';
+      const clearBtn = document.getElementById('agent-search-clear');
+      if (clearBtn) clearBtn.classList.add('hidden');
+      filterAndRenderAgents();
+    }
+
+    function resetAgentFilters() {
+      clearAgentSearch();
+      filterChinaOnly = false;
+      const btn = document.getElementById('filter-china-btn');
+      if (btn) {
+        btn.classList.remove('bg-rose-50', 'dark:bg-rose-950/60', 'border-rose-400', 'text-rose-600', 'dark:text-rose-300');
+        btn.classList.add('border-slate-200', 'dark:border-slate-800', 'text-slate-700', 'dark:text-slate-300');
+      }
+      selectDept('ALL');
+    }
+
+    function filterAndRenderAgents() {
+      if (!window.AGENTS_DATA) return;
+
+      const filtered = window.AGENTS_DATA.filter(a => {
+        if (selectedDepartment !== 'ALL' && a.department !== selectedDepartment) {
+          return false;
+        }
+        if (filterChinaOnly && !a.is_china_original) {
+          return false;
+        }
+        if (agentSearchQuery) {
+          const matchName = a.name.toLowerCase().includes(agentSearchQuery);
+          const matchDesc = a.desc.toLowerCase().includes(agentSearchQuery);
+          const matchDept = a.department.toLowerCase().includes(agentSearchQuery);
+          const matchId = a.id.toLowerCase().includes(agentSearchQuery);
+          if (!matchName && !matchDesc && !matchDept && !matchId) {
+            return false;
+          }
+        }
+        return true;
+      });
+
+      const countBadge = document.getElementById('agent-count-badge');
+      if (countBadge) {
+        countBadge.textContent = currentLang === 'zh' ? `${filtered.length} 位专家` : `${filtered.length} Agents`;
+      }
+
+      const grid = document.getElementById('agent-cards-grid');
+      const emptyState = document.getElementById('agent-empty-state');
+      if (!grid) return;
+
+      if (filtered.length === 0) {
+        grid.innerHTML = '';
+        if (emptyState) {
+          emptyState.classList.remove('hidden');
+          emptyState.classList.add('flex');
+        }
+        return;
+      }
+
+      if (emptyState) {
+        emptyState.classList.add('hidden');
+        emptyState.classList.remove('flex');
+      }
+
+      const isZh = currentLang === 'zh';
+      const cardsHtml = filtered.map(a => {
+        const isPro = a.recommended && a.recommended.model && a.recommended.model.includes('pro');
+        const badgeColor = isPro ? 'bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800/50' : 'bg-sky-50 dark:bg-sky-950/40 text-sky-600 dark:text-sky-400 border border-sky-200 dark:border-sky-800/50';
+        const modelLabel = isPro ? '🧠 V4-Pro CoT' : '⚡ V4.1-Flash';
+
+        return `
+          <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800/90 hover:border-sky-400/60 dark:hover:border-sky-500/50 rounded-xl p-4 flex flex-col justify-between transition-all hover:shadow-md group">
+            <div>
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <div class="flex items-center gap-2 min-w-0">
+                  <span class="text-xl p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center shrink-0 shadow-xs">${a.emoji || '🤖'}</span>
+                  <div class="truncate">
+                    <h4 class="text-xs sm:text-sm font-bold text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition truncate">${a.name}</h4>
+                    <span class="text-[10px] text-slate-500 dark:text-slate-400 font-medium">${a.department}</span>
+                  </div>
+                </div>
+                <div class="flex flex-col items-end gap-1 shrink-0">
+                  ${a.is_china_original ? '<span class="px-1.5 py-0.5 rounded text-[9px] font-bold bg-rose-50 dark:bg-rose-950/50 border border-rose-200 dark:border-rose-900/60 text-rose-600 dark:text-rose-400">🇨🇳 原创</span>' : ''}
+                  <span class="px-1.5 py-0.5 rounded text-[9px] font-mono font-medium ${badgeColor}">${modelLabel}</span>
+                </div>
+              </div>
+              <p class="text-[11px] text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-3 mb-3" title="${a.desc.replace(/"/g, '&quot;')}">
+                ${a.desc}
+              </p>
+            </div>
+            <div class="pt-2.5 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between gap-2">
+              <button onclick="copyAgentSystemPrompt('${a.id}')" class="px-2.5 py-1.5 rounded-lg border border-slate-200 dark:border-slate-800 hover:border-slate-400 dark:hover:border-slate-700 text-[11px] font-medium text-slate-600 dark:text-slate-300 transition flex items-center gap-1" title="复制原生提示词">
+                <span>📋</span>
+                <span>${isZh ? '复制人设' : 'Copy'}</span>
+              </button>
+              <button onclick="loadAgentToGenerator('${a.id}')" class="flex-1 px-3 py-1.5 rounded-lg bg-sky-50 dark:bg-sky-950/60 hover:bg-sky-500 hover:text-slate-950 dark:hover:bg-sky-400 dark:hover:text-slate-950 border border-sky-300 dark:border-sky-500/40 text-[11px] font-bold text-sky-700 dark:text-sky-300 transition shadow-xs flex items-center justify-center gap-1">
+                <span>⚡</span>
+                <span>${isZh ? '一键装填到生成器' : 'Load to DeepSeek'}</span>
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      grid.innerHTML = cardsHtml;
+    }
+
+    function loadAgentToGenerator(agentId) {
+      if (!window.AGENTS_DATA) return;
+      const agent = window.AGENTS_DATA.find(a => a.id === agentId);
+      if (!agent) return;
+
+      const roleInput = document.getElementById('role-input');
+      if (roleInput) {
+        roleInput.value = `${agent.name} (${agent.department})`;
+      }
+
+      const taskInput = document.getElementById('task-input');
+      if (taskInput) {
+        taskInput.value = agent.task;
+      }
+
+      const contextInput = document.getElementById('context-input');
+      if (contextInput) {
+        contextInput.value = agent.context;
+      }
+
+      if (agent.recommended && agent.recommended.model) {
+        const modelVal = agent.recommended.model === 'deepseek-v4-pro' ? 'v4_pro' : 'v4_flash';
+        const radio = document.querySelector(`input[name="model-mode"][value="${modelVal}"]`);
+        if (radio) {
+          radio.checked = true;
+          updateModelMode(modelVal);
+        }
+      }
+
+      if (agent.recommended && agent.recommended.cot) {
+        setThinkingMode(agent.recommended.cot);
+      }
+
+      userHasCustomized = true;
+      generatePrompt();
+      closeAgentHubModal();
+
+      const outputEl = document.getElementById('prompt-output-card') || document.getElementById('role-input');
+      if (outputEl) {
+        outputEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+
+      const toastMsg = currentLang === 'zh' ? `✓ 已成功装载【${agent.name}】专家角色与专属任务！` : `✓ Loaded 【${agent.name}】 expert persona and directives!`;
+      showToast(toastMsg);
+    }
+
+    function copyAgentSystemPrompt(agentId) {
+      if (!window.AGENTS_DATA) return;
+      const agent = window.AGENTS_DATA.find(a => a.id === agentId);
+      if (!agent) return;
+
+      const isZh = currentLang === 'zh';
+      const promptText = isZh 
+        ? `你是一位专业的【${agent.name}】（${agent.department}）。\n\n【角色定位与专长】\n${agent.desc}\n\n${agent.task}\n\n${agent.context}`
+        : `You are an expert ${agent.name} (${agent.department}).\n\n[Core Mission & Domain]\n${agent.desc}\n\n${agent.task}\n\n${agent.context}`;
+
+      navigator.clipboard.writeText(promptText).then(() => {
+        showToast(isZh ? `✓ 【${agent.name}】专家提示词已复制到剪贴板！` : `✓ 【${agent.name}】 persona copied to clipboard!`);
+      });
+    }
+
     // Initialize
     window.addEventListener('DOMContentLoaded', () => {
       const theme = getSharedTheme();
       applyTheme(theme === 'dark', false);
       applyLanguage(getSharedLang(), false);
       setTaskPreset('code');
+      // Pre-warm agents database
+      initAgentHub();
     });
   </script>
 </body>
