@@ -516,6 +516,23 @@
               <span>↗</span>
             </a>
           </div>
+
+          <!-- High-Converting Partner API Banner (SiliconFlow) -->
+          <div class="mt-3 pt-3 border-t border-slate-100 dark:border-slate-800/80">
+            <a href="go/siliconflow" target="_blank" rel="noopener nofollow sponsored" class="group flex items-center justify-between p-2.5 rounded-xl bg-gradient-to-r from-sky-500/10 via-indigo-500/10 to-purple-500/10 hover:from-sky-500/20 hover:to-purple-500/20 border border-sky-400/30 dark:border-sky-500/30 transition shadow-xs">
+              <div class="flex items-center gap-2 min-w-0">
+                <span class="text-base p-1 rounded-lg bg-sky-500 text-slate-950 font-bold shrink-0 shadow-xs">⚡</span>
+                <div class="truncate">
+                  <div class="flex items-center gap-1.5 flex-wrap">
+                    <span class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-sky-500 transition" data-i18n="aff_sf_title">官方拥堵？免排队极速 API 专线</span>
+                    <span class="px-1.5 py-0.2 rounded text-[9px] font-bold bg-amber-500/20 text-amber-600 dark:text-amber-400 border border-amber-500/30">赠 2000万 Token</span>
+                  </div>
+                  <p class="text-[11px] text-slate-500 dark:text-slate-400 truncate" data-i18n="aff_sf_desc">硅基流动 SiliconFlow 极速部署 V4 & R1，专属通道注册即送 20M Token 额度</p>
+                </div>
+              </div>
+              <span class="text-xs text-sky-600 dark:text-sky-400 font-bold shrink-0 ml-2 group-hover:translate-x-0.5 transition" data-i18n="aff_sf_btn">直达 →</span>
+            </a>
+          </div>
         </div>
 
         <!-- Token Arbitrage & Cost Savings Calculator Card -->
@@ -533,6 +550,12 @@
           <div class="mt-3 pt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs font-mono">
             <span class="text-slate-500">V4.1 Cache Hit / Miss:</span>
             <span class="text-emerald-600 dark:text-emerald-400 font-bold">$0.08 / $0.28 (Output: $0.55)</span>
+          </div>
+          <div class="mt-2.5 pt-2 border-t border-slate-200/60 dark:border-slate-800/60 flex items-center justify-between text-xs">
+            <span class="text-slate-500 font-medium" data-i18n="calc_aff_label">🎁 专属免费算力节点:</span>
+            <a href="go/siliconflow" target="_blank" rel="noopener nofollow sponsored" class="text-sky-600 dark:text-sky-400 hover:underline font-bold flex items-center gap-1">
+              <span data-i18n="calc_aff_action">硅基流动 SiliconFlow (领 2000万 Token) →</span>
+            </a>
           </div>
         </div>
 
@@ -664,6 +687,9 @@
     <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
       <div>
         <span data-i18n="footer_brand">PaceBowl &copy; 2026. Part of the <a href="https://pacebowl.com" class="text-sky-600 dark:text-sky-400 hover:underline">PaceBowl Suite Matrix</a>.</span>
+        <p class="text-[10px] text-slate-400/80 mt-1">
+          Disclosure: We may earn an affiliate commission when you register or purchase through partner links on our site at no additional cost to you.
+        </p>
       </div>
       <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-slate-600 dark:text-slate-400">
         <a href="https://hot.pacebowl.com" class="hover:text-rose-500 dark:hover:text-rose-400 text-rose-600 dark:text-rose-300/80 transition font-medium">🔥 AI Radar</a>
@@ -829,12 +855,17 @@
         opt_cot_concise: 'Concise Reasoning (Direct path proof)',
         output_title: 'Synthesized DeepSeek Prompt',
         btn_copy: 'Copy Prompt',
-        toast_copied: '✓ DeepSeek Prompt copied to clipboard!',
+        toast_copied: '✓ DeepSeek Prompt copied to clipboard! (Tip: Use fast API route below if official chat is queued)',
         toast_random: 'Loaded random production scenario',
         stats_words: 'words',
         stats_tokens: 'tokens',
         calc_title: 'DeepSeek V4.1 Arbitrage Savings',
         calc_desc: 'Running 1M tokens on DeepSeek-V4.1-Flash ($0.28 standard, $0.08 cached) vs OpenAI o1/GPT-4o ($15.00) saves ~$14.72+ per million tokens with native 1M context window and vision reasoning.',
+        aff_sf_title: 'DeepSeek Busy? Zero-Queue Fast API Route',
+        aff_sf_desc: 'SiliconFlow high-speed V4 & R1 inference. Register via partner link for 20M free tokens',
+        aff_sf_btn: 'Get 20M Tokens →',
+        calc_aff_label: '🎁 Partner Free Compute Node:',
+        calc_aff_action: 'SiliconFlow (Claim 20M Free Tokens) →',
         faq_tag: 'DEEPSEEK V4 SPEC',
         faq_title: 'DeepSeek V4 & R1 Prompt Engineering Standards',
         faq_subtitle: 'Architectural principles to extract maximum reasoning power from DeepSeek V4 and R1 models.',
@@ -939,12 +970,17 @@
         opt_cot_concise: '精简思维链 (最简证明与执行路径)',
         output_title: '已合成的结构化 DeepSeek 提示词',
         btn_copy: '复制提示词',
-        toast_copied: '✓ DeepSeek 提示词已成功复制到剪贴板！',
+        toast_copied: '✓ 提示词已成功复制！若官方服务器繁忙，可搭配下方免排队 API 专线。',
         toast_random: '已填入随机生产级实战案例',
         stats_words: '词/字符',
         stats_tokens: 'Token',
         calc_title: 'DeepSeek V4.1 算力套利成本评估',
         calc_desc: '在 DeepSeek-V4.1-Flash 运行 100 万 Token 仅需 $0.28（命中缓存仅 $0.08），对比 OpenAI o1/GPT-4o ($15.00) 节省超 98% 成本，兼备百万上下文与多模态视觉。',
+        aff_sf_title: '官方拥堵？免排队极速 API 专线',
+        aff_sf_desc: '硅基流动 SiliconFlow 极速部署 V4 & R1，专属通道注册即送 2000万 Token 算力',
+        aff_sf_btn: '领 2000万 Token →',
+        calc_aff_label: '🎁 专属免费算力节点:',
+        calc_aff_action: '硅基流动 SiliconFlow (领 2000万 Token) →',
         faq_tag: 'DEEPSEEK V4 规范',
         faq_title: 'DeepSeek V4 与 R1 提示工程最佳实践',
         faq_subtitle: '充分释放 DeepSeek V4 与 R1 大模型推理潜力的核心技术准则。',
