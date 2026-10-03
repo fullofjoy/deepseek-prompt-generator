@@ -404,10 +404,10 @@ def generate_agent_page(agent, peer_agents, china_agents):
     <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
       <div class="flex items-center gap-2 text-slate-300">
         <span>💻</span>
-        <span class="text-[11px]">想在 Mac / Windows 桌面常驻调用【{name_zh}】？推荐使用 <strong>TypingMind</strong> 原生客户端（终身买断 • 直连 DeepSeek API）</span>
+        <span class="text-[11px]">想在 Mac / Windows 桌面常驻调用【{name_zh}】？推荐搭配 <strong>TypingMind</strong> 原生客户端（终身买断 • 直连 DeepSeek API • 专属通道购买双方永久获赠 0.5GB 免费云存储）</span>
       </div>
       <a href="../go/typingmind" target="_blank" rel="noopener nofollow sponsored" class="text-indigo-400 hover:text-indigo-300 font-bold whitespace-nowrap text-[11px] flex items-center gap-1 shrink-0">
-        <span>获取 TypingMind →</span>
+        <span>领 0.5GB 空间并体验 →</span>
       </a>
     </div>
 
@@ -762,6 +762,17 @@ def generate_catalog_page(agents, departments):
       <a href="../go/siliconflow" target="_blank" rel="noopener nofollow sponsored" class="inline-flex items-center justify-center gap-1 px-3.5 py-2 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-xs transition shrink-0 shadow-sm hover:scale-[1.02]">
         <span>领取免费算力</span>
         <span>→</span>
+      </a>
+    </div>
+
+    <!-- TypingMind Client Callout in Catalog -->
+    <div class="mt-2.5 max-w-4xl mx-auto p-3 rounded-2xl bg-slate-900/60 border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 text-xs shadow-sm">
+      <div class="flex items-center gap-2 text-slate-300">
+        <span>💻</span>
+        <span class="text-[11px]">想在 Mac / Windows 离线常驻管理 277 位专家？推荐搭配 <strong>TypingMind</strong> 原生客户端（终身买断 • 直连 API • 专属通道购买双方永久获赠 0.5GB 免费云存储）</span>
+      </div>
+      <a href="../go/typingmind" target="_blank" rel="noopener nofollow sponsored" class="text-indigo-400 hover:text-indigo-300 font-bold whitespace-nowrap text-[11px] flex items-center gap-1 shrink-0">
+        <span>领 0.5GB 空间并体验 →</span>
       </a>
     </div>
   </section>
