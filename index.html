@@ -272,6 +272,13 @@
                 <div class="text-[10px] text-slate-500 dark:text-slate-400" data-i18n="suite_geo_sub">AI Search & Stripe Funnel</div>
               </div>
             </a>
+            <a href="https://reddit.pacebowl.com" class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/80 text-xs text-slate-700 dark:text-slate-200 transition mt-1">
+              <span class="w-7 h-7 rounded-lg bg-orange-600 flex items-center justify-center text-[10px] font-bold text-white shadow-sm">RD</span>
+              <div>
+                <div class="font-bold text-slate-900 dark:text-white" data-i18n="suite_reddit">Reddit Growth Studio</div>
+                <div class="text-[10px] text-slate-500 dark:text-slate-400" data-i18n="suite_reddit_sub">15-Word One-Liners & Radar</div>
+              </div>
+            </a>
           </div>
         </div>
 
@@ -391,13 +398,12 @@
             </div>
           </div>
 
-          <div class="grid grid-cols-2 sm:grid-cols-6 gap-2 text-xs" id="task-preset-buttons">
+          <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-xs" id="task-preset-buttons">
             <button onclick="setTaskPreset('code')" id="preset-code" class="p-2.5 rounded-xl border border-sky-500/50 bg-sky-50 dark:bg-sky-950/40 text-sky-700 dark:text-sky-300 font-semibold transition text-center" data-i18n="preset_code">💻 Code Refactor</button>
             <button onclick="setTaskPreset('math')" id="preset-math" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-400 text-slate-700 dark:text-slate-300 transition text-center" data-i18n="preset_math">🧠 Logic & Proof</button>
             <button onclick="setTaskPreset('research')" id="preset-research" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-400 text-slate-700 dark:text-slate-300 transition text-center" data-i18n="preset_research">🔬 Deep Research</button>
             <button onclick="setTaskPreset('system')" id="preset-system" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-400 text-slate-700 dark:text-slate-300 transition text-center" data-i18n="preset_system">🎭 System Prompt</button>
             <button onclick="setTaskPreset('json')" id="preset-json" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-400 text-slate-700 dark:text-slate-300 transition text-center" data-i18n="preset_json">📄 Structured Data</button>
-            <button onclick="setTaskPreset('reddit')" id="preset-reddit" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-400 text-slate-700 dark:text-slate-300 transition text-center" data-i18n="preset_reddit">👾 Reddit 单行神评</button>
           </div>
 
           <!-- Role Persona Input -->
@@ -835,6 +841,8 @@
         suite_hot_sub: '24h Automated Tech Intel',
         suite_geo: 'OpenGEO Studio',
         suite_geo_sub: 'AI Search & Stripe Funnel',
+        suite_reddit: 'Reddit Growth Studio',
+        suite_reddit_sub: '15-Word One-Liners & Radar',
         nav_coffee: 'Sponsor',
         nav_faq: 'V4 & R1 Specs',
         footer_coffee: 'Buy me a coffee',
@@ -860,7 +868,6 @@
         preset_research: '🔬 Deep Research',
         preset_system: '🎭 System Prompt',
         preset_json: '📄 Structured Data',
-        preset_reddit: '👾 Reddit One-Liners',
         sec3_title: '3. Raw Goal & Context Payload',
         lbl_task: 'What do you want DeepSeek to accomplish?',
         lbl_context: 'Background Code / Data / Reference Context (Optional)',
@@ -958,6 +965,8 @@
         suite_hot_sub: '24h 自动化 AI 情报雷达',
         suite_geo: 'OpenGEO 商业归因',
         suite_geo_sub: 'AI 搜索推荐与 Stripe 转化',
+        suite_reddit: 'Reddit 增长工坊',
+        suite_reddit_sub: '15词单行神评与风控雷达',
         nav_coffee: '赞助项目',
         nav_faq: 'V4 & R1 规范',
         footer_coffee: '请作者喝杯咖啡',
@@ -983,7 +992,6 @@
         preset_research: '🔬 深度研究',
         preset_system: '🎭 系统提示词',
         preset_json: '📄 结构化数据',
-        preset_reddit: '👾 Reddit 单行神评',
         sec3_title: '3. 核心诉求与上下文数据',
         lbl_task: '你希望 DeepSeek 为你解决什么具体问题？',
         lbl_context: '相关代码片段 / 数据结构 / 报错上下文 (选填)',
@@ -1109,14 +1117,6 @@
         task_zh: '从非结构化文本中精准抽取发票行项目、税号、付款账期与供应商元数据，输出符合 RFC 8259 规范的合法 JSON。',
         context_en: 'Vendor: Acme Corp | Invoice #9482 | Date: 2026-10-01 | Total: $4,250.00 (Tax 8% included: $314.81)...',
         context_zh: '开票单位: 科技有限公司 | 发票号 #9482 | 开票日期: 2026-10-01 | 总额: ￥42,500.00...'
-      },
-      reddit: {
-        role_en: 'Elite Reddit Karma Specialist & Viral One-Liner Strategist',
-        role_zh: '资深 Reddit 社区梗王与高赞单行神评操盘手（Karma 极速冷启动专家）',
-        task_en: 'For the target Reddit post/question, strictly follow the Viral One-Liner Formula: output 3 distinct, ultra-punchy comments (under 15 words each) with authentic native Redditor humor to farm Upvotes rapidly.',
-        task_zh: '针对目标 Reddit 帖子/提问，严格遵循【单行神评万能口诀】，输出 3 条每条严控在 15 词以内的地道高赞短评 (One-Liners)，供直接复制发布以快速收割 Upvote 突破 Karma。',
-        context_en: '【Reddit Viral Formula / Rules】\n1. Brevity Rule: Strictly under 15 words per comment. 90% of Reddit reads on mobile; long paragraphs look like AI slop and get skipped.\n2. Anti-AI Voice: Zero throat-clearing, no moral lecturing, no polite disclaimers. Sound like a witty native Redditor.\n3. Provide 3 distinct one-liner options ready to copy:\n   • Option 1 [Deadpan Sarcasm]: Dry, understated, sharp punchline.\n   • Option 2 [Self-Deprecating]: Classic Reddit irony and self-burn.\n   • Option 3 [Brutally Concise / Mic Drop]: Cold, punchy, zero fluff.\n4. Zero External Links: Absolutely no URLs to guarantee 100% bypass of AutoMod spam filters.',
-        context_zh: '【Reddit 高赞万能口诀 / Viral Rules】\n1. 极简原则（严控 15 词内）：Reddit 手机端用户只停留 1 秒，拒绝长篇大论，长文会被当成 AI 甚至直接滑走！\n2. 杜绝 AI 味：严禁“虽然我不完美”、“首先...其次...”等教科书式说教，纯粹呈现地道网民俚语与网感。\n3. 必须输出 3 种不同流派的单行神评供直接复制：\n   • [流派 1：冷面毒舌 / 反转讽刺 (Deadpan Wit)]：语气平淡但反差致命，画面感极强。\n   • [流派 2：自嘲反讽 (Self-Deprecating)]：Reddit 网民最爱，调侃荒谬现实与自黑。\n   • [流派 3：硬核一刀两断 (Mic Drop)]：绝不多废话，干净利落。\n4. 绝对零外链：不带任何 URL 链接，100% 避开 AutoMod 垃圾内容封杀。'
       }
     };
 
@@ -1334,7 +1334,7 @@
       currentTaskPreset = presetKey;
       currentLoadedAgentId = null;
       userHasCustomized = false;
-      ['code', 'math', 'research', 'system', 'json', 'reddit'].forEach(k => {
+      ['code', 'math', 'research', 'system', 'json'].forEach(k => {
         const btn = document.getElementById('preset-' + k);
         if (!btn) return;
         if (k === presetKey) {
@@ -1354,7 +1354,7 @@
     }
 
     function randomizePreset() {
-      const keys = ['code', 'math', 'research', 'system', 'json', 'reddit'];
+      const keys = ['code', 'math', 'research', 'system', 'json'];
       const filtered = keys.filter(k => k !== currentTaskPreset);
       const next = filtered[Math.floor(Math.random() * filtered.length)];
       setTaskPreset(next);
@@ -1461,28 +1461,6 @@
           }
         }
 
-        if (currentTaskPreset === 'reddit') {
-          prompt += `<reddit_viral_formula>\n`;
-          if (isZh) {
-            prompt += `- 【万能单行神评口诀】严格执行手机端 1 秒抓人法则：每条评论字数严控在 15 个英文单词以内！\n`;
-            prompt += `- 绝不写长篇大论：长文在休闲版块会被当成 AI 生成或直接滑走，必须短小精悍。\n`;
-            prompt += `- 杜绝 AI 腔调：禁止“虽然...但是...”、“作为AI”等假客套或道德说教，纯粹输出地道网民俚语。\n`;
-            prompt += `- 必须同时提供 3 个不同流派的高赞单行神评 (One-Liners)，供直接复制：\n`;
-            prompt += `  • [流派 1：冷面毒舌 / 反转讽刺 (Deadpan Sarcasm)]：语气平淡但反差致命，画面感极强。\n`;
-            prompt += `  • [流派 2：自嘲反讽 (Self-Deprecating)]：Reddit 网民最爱，调侃荒谬现实与自黑。\n`;
-            prompt += `  • [流派 3：硬核一刀两断 (Mic Drop)]：绝不多废话，冷酷直接。\n`;
-            prompt += `- 绝对零外链：严禁附带任何 URL 链接，100% 避开 AutoMod 垃圾内容封杀。\n`;
-          } else {
-            prompt += `- [Reddit Viral One-Liner Formula] Strictly under 15 words per comment (mobile users skip long essays).\n`;
-            prompt += `- Zero AI tone: No essays, no preaching, no polite disclaimers. Authentic Reddit voice only.\n`;
-            prompt += `- Provide 3 distinct high-upvote one-liner options ready to copy-paste:\n`;
-            prompt += `  • [Style 1: Deadpan Sarcasm]: Dry, understated, sharp punchline.\n`;
-            prompt += `  • [Style 2: Self-Deprecating]: Classic Reddit irony and self-burn.\n`;
-            prompt += `  • [Style 3: Brutally Concise / Mic Drop]: Cold, punchy, zero fluff.\n`;
-            prompt += `- Zero external links: Absolutely no URLs to guarantee 100% bypass of AutoMod spam filters.\n`;
-          }
-          prompt += `</reddit_viral_formula>\n\n`;
-        }
 
         prompt += `<constraints>\n`;
         if (noFiller) {
@@ -1554,20 +1532,6 @@
           prompt += isZh ? `### 背景数据与参考上下文\n${context}\n\n` : `### Background Context\n${context}\n\n`;
         }
 
-        if (currentTaskPreset === 'reddit') {
-          prompt += isZh ? `### Reddit 高赞单行神评万能口诀\n` : `### Reddit Viral One-Liner Formula\n`;
-          if (isZh) {
-            prompt += `- 长度严控在 15 个英文单词以内！拒绝长篇大论（手机端太长不看，长文极易被当成 AI 或直接滑走）。\n`;
-            prompt += `- 杜绝 AI 味：严禁教科书式长篇说教，纯正地道网民口吻。\n`;
-            prompt += `- 同时提供 3 个流派直接供复制：1) 冷面毒舌反转 2) 自嘲反讽 3) 硬核一刀两断。\n`;
-            prompt += `- 绝对零外链：严禁任何 URL 链接，彻底避开 AutoMod 拦截。\n\n`;
-          } else {
-            prompt += `- Strictly under 15 words per comment (mobile users skip long essays; short comments get 10x upvotes).\n`;
-            prompt += `- No AI tone: Zero lecturing, no disclaimers, authentic witty redditor voice.\n`;
-            prompt += `- Provide 3 distinct options: 1) Deadpan sarcasm, 2) Self-deprecating irony, 3) Brutal mic-drop.\n`;
-            prompt += `- Zero external links to prevent spam filter triggers.\n\n`;
-          }
-        }
 
         prompt += isZh ? `### 负向约束与边界防线\n` : `### Constraints & Guardrails\n`;
         if (noFiller) prompt += isZh ? `- 跳过所有开场客套废话，直接输出结果。\n` : `- Skip all conversational filler. Provide the answer immediately.\n`;
