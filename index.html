@@ -181,26 +181,26 @@
 
   <!-- Header -->
   <header class="border-b border-slate-200 dark:border-slate-800/80 bg-white/80 dark:bg-[#07090e]/80 backdrop-blur sticky top-0 z-40 transition-colors duration-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-      <div class="flex items-center space-x-3">
-        <a href="https://pacebowl.com" class="text-xs font-mono text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition flex items-center gap-1.5 py-1 px-2.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 shadow-sm" title="Back to PaceBowl Mothership">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-2">
+      <div class="flex items-center space-x-2 sm:space-x-3 min-w-0">
+        <a href="https://pacebowl.com" class="hidden md:flex text-xs font-mono text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition items-center gap-1.5 py-1 px-2.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 shadow-sm flex-shrink-0" title="Back to PaceBowl Mothership">
           <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
           <span>PaceBowl</span>
         </a>
-        <span class="text-slate-400 dark:text-slate-600 font-mono">/</span>
-        <div class="flex items-center space-x-2">
-          <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-sky-500 via-blue-600 to-indigo-700 flex items-center justify-center font-bold text-white shadow-md shadow-sky-500/20">
+        <span class="hidden md:inline text-slate-400 dark:text-slate-600 font-mono">/</span>
+        <div class="flex items-center space-x-2 min-w-0">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-sky-500 via-blue-600 to-indigo-700 flex items-center justify-center font-bold text-white shadow-md shadow-sky-500/20 flex-shrink-0">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
           </div>
-          <div>
-            <span class="font-bold text-base text-slate-900 dark:text-white tracking-tight">DeepSeek <span class="text-sky-600 dark:text-sky-400 font-mono text-xs px-1.5 py-0.5 rounded bg-sky-100 dark:bg-sky-950/80 border border-sky-300 dark:border-sky-500/30">Studio</span></span>
+          <div class="truncate">
+            <span class="font-bold text-sm sm:text-base text-slate-900 dark:text-white tracking-tight">DeepSeek <span class="text-sky-600 dark:text-sky-400 font-mono text-[10px] sm:text-xs px-1.5 py-0.5 rounded bg-sky-100 dark:bg-sky-950/80 border border-sky-300 dark:border-sky-500/30">Studio</span></span>
           </div>
         </div>
       </div>
 
-      <div class="flex items-center space-x-2 sm:space-x-3">
+      <div class="flex items-center space-x-1.5 sm:space-x-3 flex-shrink-0">
         <!-- 277+ AI Expert Agents Hub Button -->
-        <button id="agent-hub-btn" onclick="openAgentHubModal()" class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg bg-gradient-to-r from-sky-500/10 via-indigo-500/10 to-purple-500/10 hover:from-sky-500/20 hover:to-purple-500/20 border border-sky-400/40 dark:border-sky-500/40 text-xs font-semibold text-sky-800 dark:text-sky-300 transition shadow-sm hover:scale-[1.02]" title="277+ AI Expert Agents Hub">
+        <button id="agent-hub-btn" onclick="openAgentHubModal()" class="inline-flex items-center gap-1 sm:gap-1.5 px-2 sm:px-3 py-1.5 rounded-lg bg-gradient-to-r from-sky-500/10 via-indigo-500/10 to-purple-500/10 hover:from-sky-500/20 hover:to-purple-500/20 border border-sky-400/40 dark:border-sky-500/40 text-xs font-semibold text-sky-800 dark:text-sky-300 transition shadow-sm active:scale-95" title="277+ AI Expert Agents Hub">
           <span>🎭</span>
           <span class="hidden sm:inline" data-i18n="agent_hub_nav">277+ AI 专家库</span>
           <span class="sm:hidden" data-i18n="agent_hub_nav_short">专家库</span>
@@ -371,10 +371,10 @@
               </label>
               <span class="text-[10px] font-mono text-sky-600 dark:text-sky-400 font-semibold" id="thinking-mode-tag">Standard Thinking (CoT)</span>
             </div>
-            <div class="grid grid-cols-3 gap-2 text-xs">
-              <button type="button" onclick="setThinkingMode('none')" id="think-btn-none" class="p-2 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-400 text-slate-700 dark:text-slate-300 font-medium transition text-center" data-i18n="think_fast">⚡ Off (Fast)</button>
-              <button type="button" onclick="setThinkingMode('standard')" id="think-btn-standard" class="p-2 rounded-xl border border-sky-500/60 bg-sky-50 dark:bg-sky-950/40 text-sky-700 dark:text-sky-300 font-bold transition text-center" data-i18n="think_standard">🧠 Standard CoT</button>
-              <button type="button" onclick="setThinkingMode('max')" id="think-btn-max" class="p-2 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-400 text-slate-700 dark:text-slate-300 font-medium transition text-center" data-i18n="think_max">🔥 Max Thinking</button>
+            <div class="grid grid-cols-3 gap-1.5 sm:gap-2 text-[11px] sm:text-xs">
+              <button type="button" onclick="setThinkingMode('none')" id="think-btn-none" class="p-1.5 sm:p-2 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-400 text-slate-700 dark:text-slate-300 font-medium transition text-center truncate active:scale-95" data-i18n="think_fast">⚡ Off (Fast)</button>
+              <button type="button" onclick="setThinkingMode('standard')" id="think-btn-standard" class="p-1.5 sm:p-2 rounded-xl border border-sky-500/60 bg-sky-50 dark:bg-sky-950/40 text-sky-700 dark:text-sky-300 font-bold transition text-center truncate active:scale-95" data-i18n="think_standard">🧠 Standard CoT</button>
+              <button type="button" onclick="setThinkingMode('max')" id="think-btn-max" class="p-1.5 sm:p-2 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-400 text-slate-700 dark:text-slate-300 font-medium transition text-center truncate active:scale-95" data-i18n="think_max">🔥 Max Thinking</button>
             </div>
           </div>
         </div>
