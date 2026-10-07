@@ -1,1676 +1,1676 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://deepseek.pacebowl.com/</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://deepseek.pacebowl.com/agents/</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/specialized-ai-policy-writer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/specialized-ai-policy-writer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/corporate-training-designer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/corporate-training-designer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/specialized-risk-assessor.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/specialized-risk-assessor</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/specialized-meeting-assistant.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/specialized-meeting-assistant</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/livestock-archive-auditor.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/livestock-archive-auditor</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/specialized-pricing-optimizer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/specialized-pricing-optimizer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/healthcare-marketing-compliance.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/healthcare-marketing-compliance</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/recruitment-specialist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/recruitment-specialist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/prompt-engineer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/prompt-engineer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/government-digital-presales-consultant.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/government-digital-presales-consultant</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/travel-planner.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/travel-planner</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/study-abroad-advisor.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/study-abroad-advisor</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/authenticity-appraiser.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/authenticity-appraiser</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/gaokao-college-advisor.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/gaokao-college-advisor</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/hr-recruiter.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/hr-recruiter</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/hr-performance-reviewer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/hr-performance-reviewer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/supply-chain-vendor-evaluator.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/supply-chain-vendor-evaluator</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/supply-chain-strategist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/supply-chain-strategist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/supply-chain-inventory-forecaster.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/supply-chain-inventory-forecaster</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/supply-chain-garment-factory-planning-engineer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/supply-chain-garment-factory-planning-engineer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/supply-chain-route-optimizer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/supply-chain-route-optimizer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/chief-product-officer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/chief-product-officer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/chief-executive-officer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/chief-executive-officer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/chief-technology-officer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/chief-technology-officer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/chief-marketing-officer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/chief-marketing-officer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/chief-operating-officer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/chief-operating-officer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/academic-study-planner.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/academic-study-planner</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-fpga-digital-design-engineer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-fpga-digital-design-engineer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-iot-solution-architect.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-iot-solution-architect</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-pc-host-engineer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-pc-host-engineer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-network-engineer-china.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-network-engineer-china</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-embedded-linux-driver-engineer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-embedded-linux-driver-engineer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-wechat-mini-program-developer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-wechat-mini-program-developer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-mechanical-design-engineer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-mechanical-design-engineer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-dingtalk-integration-developer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-dingtalk-integration-developer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-feishu-integration-developer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-feishu-integration-developer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/support-recruitment-specialist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/support-recruitment-specialist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/legal-policy-writer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/legal-policy-writer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/legal-contract-reviewer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/legal-contract-reviewer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/testing-embedded-qa-engineer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/testing-embedded-qa-engineer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-bilibili-strategist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-bilibili-strategist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-china-market-localization-strategist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-china-market-localization-strategist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-china-ecommerce-operator.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-china-ecommerce-operator</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-xiaohongshu-operator.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-xiaohongshu-operator</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-wechat-operator.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-wechat-operator</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-weixin-channels-strategist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-weixin-channels-strategist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-weibo-strategist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-weibo-strategist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-kuaishou-strategist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-kuaishou-strategist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-douyin-strategist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-douyin-strategist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-search-growth-orchestrator.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-search-growth-orchestrator</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-podcast-strategist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-podcast-strategist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-daily-news-briefing.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-daily-news-briefing</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-ecommerce-operator.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-ecommerce-operator</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-baidu-seo-specialist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-baidu-seo-specialist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-livestream-commerce-coach.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-livestream-commerce-coach</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-knowledge-commerce-strategist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-knowledge-commerce-strategist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-short-video-editing-coach.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-short-video-editing-coach</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-private-domain-operator.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-private-domain-operator</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-cross-border-ecommerce.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-cross-border-ecommerce</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/design-video-prompt-engineer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/design-video-prompt-engineer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/finance-invoice-manager.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/finance-invoice-manager</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/finance-financial-forecaster.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/finance-financial-forecaster</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/finance-fraud-detector.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/finance-fraud-detector</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/finance-hk-stock-compliance-reviewer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/finance-hk-stock-compliance-reviewer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/gis-bim-specialist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/gis-bim-specialist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/gis-analyst.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/gis-analyst</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/gis-qa-engineer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/gis-qa-engineer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/gis-geoai-ml-engineer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/gis-geoai-ml-engineer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/gis-web-gis-developer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/gis-web-gis-developer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/gis-3d-scene-developer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/gis-3d-scene-developer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/gis-cartography-designer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/gis-cartography-designer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/gis-geoprocessing-specialist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/gis-geoprocessing-specialist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/gis-technical-consultant.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/gis-technical-consultant</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/gis-drone-reality-mapping.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/gis-drone-reality-mapping</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/gis-spatial-data-engineer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/gis-spatial-data-engineer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/gis-spatial-data-scientist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/gis-spatial-data-scientist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/gis-solution-engineer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/gis-solution-engineer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/esg-sustainability-officer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/esg-sustainability-officer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/hr-onboarding.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/hr-onboarding</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/lsp-index-engineer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/lsp-index-engineer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/ma-integration-manager.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/ma-integration-manager</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/specialized-mcp-builder.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/specialized-mcp-builder</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/specialized-salesforce-architect.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/specialized-salesforce-architect</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/zk-steward.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/zk-steward</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/personal-growth-mentor.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/personal-growth-mentor</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/loan-officer-assistant.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/loan-officer-assistant</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/healthcare-customer-service.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/healthcare-customer-service</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/medical-billing-coding-specialist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/medical-billing-coding-specialist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/change-management-consultant.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/change-management-consultant</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/business-strategist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/business-strategist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/specialized-civil-engineer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/specialized-civil-engineer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/specialized-pricing-analyst.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/specialized-pricing-analyst</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/customer-success-manager.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/customer-success-manager</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/specialized-workflow-architect.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/specialized-workflow-architect</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/accounts-payable-agent.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/accounts-payable-agent</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/specialized-developer-advocate.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/specialized-developer-advocate</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/legal-client-intake.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/legal-client-intake</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/legal-billing-time-tracking.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/legal-billing-time-tracking</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/real-estate-buyer-seller.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/real-estate-buyer-seller</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/technical-translator-agent.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/technical-translator-agent</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/report-distribution-agent.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/report-distribution-agent</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/data-consolidation-agent.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/data-consolidation-agent</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/data-privacy-officer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/data-privacy-officer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/specialized-cultural-intelligence-strategist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/specialized-cultural-intelligence-strategist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/specialized-document-generator.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/specialized-document-generator</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/agents-orchestrator.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/agents-orchestrator</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/specialized-model-qa.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/specialized-model-qa</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/specialized-french-consulting-market.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/specialized-french-consulting-market</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/legal-document-review.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/legal-document-review</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/specialized-strategy-duel-agent.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/specialized-strategy-duel-agent</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/organizational-psychologist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/organizational-psychologist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/automation-governance-architect.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/automation-governance-architect</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/language-translator.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/language-translator</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/grant-writer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/grant-writer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/agentic-identity-trust.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/agentic-identity-trust</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/identity-graph-operator.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/identity-graph-operator</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/operations-manager.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/operations-manager</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/hospitality-guest-services.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/hospitality-guest-services</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/sales-data-extraction-agent.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/sales-data-extraction-agent</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/retail-customer-returns.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/retail-customer-returns</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/specialized-korean-business-navigator.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/specialized-korean-business-navigator</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/product-sprint-prioritizer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/product-sprint-prioritizer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/product-manager.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/product-manager</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/product-feedback-synthesizer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/product-feedback-synthesizer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/product-behavioral-nudge-engine.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/product-behavioral-nudge-engine</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/product-trend-researcher.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/product-trend-researcher</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/paid-media-ppc-strategist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/paid-media-ppc-strategist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/paid-media-auditor.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/paid-media-auditor</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/paid-media-creative-strategist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/paid-media-creative-strategist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/paid-media-search-query-analyst.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/paid-media-search-query-analyst</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/paid-media-paid-social-strategist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/paid-media-paid-social-strategist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/paid-media-programmatic-buyer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/paid-media-programmatic-buyer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/paid-media-tracking-specialist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/paid-media-tracking-specialist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/chief-of-staff.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/chief-of-staff</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/chief-financial-officer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/chief-financial-officer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/academic-anthropologist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/academic-anthropologist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/academic-historian.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/academic-historian</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/academic-narratologist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/academic-narratologist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/academic-geographer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/academic-geographer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/academic-psychologist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/academic-psychologist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/security-incident-responder.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/security-incident-responder</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/security-cloud-security-architect.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/security-cloud-security-architect</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/security-blockchain-security-auditor.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/security-blockchain-security-auditor</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/security-compliance-auditor.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/security-compliance-auditor</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/security-threat-intelligence-analyst.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/security-threat-intelligence-analyst</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/security-threat-detection-engineer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/security-threat-detection-engineer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/security-architect.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/security-architect</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/security-appsec-engineer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/security-appsec-engineer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/security-penetration-tester.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/security-penetration-tester</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/security-senior-secops.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/security-senior-secops</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-ai-engineer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-ai-engineer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-ai-data-remediation-engineer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-ai-data-remediation-engineer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-cms-developer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-cms-developer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-devops-automator.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-devops-automator</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-drupal-shopping-cart.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-drupal-shopping-cart</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-filament-optimization-specialist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-filament-optimization-specialist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-git-workflow-master.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-git-workflow-master</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-it-service-manager.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-it-service-manager</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-orgscript-engineer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-orgscript-engineer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-prompt-engineer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-prompt-engineer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-sre.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-sre</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-solidity-smart-contract-engineer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-solidity-smart-contract-engineer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-wordpress-shopping-cart.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-wordpress-shopping-cart</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-code-reviewer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-code-reviewer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-codebase-onboarding-engineer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-codebase-onboarding-engineer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-frontend-developer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-frontend-developer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-backend-architect.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-backend-architect</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-multi-agent-systems-architect.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-multi-agent-systems-architect</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-threat-detection-engineer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-threat-detection-engineer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-security-engineer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-security-engineer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-embedded-firmware-engineer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-embedded-firmware-engineer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-rapid-prototyper.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-rapid-prototyper</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-technical-writer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-technical-writer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-incident-response-commander.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-incident-response-commander</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-data-engineer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-data-engineer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-database-optimizer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-database-optimizer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-minimal-change-engineer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-minimal-change-engineer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-mobile-app-builder.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-mobile-app-builder</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-autonomous-optimization-architect.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-autonomous-optimization-architect</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-voice-ai-integration-engineer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-voice-ai-integration-engineer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-software-architect.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-software-architect</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-email-intelligence-engineer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-email-intelligence-engineer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/engineering-senior-developer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/engineering-senior-developer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/support-infrastructure-maintainer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/support-infrastructure-maintainer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/support-support-responder.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/support-support-responder</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/support-analytics-reporter.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/support-analytics-reporter</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/support-legal-compliance-checker.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/support-legal-compliance-checker</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/support-finance-tracker.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/support-finance-tracker</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/support-executive-summary-generator.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/support-executive-summary-generator</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/testing-api-tester.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/testing-api-tester</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/testing-workflow-optimizer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/testing-workflow-optimizer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/testing-tool-evaluator.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/testing-tool-evaluator</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/testing-performance-benchmarker.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/testing-performance-benchmarker</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/testing-accessibility-auditor.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/testing-accessibility-auditor</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/testing-test-results-analyzer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/testing-test-results-analyzer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/testing-reality-checker.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/testing-reality-checker</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/testing-evidence-collector.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/testing-evidence-collector</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/blender-addon-engineer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/blender-addon-engineer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/godot-shader-developer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/godot-shader-developer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/godot-multiplayer-engineer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/godot-multiplayer-engineer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/godot-gameplay-scripter.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/godot-gameplay-scripter</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/roblox-experience-designer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/roblox-experience-designer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/roblox-systems-scripter.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/roblox-systems-scripter</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/roblox-avatar-creator.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/roblox-avatar-creator</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/unity-shader-graph-artist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/unity-shader-graph-artist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/unity-multiplayer-engineer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/unity-multiplayer-engineer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/unity-architect.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/unity-architect</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/unity-editor-tool-developer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/unity-editor-tool-developer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/unreal-world-builder.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/unreal-world-builder</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/unreal-multiplayer-architect.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/unreal-multiplayer-architect</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/unreal-technical-artist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/unreal-technical-artist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/unreal-systems-engineer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/unreal-systems-engineer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/level-designer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/level-designer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/narrative-designer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/narrative-designer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/technical-artist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/technical-artist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/game-designer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/game-designer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/game-audio-engineer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/game-audio-engineer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/xr-cockpit-interaction-specialist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/xr-cockpit-interaction-specialist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/xr-immersive-developer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/xr-immersive-developer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/xr-interface-architect.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/xr-interface-architect</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/macos-spatial-metal-engineer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/macos-spatial-metal-engineer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/visionos-spatial-engineer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/visionos-spatial-engineer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/terminal-integration-specialist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/terminal-integration-specialist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-aeo-foundations.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-aeo-foundations</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-ai-citation-strategist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-ai-citation-strategist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-instagram-curator.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-instagram-curator</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-linkedin-content-creator.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-linkedin-content-creator</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-pr-communications-manager.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-pr-communications-manager</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-reddit-community-builder.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-reddit-community-builder</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-seo-specialist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-seo-specialist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-tiktok-strategist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-tiktok-strategist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-twitter-engager.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-twitter-engager</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-x-twitter-intelligence-analyst.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-x-twitter-intelligence-analyst</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-global-podcast-strategist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-global-podcast-strategist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-content-creator.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-content-creator</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-book-co-author.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-book-co-author</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-growth-hacker.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-growth-hacker</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-multi-platform-publisher.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-multi-platform-publisher</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-xiaohongshu-specialist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-xiaohongshu-specialist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-app-store-optimizer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-app-store-optimizer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-wechat-official-account.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-wechat-official-account</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-agentic-search-optimizer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-agentic-search-optimizer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-zhihu-strategist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-zhihu-strategist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-social-media-strategist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-social-media-strategist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-video-optimization-specialist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-video-optimization-specialist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-carousel-growth-engine.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-carousel-growth-engine</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/marketing-email-strategist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/marketing-email-strategist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/design-persona-walkthrough.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/design-persona-walkthrough</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/design-ui-designer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/design-ui-designer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/design-ux-architect.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/design-ux-architect</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/design-ux-researcher.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/design-ux-researcher</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/design-inclusive-visuals-specialist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/design-inclusive-visuals-specialist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/design-brand-guardian.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/design-brand-guardian</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/design-image-prompt-engineer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/design-image-prompt-engineer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/design-visual-storyteller.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/design-visual-storyteller</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/design-whimsy-injector.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/design-whimsy-injector</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/finance-fpa-analyst.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/finance-fpa-analyst</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/finance-investment-researcher.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/finance-investment-researcher</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/finance-tax-strategist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/finance-tax-strategist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/finance-bookkeeper-controller.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/finance-bookkeeper-controller</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/finance-financial-analyst.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/finance-financial-analyst</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/sales-discovery-coach.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/sales-discovery-coach</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/sales-offer-lead-gen-strategist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/sales-offer-lead-gen-strategist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/sales-outbound-strategist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/sales-outbound-strategist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/sales-pipeline-analyst.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/sales-pipeline-analyst</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/sales-engineer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/sales-engineer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/sales-account-strategist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/sales-account-strategist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/sales-proposal-strategist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/sales-proposal-strategist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/sales-deal-strategist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/sales-deal-strategist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/sales-coach.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/sales-coach</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/project-management-jira-workflow-steward.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/project-management-jira-workflow-steward</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/project-management-meeting-notes-specialist.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/project-management-meeting-notes-specialist</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/project-management-experiment-tracker.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/project-management-experiment-tracker</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/project-management-studio-producer.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/project-management-studio-producer</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/project-management-studio-operations.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/project-management-studio-operations</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/project-management-project-shepherd.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/project-management-project-shepherd</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deepseek.pacebowl.com/agents/project-manager-senior.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://deepseek.pacebowl.com/agents/project-manager-senior</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
