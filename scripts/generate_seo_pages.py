@@ -97,7 +97,7 @@ def generate_agent_page(agent, peer_agents, china_agents):
     # Page SEO title and description
     title = f"DeepSeek 【{name_zh}】 ({name_en}) 提示词与系统指令 - {dept} AI 专家 | DeepSeek Studio"
     meta_desc = f"专为 DeepSeek-V4/R1 设计的【{name_zh}】（{name_en}）工业级中英双语提示词与系统人设规范。{desc_zh}支持一键中英文切换、装填微调与直接复制。"
-    canonical_url = f"https://deepseek.pacebowl.com/agents/{agent_id}.html"
+    canonical_url = f"https://deepseek.pacebowl.com/agents/{agent_id}"
     
     # Render documentation markdown bodies
     rendered_body_zh = markdown_to_html(agent.get('full_prompt_zh', agent.get('full_prompt', '')))
@@ -128,7 +128,7 @@ def generate_agent_page(agent, peer_agents, china_agents):
     for p in peer_agents[:6]:
         peer_name_en = p.get('name_en', '')
         peer_html += f"""
-        <a href="{p['id']}.html" class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-sky-400 dark:hover:border-sky-500/50 bg-white dark:bg-slate-900/60 transition group flex flex-col justify-between">
+        <a href="{p['id']}" class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-sky-400 dark:hover:border-sky-500/50 bg-white dark:bg-slate-900/60 transition group flex flex-col justify-between">
           <div>
             <div class="flex items-center gap-2 mb-1.5">
               <span class="text-base">{p.get('emoji', '🤖')}</span>
@@ -144,7 +144,7 @@ def generate_agent_page(agent, peer_agents, china_agents):
     china_html = ""
     for c in china_agents[:6]:
         china_html += f"""
-        <a href="{c['id']}.html" class="p-3.5 rounded-xl border border-rose-200/70 dark:border-rose-950/60 hover:border-rose-400 bg-white dark:bg-slate-900/60 transition group flex flex-col justify-between">
+        <a href="{c['id']}" class="p-3.5 rounded-xl border border-rose-200/70 dark:border-rose-950/60 hover:border-rose-400 bg-white dark:bg-slate-900/60 transition group flex flex-col justify-between">
           <div>
             <div class="flex items-center gap-2 mb-1.5">
               <span class="text-base">{c.get('emoji', '🤖')}</span>
@@ -248,6 +248,14 @@ def generate_agent_page(agent, peer_agents, china_agents):
             "acceptedAnswer": {{
               "@type": "Answer",
               "text": "本专家角色源自全球开源项目 msitarzewski/agency-agents 原版 English Specification 与 jnMetaCode/agency-agents-zh 中文社区版，经 DeepSeek-V4/R1 架构优化重构。"
+            }}
+          }},
+          {{
+            "@type": "Question",
+            "name": "How to deploy [{name_en}] on DeepSeek-R1 with Chain-of-Thought reasoning?",
+            "acceptedAnswer": {{
+              "@type": "Answer",
+              "text": "DeepSeek-R1 features native Chain-of-Thought (CoT) reasoning. To deploy [{name_en}], supply the XML prompt guidelines into DeepSeek chat or API. Specify exact deliverables, technical constraints, and domain scope in {dept_en}. DeepSeek-R1 will reason through edge cases and generate structured, hallucination-free outputs."
             }}
           }}
         ]
@@ -487,6 +495,12 @@ def generate_agent_page(agent, peer_agents, china_agents):
             系统将跳转回 DeepSeek Studio 主工具，自动装填该专家的角色定位、目标职责与红线规则（以您当前选中的中文或英文），并为您自动选定最优的思考强度。您可以随意补充代码或具体任务，一键生成符合工业级规范的 Prompt。
           </p>
         </div>
+        <div class="border border-slate-800 rounded-xl p-3.5 bg-slate-950/40">
+          <h4 class="font-bold text-slate-200 mb-1">Q: How to run [{name_en}] on DeepSeek-R1 with Chain-of-Thought reasoning?</h4>
+          <p class="text-slate-400 leading-relaxed">
+            Copy the English prompt into DeepSeek-R1 or API. Set reasoning mode to active and provide your business context. DeepSeek-R1 executes multi-step analysis across {dept_en} requirements before returning final answers, ensuring deep rigor and zero fluff.
+          </p>
+        </div>
       </div>
     </div>
 
@@ -622,7 +636,7 @@ def generate_catalog_page(agents, departments):
             name_en = a.get('name_en', a['name'])
 
             cards_html += f"""
-            <a href="{a['id']}.html" class="p-4 rounded-xl border border-slate-800 hover:border-sky-500/50 bg-slate-900/70 hover:bg-slate-900 transition flex flex-col justify-between group shadow-sm">
+            <a href="{a['id']}" class="p-4 rounded-xl border border-slate-800 hover:border-sky-500/50 bg-slate-900/70 hover:bg-slate-900 transition flex flex-col justify-between group shadow-sm">
               <div>
                 <div class="flex items-start justify-between gap-2 mb-2">
                   <div class="flex items-center gap-2 min-w-0">
@@ -811,13 +825,13 @@ def generate_sitemap(agents):
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
         '  <url>',
         f'    <loc>{base}/</loc>',
-        '    <lastmod>2026-10-03</lastmod>',
+        '    <lastmod>2026-10-10</lastmod>',
         '    <changefreq>daily</changefreq>',
         '    <priority>1.0</priority>',
         '  </url>',
         '  <url>',
         f'    <loc>{base}/agents/</loc>',
-        '    <lastmod>2026-10-03</lastmod>',
+        '    <lastmod>2026-10-10</lastmod>',
         '    <changefreq>daily</changefreq>',
         '    <priority>0.9</priority>',
         '  </url>'
@@ -826,8 +840,8 @@ def generate_sitemap(agents):
     for a in agents:
         xml_lines.extend([
             '  <url>',
-            f'    <loc>{base}/agents/{a["id"]}.html</loc>',
-            '    <lastmod>2026-10-03</lastmod>',
+            f'    <loc>{base}/agents/{a["id"]}</loc>',
+            '    <lastmod>2026-10-10</lastmod>',
             '    <changefreq>weekly</changefreq>',
             '    <priority>0.8</priority>',
             '  </url>'

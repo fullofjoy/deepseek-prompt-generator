@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN" class="dark">
 <head>
   <meta charset="UTF-8">
@@ -49,14 +49,14 @@
           { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://deepseek.pacebowl.com/" },
           { "@type": "ListItem", "position": 2, "name": "AI 专家角色库", "item": "https://deepseek.pacebowl.com/agents/" },
           { "@type": "ListItem", "position": 3, "name": "工程部", "item": "https://deepseek.pacebowl.com/agents/#dept-工程部" },
-          { "@type": "ListItem", "position": 4, "name": "邮件智能工程师", "item": "https://deepseek.pacebowl.com/agents/engineering-email-intelligence-engineer.html" }
+          { "@type": "ListItem", "position": 4, "name": "邮件智能工程师", "item": "https://deepseek.pacebowl.com/agents/engineering-email-intelligence-engineer" }
         ]
       },
       {
         "@type": "TechArticle",
         "headline": "DeepSeek 【邮件智能工程师】 (Email Intelligence Engineer) 提示词与系统指令 - 工程部 AI 专家 | DeepSeek Studio",
         "description": "专为 DeepSeek-V4/R1 设计的【邮件智能工程师】（Email Intelligence Engineer）工业级中英双语提示词与系统人设规范。专精从原始邮件线程中提取结构化、可供 AI 推理的数据，服务于智能体和自动化系统。支持一键中英文切换、装填微调与直接复制。",
-        "url": "https://deepseek.pacebowl.com/agents/engineering-email-intelligence-engineer.html",
+        "url": "https://deepseek.pacebowl.com/agents/engineering-email-intelligence-engineer",
         "inLanguage": "zh-CN",
         "author": { "@type": "Organization", "name": "PaceBowl & agency-agents (Upstream msitarzewski)" },
         "publisher": { "@type": "Organization", "name": "PaceBowl Ecosystem", "url": "https://pacebowl.com" }
@@ -87,6 +87,14 @@
               "@type": "Answer",
               "text": "本专家角色源自全球开源项目 msitarzewski/agency-agents 原版 English Specification 与 jnMetaCode/agency-agents-zh 中文社区版，经 DeepSeek-V4/R1 架构优化重构。"
             }
+          },
+          {
+            "@type": "Question",
+            "name": "How to deploy [Email Intelligence Engineer] on DeepSeek-R1 with Chain-of-Thought reasoning?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "DeepSeek-R1 features native Chain-of-Thought (CoT) reasoning. To deploy [Email Intelligence Engineer], supply the XML prompt guidelines into DeepSeek chat or API. Specify exact deliverables, technical constraints, and domain scope in Engineering. DeepSeek-R1 will reason through edge cases and generate structured, hallucination-free outputs."
+            }
           }
         ]
       }
@@ -100,7 +108,7 @@
   <header class="border-b border-slate-800/80 bg-[#07090e]/90 backdrop-blur sticky top-0 z-40">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
       <div class="flex items-center space-x-3">
-        <a href="/" class="flex items-center space-x-2 text-slate-200 hover:text-white transition">
+        <a href="../index.html" class="flex items-center space-x-2 text-slate-200 hover:text-white transition">
           <div class="w-7 h-7 rounded-lg bg-sky-500 flex items-center justify-center font-bold text-slate-950 text-xs shadow-md shadow-sky-500/20">
             DS
           </div>
@@ -127,7 +135,7 @@
 
     <!-- Breadcrumb -->
     <nav class="flex items-center gap-2 text-xs text-slate-400">
-      <a href="/" class="hover:text-slate-200 transition">首页</a>
+      <a href="../index.html" class="hover:text-slate-200 transition">首页</a>
       <span>›</span>
       <a href="index.html" class="hover:text-slate-200 transition">AI 专家角色库</a>
       <span>›</span>
@@ -980,7 +988,7 @@ def email_search(query: str, datasource_id: str, filters: dict = None) -&gt; lis
 
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
         
-        <a href="engineering-fpga-digital-design-engineer.html" class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-sky-400 dark:hover:border-sky-500/50 bg-white dark:bg-slate-900/60 transition group flex flex-col justify-between">
+        <a href="engineering-fpga-digital-design-engineer" class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-sky-400 dark:hover:border-sky-500/50 bg-white dark:bg-slate-900/60 transition group flex flex-col justify-between">
           <div>
             <div class="flex items-center gap-2 mb-1.5">
               <span class="text-base">🔬</span>
@@ -991,7 +999,7 @@ def email_search(query: str, datasource_id: str, filters: dict = None) -&gt; lis
           <span class="text-[10px] text-sky-600 dark:text-sky-400 font-semibold mt-2 inline-flex items-center gap-1">中英双语 Prompt →</span>
         </a>
         
-        <a href="engineering-iot-solution-architect.html" class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-sky-400 dark:hover:border-sky-500/50 bg-white dark:bg-slate-900/60 transition group flex flex-col justify-between">
+        <a href="engineering-iot-solution-architect" class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-sky-400 dark:hover:border-sky-500/50 bg-white dark:bg-slate-900/60 transition group flex flex-col justify-between">
           <div>
             <div class="flex items-center gap-2 mb-1.5">
               <span class="text-base">📡</span>
@@ -1002,7 +1010,7 @@ def email_search(query: str, datasource_id: str, filters: dict = None) -&gt; lis
           <span class="text-[10px] text-sky-600 dark:text-sky-400 font-semibold mt-2 inline-flex items-center gap-1">中英双语 Prompt →</span>
         </a>
         
-        <a href="engineering-pc-host-engineer.html" class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-sky-400 dark:hover:border-sky-500/50 bg-white dark:bg-slate-900/60 transition group flex flex-col justify-between">
+        <a href="engineering-pc-host-engineer" class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-sky-400 dark:hover:border-sky-500/50 bg-white dark:bg-slate-900/60 transition group flex flex-col justify-between">
           <div>
             <div class="flex items-center gap-2 mb-1.5">
               <span class="text-base">🖥️</span>
@@ -1013,7 +1021,7 @@ def email_search(query: str, datasource_id: str, filters: dict = None) -&gt; lis
           <span class="text-[10px] text-sky-600 dark:text-sky-400 font-semibold mt-2 inline-flex items-center gap-1">中英双语 Prompt →</span>
         </a>
         
-        <a href="engineering-network-engineer-china.html" class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-sky-400 dark:hover:border-sky-500/50 bg-white dark:bg-slate-900/60 transition group flex flex-col justify-between">
+        <a href="engineering-network-engineer-china" class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-sky-400 dark:hover:border-sky-500/50 bg-white dark:bg-slate-900/60 transition group flex flex-col justify-between">
           <div>
             <div class="flex items-center gap-2 mb-1.5">
               <span class="text-base">🌐</span>
@@ -1024,7 +1032,7 @@ def email_search(query: str, datasource_id: str, filters: dict = None) -&gt; lis
           <span class="text-[10px] text-sky-600 dark:text-sky-400 font-semibold mt-2 inline-flex items-center gap-1">中英双语 Prompt →</span>
         </a>
         
-        <a href="engineering-embedded-linux-driver-engineer.html" class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-sky-400 dark:hover:border-sky-500/50 bg-white dark:bg-slate-900/60 transition group flex flex-col justify-between">
+        <a href="engineering-embedded-linux-driver-engineer" class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-sky-400 dark:hover:border-sky-500/50 bg-white dark:bg-slate-900/60 transition group flex flex-col justify-between">
           <div>
             <div class="flex items-center gap-2 mb-1.5">
               <span class="text-base">🔌</span>
@@ -1035,7 +1043,7 @@ def email_search(query: str, datasource_id: str, filters: dict = None) -&gt; lis
           <span class="text-[10px] text-sky-600 dark:text-sky-400 font-semibold mt-2 inline-flex items-center gap-1">中英双语 Prompt →</span>
         </a>
         
-        <a href="engineering-wechat-mini-program-developer.html" class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-sky-400 dark:hover:border-sky-500/50 bg-white dark:bg-slate-900/60 transition group flex flex-col justify-between">
+        <a href="engineering-wechat-mini-program-developer" class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-sky-400 dark:hover:border-sky-500/50 bg-white dark:bg-slate-900/60 transition group flex flex-col justify-between">
           <div>
             <div class="flex items-center gap-2 mb-1.5">
               <span class="text-base">💬</span>
@@ -1061,7 +1069,7 @@ def email_search(query: str, datasource_id: str, filters: dict = None) -&gt; lis
 
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
         
-        <a href="specialized-ai-policy-writer.html" class="p-3.5 rounded-xl border border-rose-200/70 dark:border-rose-950/60 hover:border-rose-400 bg-white dark:bg-slate-900/60 transition group flex flex-col justify-between">
+        <a href="specialized-ai-policy-writer" class="p-3.5 rounded-xl border border-rose-200/70 dark:border-rose-950/60 hover:border-rose-400 bg-white dark:bg-slate-900/60 transition group flex flex-col justify-between">
           <div>
             <div class="flex items-center gap-2 mb-1.5">
               <span class="text-base">📜</span>
@@ -1073,7 +1081,7 @@ def email_search(query: str, datasource_id: str, filters: dict = None) -&gt; lis
           <span class="text-[10px] text-rose-600 dark:text-rose-400 font-semibold mt-2 inline-flex items-center gap-1">使用中国专家 →</span>
         </a>
         
-        <a href="corporate-training-designer.html" class="p-3.5 rounded-xl border border-rose-200/70 dark:border-rose-950/60 hover:border-rose-400 bg-white dark:bg-slate-900/60 transition group flex flex-col justify-between">
+        <a href="corporate-training-designer" class="p-3.5 rounded-xl border border-rose-200/70 dark:border-rose-950/60 hover:border-rose-400 bg-white dark:bg-slate-900/60 transition group flex flex-col justify-between">
           <div>
             <div class="flex items-center gap-2 mb-1.5">
               <span class="text-base">🎓</span>
@@ -1085,7 +1093,7 @@ def email_search(query: str, datasource_id: str, filters: dict = None) -&gt; lis
           <span class="text-[10px] text-rose-600 dark:text-rose-400 font-semibold mt-2 inline-flex items-center gap-1">使用中国专家 →</span>
         </a>
         
-        <a href="specialized-risk-assessor.html" class="p-3.5 rounded-xl border border-rose-200/70 dark:border-rose-950/60 hover:border-rose-400 bg-white dark:bg-slate-900/60 transition group flex flex-col justify-between">
+        <a href="specialized-risk-assessor" class="p-3.5 rounded-xl border border-rose-200/70 dark:border-rose-950/60 hover:border-rose-400 bg-white dark:bg-slate-900/60 transition group flex flex-col justify-between">
           <div>
             <div class="flex items-center gap-2 mb-1.5">
               <span class="text-base">⚖️</span>
@@ -1097,7 +1105,7 @@ def email_search(query: str, datasource_id: str, filters: dict = None) -&gt; lis
           <span class="text-[10px] text-rose-600 dark:text-rose-400 font-semibold mt-2 inline-flex items-center gap-1">使用中国专家 →</span>
         </a>
         
-        <a href="specialized-meeting-assistant.html" class="p-3.5 rounded-xl border border-rose-200/70 dark:border-rose-950/60 hover:border-rose-400 bg-white dark:bg-slate-900/60 transition group flex flex-col justify-between">
+        <a href="specialized-meeting-assistant" class="p-3.5 rounded-xl border border-rose-200/70 dark:border-rose-950/60 hover:border-rose-400 bg-white dark:bg-slate-900/60 transition group flex flex-col justify-between">
           <div>
             <div class="flex items-center gap-2 mb-1.5">
               <span class="text-base">📅</span>
@@ -1109,7 +1117,7 @@ def email_search(query: str, datasource_id: str, filters: dict = None) -&gt; lis
           <span class="text-[10px] text-rose-600 dark:text-rose-400 font-semibold mt-2 inline-flex items-center gap-1">使用中国专家 →</span>
         </a>
         
-        <a href="livestock-archive-auditor.html" class="p-3.5 rounded-xl border border-rose-200/70 dark:border-rose-950/60 hover:border-rose-400 bg-white dark:bg-slate-900/60 transition group flex flex-col justify-between">
+        <a href="livestock-archive-auditor" class="p-3.5 rounded-xl border border-rose-200/70 dark:border-rose-950/60 hover:border-rose-400 bg-white dark:bg-slate-900/60 transition group flex flex-col justify-between">
           <div>
             <div class="flex items-center gap-2 mb-1.5">
               <span class="text-base">🐄</span>
@@ -1121,7 +1129,7 @@ def email_search(query: str, datasource_id: str, filters: dict = None) -&gt; lis
           <span class="text-[10px] text-rose-600 dark:text-rose-400 font-semibold mt-2 inline-flex items-center gap-1">使用中国专家 →</span>
         </a>
         
-        <a href="specialized-pricing-optimizer.html" class="p-3.5 rounded-xl border border-rose-200/70 dark:border-rose-950/60 hover:border-rose-400 bg-white dark:bg-slate-900/60 transition group flex flex-col justify-between">
+        <a href="specialized-pricing-optimizer" class="p-3.5 rounded-xl border border-rose-200/70 dark:border-rose-950/60 hover:border-rose-400 bg-white dark:bg-slate-900/60 transition group flex flex-col justify-between">
           <div>
             <div class="flex items-center gap-2 mb-1.5">
               <span class="text-base">💲</span>
@@ -1152,6 +1160,12 @@ def email_search(query: str, datasource_id: str, filters: dict = None) -&gt; lis
             系统将跳转回 DeepSeek Studio 主工具，自动装填该专家的角色定位、目标职责与红线规则（以您当前选中的中文或英文），并为您自动选定最优的思考强度。您可以随意补充代码或具体任务，一键生成符合工业级规范的 Prompt。
           </p>
         </div>
+        <div class="border border-slate-800 rounded-xl p-3.5 bg-slate-950/40">
+          <h4 class="font-bold text-slate-200 mb-1">Q: How to run [Email Intelligence Engineer] on DeepSeek-R1 with Chain-of-Thought reasoning?</h4>
+          <p class="text-slate-400 leading-relaxed">
+            Copy the English prompt into DeepSeek-R1 or API. Set reasoning mode to active and provide your business context. DeepSeek-R1 executes multi-step analysis across Engineering requirements before returning final answers, ensuring deep rigor and zero fluff.
+          </p>
+        </div>
       </div>
     </div>
 
@@ -1167,7 +1181,7 @@ def email_search(query: str, datasource_id: str, filters: dict = None) -&gt; lis
         </p>
       </div>
       <div class="flex items-center gap-4 text-slate-400">
-        <a href="/" class="hover:text-white transition">生成器主页</a>
+        <a href="../index.html" class="hover:text-white transition">生成器主页</a>
         <a href="index.html" class="hover:text-white transition">专家库大全</a>
         <a href="https://pacebowl.com" class="hover:text-white transition">PaceBowl 母舰</a>
         <a href="https://buymeacoffee.com/pacebowl" target="_blank" rel="noopener noreferrer" class="text-amber-400 hover:underline">☕ 赞助</a>

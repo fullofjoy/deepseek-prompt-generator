@@ -1,3 +1,6 @@
+# Canonical clean URL redirects for Programmatic SEO pages
+/agents/*.html /agents/:splat 301
+
 # PaceBowl Matrix Centralized Redirects & Affiliate Gateways
 /go/elevenlabs https://try.elevenlabs.io/3wvzgabjr4od 302
 /go/voice https://try.elevenlabs.io/3wvzgabjr4od 302
