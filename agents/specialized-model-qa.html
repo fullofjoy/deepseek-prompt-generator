@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DeepSeek 【模型 QA 专家】 (Model QA Specialist) 提示词与系统指令 - 专项部 AI 专家 | DeepSeek Studio</title>
+  <title>DeepSeek 【模型 QA 专家】 (Model QA Specialist) 提示词与系统指令 [一键复制/双语] - 专项部 | DeepSeek Studio</title>
   <meta name="description" content="专为 DeepSeek-V4/R1 设计的【模型 QA 专家】（Model QA Specialist）工业级中英双语提示词与系统人设规范。独立模型 QA 专家，端到端审计机器学习和统计模型——从文档审查、数据重建到复现、校准测试、可解释性分析、性能监控和审计级报告。支持一键中英文切换、装填微调与直接复制。">
   <meta name="keywords" content="DeepSeek 模型 QA 专家 提示词, Model QA Specialist prompt, DeepSeek V4 Model QA Specialist, 专项部 AI专家, DeepSeek-R1 提示词, agency-agents, msitarzewski/agency-agents">
   <link rel="canonical" href="https://deepseek.pacebowl.com/agents/specialized-model-qa">
 
   <!-- OpenGraph -->
-  <meta property="og:title" content="DeepSeek 【模型 QA 专家】 (Model QA Specialist) 提示词与系统指令 - 专项部 AI 专家 | DeepSeek Studio">
+  <meta property="og:title" content="DeepSeek 【模型 QA 专家】 (Model QA Specialist) 提示词与系统指令 [一键复制/双语] - 专项部 | DeepSeek Studio">
   <meta property="og:description" content="专为 DeepSeek-V4/R1 设计的【模型 QA 专家】（Model QA Specialist）工业级中英双语提示词与系统人设规范。独立模型 QA 专家，端到端审计机器学习和统计模型——从文档审查、数据重建到复现、校准测试、可解释性分析、性能监控和审计级报告。支持一键中英文切换、装填微调与直接复制。">
   <meta property="og:url" content="https://deepseek.pacebowl.com/agents/specialized-model-qa">
   <meta property="og:type" content="article">
@@ -17,7 +17,7 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="DeepSeek 【模型 QA 专家】 (Model QA Specialist) 提示词与系统指令 - 专项部 AI 专家 | DeepSeek Studio">
+  <meta name="twitter:title" content="DeepSeek 【模型 QA 专家】 (Model QA Specialist) 提示词与系统指令 [一键复制/双语] - 专项部 | DeepSeek Studio">
   <meta name="twitter:description" content="专为 DeepSeek-V4/R1 设计的【模型 QA 专家】（Model QA Specialist）工业级中英双语提示词与系统人设规范。独立模型 QA 专家，端到端审计机器学习和统计模型——从文档审查、数据重建到复现、校准测试、可解释性分析、性能监控和审计级报告。支持一键中英文切换、装填微调与直接复制。">
 
   <!-- Favicon -->
@@ -54,7 +54,7 @@
       },
       {
         "@type": "TechArticle",
-        "headline": "DeepSeek 【模型 QA 专家】 (Model QA Specialist) 提示词与系统指令 - 专项部 AI 专家 | DeepSeek Studio",
+        "headline": "DeepSeek 【模型 QA 专家】 (Model QA Specialist) 提示词与系统指令 [一键复制/双语] - 专项部 | DeepSeek Studio",
         "description": "专为 DeepSeek-V4/R1 设计的【模型 QA 专家】（Model QA Specialist）工业级中英双语提示词与系统人设规范。独立模型 QA 专家，端到端审计机器学习和统计模型——从文档审查、数据重建到复现、校准测试、可解释性分析、性能监控和审计级报告。支持一键中英文切换、装填微调与直接复制。",
         "url": "https://deepseek.pacebowl.com/agents/specialized-model-qa",
         "inLanguage": "zh-CN",
@@ -101,6 +101,11 @@
     ]
   }
   </script>
+
+  <!-- Umami Analytics -->
+  <script defer src="https://umami-ruby-alpha-96.vercel.app/script.js" data-website-id="ab4cf304-8b62-4dbc-b40e-124cc4175606"></script>
+  <!-- OpenGEO Attribution -->
+  <script defer data-domain="deepseek.pacebowl.com" data-api="https://geo.pacebowl.com/api" src="https://geo.pacebowl.com/geo.js"></script>
 </head>
 <body class="bg-[#07090e] text-slate-100 min-h-screen flex flex-col font-sans antialiased selection:bg-sky-500 selection:text-slate-950">
 
@@ -1541,6 +1546,12 @@ def pdp_interaction(
       const el = document.getElementById('prompt-content');
       if (!el) return;
       navigator.clipboard.writeText(el.value).then(() => {
+        if (window.umami) {
+          window.umami.track('copy_agent_prompt', { agent: 'specialized-model-qa', lang: currentPromptLang });
+        }
+        if (window.geotrace) {
+          window.geotrace.track('copy_agent_prompt', { agent: 'specialized-model-qa', lang: currentPromptLang });
+        }
         const isZh = currentPromptLang === 'zh';
         showToast(isZh ? '✓ 【模型 QA 专家】中文提示词已复制到剪贴板！' : '✓ 【Model QA Specialist】English prompt copied to clipboard!');
         const btn = document.getElementById('copy-btn-text');

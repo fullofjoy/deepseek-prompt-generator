@@ -95,7 +95,7 @@ def generate_agent_page(agent, peer_agents, china_agents):
     cot_label = '🔥 极致深度思考 (Max Thinking)' if cot_level in ['max', 'deep'] else '🧠 标准思维链 (Standard CoT)'
     
     # Page SEO title and description
-    title = f"DeepSeek 【{name_zh}】 ({name_en}) 提示词与系统指令 - {dept} AI 专家 | DeepSeek Studio"
+    title = f"DeepSeek 【{name_zh}】 ({name_en}) 提示词与系统指令 [一键复制/双语] - {dept} | DeepSeek Studio"
     meta_desc = f"专为 DeepSeek-V4/R1 设计的【{name_zh}】（{name_en}）工业级中英双语提示词与系统人设规范。{desc_zh}支持一键中英文切换、装填微调与直接复制。"
     canonical_url = f"https://deepseek.pacebowl.com/agents/{agent_id}"
     
@@ -263,6 +263,11 @@ def generate_agent_page(agent, peer_agents, china_agents):
     ]
   }}
   </script>
+
+  <!-- Umami Analytics -->
+  <script defer src="https://umami-ruby-alpha-96.vercel.app/script.js" data-website-id="ab4cf304-8b62-4dbc-b40e-124cc4175606"></script>
+  <!-- OpenGEO Attribution -->
+  <script defer data-domain="deepseek.pacebowl.com" data-api="https://geo.pacebowl.com/api" src="https://geo.pacebowl.com/geo.js"></script>
 </head>
 <body class="bg-[#07090e] text-slate-100 min-h-screen flex flex-col font-sans antialiased selection:bg-sky-500 selection:text-slate-950">
 
@@ -585,6 +590,12 @@ def generate_agent_page(agent, peer_agents, china_agents):
       const el = document.getElementById('prompt-content');
       if (!el) return;
       navigator.clipboard.writeText(el.value).then(() => {{
+        if (window.umami) {{
+          window.umami.track('copy_agent_prompt', {{ agent: '{agent_id}', lang: currentPromptLang }});
+        }}
+        if (window.geotrace) {{
+          window.geotrace.track('copy_agent_prompt', {{ agent: '{agent_id}', lang: currentPromptLang }});
+        }}
         const isZh = currentPromptLang === 'zh';
         showToast(isZh ? '✓ 【{name_zh}】中文提示词已复制到剪贴板！' : '✓ 【{name_en}】English prompt copied to clipboard!');
         const btn = document.getElementById('copy-btn-text');
@@ -718,6 +729,11 @@ def generate_catalog_page(agents, departments):
       }}
     }}
   </script>
+
+  <!-- Umami Analytics -->
+  <script defer src="https://umami-ruby-alpha-96.vercel.app/script.js" data-website-id="ab4cf304-8b62-4dbc-b40e-124cc4175606"></script>
+  <!-- OpenGEO Attribution -->
+  <script defer data-domain="deepseek.pacebowl.com" data-api="https://geo.pacebowl.com/api" src="https://geo.pacebowl.com/geo.js"></script>
 </head>
 <body id="top" class="bg-[#07090e] text-slate-100 min-h-screen flex flex-col font-sans antialiased selection:bg-sky-500 selection:text-slate-950">
 
@@ -825,13 +841,13 @@ def generate_sitemap(agents):
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
         '  <url>',
         f'    <loc>{base}/</loc>',
-        '    <lastmod>2026-10-10</lastmod>',
+        '    <lastmod>2026-10-12</lastmod>',
         '    <changefreq>daily</changefreq>',
         '    <priority>1.0</priority>',
         '  </url>',
         '  <url>',
         f'    <loc>{base}/agents/</loc>',
-        '    <lastmod>2026-10-10</lastmod>',
+        '    <lastmod>2026-10-12</lastmod>',
         '    <changefreq>daily</changefreq>',
         '    <priority>0.9</priority>',
         '  </url>'
@@ -841,7 +857,7 @@ def generate_sitemap(agents):
         xml_lines.extend([
             '  <url>',
             f'    <loc>{base}/agents/{a["id"]}</loc>',
-            '    <lastmod>2026-10-10</lastmod>',
+            '    <lastmod>2026-10-12</lastmod>',
             '    <changefreq>weekly</changefreq>',
             '    <priority>0.8</priority>',
             '  </url>'

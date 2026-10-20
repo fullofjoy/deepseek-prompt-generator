@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DeepSeek V4 & R1 Prompt Generator - Free Online CoT & System Prompt Builder | PaceBowl</title>
+  <title>DeepSeek Prompt Generator — Free System Prompt & Reasoning CoT Builder | PaceBowl</title>
 
   <!-- Theme & Language Initialization: Anti-FOUC & Cross-Subdomain Sync -->
   <script>
@@ -27,7 +27,7 @@
     })();
   </script>
 
-  <meta name="description" content="Free online DeepSeek prompt generator optimized for DeepSeek-V4.1-Flash (1M context & native multimodal), DeepSeek-V4-Pro (Max Thinking), and DeepSeek-R1. Build production XML system prompts and reasoning directives in 1 click.">
+  <meta name="description" content="Free online DeepSeek prompt generator for R1 & V3/V4. Generate production XML system prompts, reasoning Chain-of-Thought (CoT) directives, and engineering templates with 1-click copy.">
   <meta name="keywords" content="deepseek v4 prompt generator, deepseek v4.1 flash, deepseek v4 pro, deepseek r1 prompts, max thinking prompt generator, deepseek system prompt builder, deepseek v4 prompts, pacebowl">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="https://deepseek.pacebowl.com/">
@@ -1689,6 +1689,12 @@
       if (!outputEl) return;
 
       navigator.clipboard.writeText(outputEl.value).then(() => {
+        if (window.umami) {
+          window.umami.track('copy_generated_prompt', { lang: currentLang });
+        }
+        if (window.geotrace) {
+          window.geotrace.track('copy_generated_prompt', { lang: currentLang });
+        }
         const msg = (I18N[currentLang] && I18N[currentLang].toast_copied) ? I18N[currentLang].toast_copied : '✓ Prompt copied!';
         showToast(msg);
         const btn = document.getElementById('copy-btn');
@@ -1701,6 +1707,12 @@
     }
 
     function trackLaunchChat() {
+      if (window.umami) {
+        window.umami.track('launch_deepseek_chat');
+      }
+      if (window.geotrace) {
+        window.geotrace.track('launch_deepseek_chat');
+      }
       showToast(currentLang === 'zh' ? '🚀 正在前往 DeepSeek，请直接粘贴刚复制的提示词！' : '🚀 Launching DeepSeek. Paste your copied prompt into chat!');
     }
 
@@ -2017,6 +2029,12 @@
       }
 
       const agentName = isEn ? (agent.name_en || agent.name) : (agent.name_zh || agent.name);
+      if (window.umami) {
+        window.umami.track('load_agent', { agent: agentId });
+      }
+      if (window.geotrace) {
+        window.geotrace.track('load_agent', { agent: agentId });
+      }
       const toastMsg = currentLang === 'zh' ? `✓ 已成功装载【${agentName}】专家角色与专属任务！` : `✓ Loaded 【${agentName}】 expert persona and directives!`;
       showToast(toastMsg);
     }
@@ -2033,6 +2051,12 @@
 
       const name = isEn ? (agent.name_en || agent.name) : (agent.name_zh || agent.name);
       navigator.clipboard.writeText(promptText).then(() => {
+        if (window.umami) {
+          window.umami.track('copy_agent_prompt', { agent: agentId, lang: currentPromptLang });
+        }
+        if (window.geotrace) {
+          window.geotrace.track('copy_agent_prompt', { agent: agentId, lang: currentPromptLang });
+        }
         showToast(isEn ? `✓ 【${name}】 persona copied to clipboard!` : `✓ 【${name}】专家提示词已复制到剪贴板！`);
       });
     }

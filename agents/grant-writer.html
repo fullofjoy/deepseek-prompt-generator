@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DeepSeek 【资助申请撰稿人】 (Grant Writer) 提示词与系统指令 - 专项部 AI 专家 | DeepSeek Studio</title>
+  <title>DeepSeek 【资助申请撰稿人】 (Grant Writer) 提示词与系统指令 [一键复制/双语] - 专项部 | DeepSeek Studio</title>
   <meta name="description" content="专为 DeepSeek-V4/R1 设计的【资助申请撰稿人】（Grant Writer）工业级中英双语提示词与系统人设规范。资深 grant writing（基金申请写作）专家，服务于非营利组织、科研机构与社会企业——覆盖资助方调研（prospect research）、意向函（letter of inquiry）撰写、完整 proposal 开发、budget narrative、联邦与基金会 grant、以及结项后报告，最大化获资成功率支持一键中英文切换、装填微调与直接复制。">
   <meta name="keywords" content="DeepSeek 资助申请撰稿人 提示词, Grant Writer prompt, DeepSeek V4 Grant Writer, 专项部 AI专家, DeepSeek-R1 提示词, agency-agents, msitarzewski/agency-agents">
   <link rel="canonical" href="https://deepseek.pacebowl.com/agents/grant-writer">
 
   <!-- OpenGraph -->
-  <meta property="og:title" content="DeepSeek 【资助申请撰稿人】 (Grant Writer) 提示词与系统指令 - 专项部 AI 专家 | DeepSeek Studio">
+  <meta property="og:title" content="DeepSeek 【资助申请撰稿人】 (Grant Writer) 提示词与系统指令 [一键复制/双语] - 专项部 | DeepSeek Studio">
   <meta property="og:description" content="专为 DeepSeek-V4/R1 设计的【资助申请撰稿人】（Grant Writer）工业级中英双语提示词与系统人设规范。资深 grant writing（基金申请写作）专家，服务于非营利组织、科研机构与社会企业——覆盖资助方调研（prospect research）、意向函（letter of inquiry）撰写、完整 proposal 开发、budget narrative、联邦与基金会 grant、以及结项后报告，最大化获资成功率支持一键中英文切换、装填微调与直接复制。">
   <meta property="og:url" content="https://deepseek.pacebowl.com/agents/grant-writer">
   <meta property="og:type" content="article">
@@ -17,7 +17,7 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="DeepSeek 【资助申请撰稿人】 (Grant Writer) 提示词与系统指令 - 专项部 AI 专家 | DeepSeek Studio">
+  <meta name="twitter:title" content="DeepSeek 【资助申请撰稿人】 (Grant Writer) 提示词与系统指令 [一键复制/双语] - 专项部 | DeepSeek Studio">
   <meta name="twitter:description" content="专为 DeepSeek-V4/R1 设计的【资助申请撰稿人】（Grant Writer）工业级中英双语提示词与系统人设规范。资深 grant writing（基金申请写作）专家，服务于非营利组织、科研机构与社会企业——覆盖资助方调研（prospect research）、意向函（letter of inquiry）撰写、完整 proposal 开发、budget narrative、联邦与基金会 grant、以及结项后报告，最大化获资成功率支持一键中英文切换、装填微调与直接复制。">
 
   <!-- Favicon -->
@@ -54,7 +54,7 @@
       },
       {
         "@type": "TechArticle",
-        "headline": "DeepSeek 【资助申请撰稿人】 (Grant Writer) 提示词与系统指令 - 专项部 AI 专家 | DeepSeek Studio",
+        "headline": "DeepSeek 【资助申请撰稿人】 (Grant Writer) 提示词与系统指令 [一键复制/双语] - 专项部 | DeepSeek Studio",
         "description": "专为 DeepSeek-V4/R1 设计的【资助申请撰稿人】（Grant Writer）工业级中英双语提示词与系统人设规范。资深 grant writing（基金申请写作）专家，服务于非营利组织、科研机构与社会企业——覆盖资助方调研（prospect research）、意向函（letter of inquiry）撰写、完整 proposal 开发、budget narrative、联邦与基金会 grant、以及结项后报告，最大化获资成功率支持一键中英文切换、装填微调与直接复制。",
         "url": "https://deepseek.pacebowl.com/agents/grant-writer",
         "inLanguage": "zh-CN",
@@ -101,6 +101,11 @@
     ]
   }
   </script>
+
+  <!-- Umami Analytics -->
+  <script defer src="https://umami-ruby-alpha-96.vercel.app/script.js" data-website-id="ab4cf304-8b62-4dbc-b40e-124cc4175606"></script>
+  <!-- OpenGEO Attribution -->
+  <script defer data-domain="deepseek.pacebowl.com" data-api="https://geo.pacebowl.com/api" src="https://geo.pacebowl.com/geo.js"></script>
 </head>
 <body class="bg-[#07090e] text-slate-100 min-h-screen flex flex-col font-sans antialiased selection:bg-sky-500 selection:text-slate-950">
 
@@ -1500,6 +1505,12 @@ Reporting best practices:
       const el = document.getElementById('prompt-content');
       if (!el) return;
       navigator.clipboard.writeText(el.value).then(() => {
+        if (window.umami) {
+          window.umami.track('copy_agent_prompt', { agent: 'grant-writer', lang: currentPromptLang });
+        }
+        if (window.geotrace) {
+          window.geotrace.track('copy_agent_prompt', { agent: 'grant-writer', lang: currentPromptLang });
+        }
         const isZh = currentPromptLang === 'zh';
         showToast(isZh ? '✓ 【资助申请撰稿人】中文提示词已复制到剪贴板！' : '✓ 【Grant Writer】English prompt copied to clipboard!');
         const btn = document.getElementById('copy-btn-text');
